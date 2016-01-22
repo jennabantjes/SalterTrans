@@ -48,7 +48,7 @@ a {
   a:hover {
     transition: all ease-in-out 0.2s; }
 
-h1 {
+h1, .tagline {
   font-weight: 400;
   font-size: 30px;
   line-height: 3;

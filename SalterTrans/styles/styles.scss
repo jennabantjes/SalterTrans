@@ -1,0 +1,283 @@
+/* VARIABLES */
+$grey: #14281D;
+$green: #009D49;
+$light-blue: rgba(9,65,122,.1);
+$blue: #09417A;
+
+/* RESETS */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    font-weight: 400;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    &:hover {
+        transition: all ease-in-out 0.2s;
+    }
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 3;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 3;
+}
+
+p {
+    color: $grey;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* STYLES */
+
+#resources {
+    ul {
+        text-align: right;
+        width: 100%;
+        li {
+            display: inline-block;
+            margin-left: 25px;
+            a {
+                color: $grey;
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: none;
+
+                &:hover {
+                    border-color: $green;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+#services {
+    ul {
+        margin-top: 30px;
+        text-align: right;
+        width: 100%;
+        li {
+            display: inline-block;
+            margin-left: 25px;
+            text-align: right;
+
+            a {
+                color: $grey;
+                font-size: 18px;
+                font-weight: 400;
+                text-decoration: none;
+
+                &:hover {
+                    border-color: $green;
+                    color: $green;
+                    transition: all ease-in-out 0.2s;
+                }
+            }
+        }
+}
+
+button, .button {
+        border: 1px solid $green;
+        border-radius: 50px;
+        padding: 10px;
+        a {
+            color: $green;
+        }
+    }
+}
+
+.image-text-block {
+    clear: both;
+    line-height: 1.5;
+    padding: 30px 20px 30px 0;
+ img {
+        width: 100%;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 3;
+    }
+    a {
+        line-height: 3;
+    }
+}
+
+.light-bg {
+    background-color: white;
+    a {
+        color: $green;
+        &:hover {
+            border-color: $green;
+        }
+    }
+}
+
+.medium-bg {
+    background-color: $light-blue;
+    a {
+        color: $green;
+        &:hover {
+            border-color: $green;
+        }
+    }
+}
+
+.dark-bg {
+    background-color: $blue;
+    color: white;
+    a {
+        color: white;
+        &:hover {
+            border-color: white;
+        }
+    }
+}
+
+.callout {
+    background-color: $blue;
+    clear: both;
+    color: white;
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    font-size: 12px;
+    width: 100%;
+
+    ul {
+        li {
+            float: left;
+        }
+    }
+}
+
+/* GRID */
+
+
+.page-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.one-of-two {
+    float: left;
+    width: 50%;
+}
+
+.one-of-three {
+    float: left;
+    width: 33%;
+}
+
+.two-of-three {
+    float: left;
+    width: 66%;
+}
+
+.one-of-four {
+    float: left;
+    width: 25%;
+}

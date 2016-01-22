@@ -1,0 +1,217 @@
+/* VARIABLES */
+/* RESETS */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; }
+  a:hover {
+    transition: all ease-in-out 0.2s; }
+
+h1 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 3;
+  text-align: center; }
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 3; }
+
+p {
+  color: #14281D;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 1em; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* STYLES */
+#resources ul {
+  text-align: right;
+  width: 100%; }
+  #resources ul li {
+    display: inline-block;
+    margin-left: 25px; }
+    #resources ul li a {
+      color: #14281D;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none; }
+      #resources ul li a:hover {
+        border-color: #009D49;
+        color: #009D49; }
+
+#services ul {
+  margin-top: 30px;
+  text-align: right;
+  width: 100%; }
+  #services ul li {
+    display: inline-block;
+    margin-left: 25px;
+    text-align: right; }
+    #services ul li a {
+      color: #14281D;
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none; }
+      #services ul li a:hover {
+        border-color: #009D49;
+        color: #009D49;
+        transition: all ease-in-out 0.2s; }
+#services button, #services .button {
+  border: 1px solid #009D49;
+  border-radius: 50px;
+  padding: 10px; }
+  #services button a, #services .button a {
+    color: #009D49; }
+
+.image-text-block {
+  clear: both;
+  line-height: 1.5;
+  padding: 30px 20px 30px 0; }
+  .image-text-block img {
+    width: 100%; }
+  .image-text-block h2 {
+    font-size: 24px;
+    line-height: 3; }
+  .image-text-block a {
+    line-height: 3; }
+
+.light-bg {
+  background-color: white; }
+  .light-bg a {
+    color: #009D49; }
+    .light-bg a:hover {
+      border-color: #009D49; }
+
+.medium-bg {
+  background-color: rgba(9, 65, 122, 0.1); }
+  .medium-bg a {
+    color: #009D49; }
+    .medium-bg a:hover {
+      border-color: #009D49; }
+
+.dark-bg {
+  background-color: #09417A;
+  color: white; }
+  .dark-bg a {
+    color: white; }
+    .dark-bg a:hover {
+      border-color: white; }
+
+.callout {
+  background-color: #09417A;
+  clear: both;
+  color: white;
+  font-size: 24px;
+  padding: 30px;
+  text-align: center;
+  width: 100%; }
+
+footer {
+  clear: both;
+  font-size: 12px;
+  width: 100%; }
+  footer ul li {
+    float: left; }
+
+/* GRID */
+.page-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: auto; }
+
+.one-of-two {
+  float: left;
+  width: 50%; }
+
+.one-of-three {
+  float: left;
+  width: 33%; }
+
+.two-of-three {
+  float: left;
+  width: 66%; }
+
+.one-of-four {
+  float: left;
+  width: 25%; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,8 @@ $green: #009D49;
 $light-blue: rgba(9,65,122,.1);
 $blue: #09417A;
 
+/*changes*/
+
 /* RESETS */
 
 html, body, div, span, object, iframe,
@@ -64,7 +66,8 @@ a {
 h1, .tagline {
     font-weight: 400;
     font-size: 30px;
-    line-height: 3;
+    line-height: 1.5;
+    margin: 1em 0;
     text-align: center;
 }
 
@@ -255,11 +258,17 @@ footer {
 
 /* GRID */
 
-
 .page-wrapper {
     max-width: 1024px;
     margin: 0 auto;
-    overflow: auto;
+
+    &:after { 
+       content: "."; 
+       visibility: hidden; 
+       display: block; 
+       height: 0; 
+       clear: both;
+    }
 }
 
 .one-of-two {

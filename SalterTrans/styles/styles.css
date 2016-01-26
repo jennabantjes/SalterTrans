@@ -1,4 +1,5 @@
 /* VARIABLES */
+/*changes*/
 /* RESETS */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,7 +52,8 @@ a {
 h1, .tagline {
   font-weight: 400;
   font-size: 30px;
-  line-height: 3;
+  line-height: 1.5;
+  margin: 1em 0;
   text-align: center; }
 
 h2 {
@@ -195,8 +197,13 @@ footer {
 /* GRID */
 .page-wrapper {
   max-width: 1024px;
-  margin: 0 auto;
-  overflow: auto; }
+  margin: 0 auto; }
+  .page-wrapper:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
 
 .one-of-two {
   float: left;

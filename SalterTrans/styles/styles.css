@@ -1,6 +1,11 @@
 /* VARIABLES */
 /*changes*/
 /* RESETS */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -105,20 +110,43 @@ input, select {
   vertical-align: middle; }
 
 /* STYLES */
-#resources ul {
-  text-align: right;
-  width: 100%; }
-  #resources ul li {
-    display: inline-block;
-    margin-left: 25px; }
-    #resources ul li a {
-      color: #14281D;
-      font-size: 14px;
-      font-weight: 400;
-      text-decoration: none; }
-      #resources ul li a:hover {
+header:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.logo {
+  float: left;
+  margin: 1em 0; }
+
+#resources {
+  font-size: 14px;
+  margin: 1em 0; }
+  #resources ul {
+    text-align: right;
+    width: 100%; }
+    #resources ul li {
+      display: inline-block;
+      margin-left: 25px; }
+  #resources a {
+    color: #14281D; }
+    #resources a:hover {
+      border-color: #14281D; }
+  #resources .button {
+    border: 1px solid #009D49;
+    border-radius: 50px;
+    padding: .75em 1.25em; }
+    #resources .button a {
+      color: #009D49; }
+      #resources .button a:hover {
         border-color: #009D49;
         color: #009D49; }
+
+.banner {
+  text-align: center;
+  width: 100%; }
+  .banner img {
+    width: 100%; }
 
 #services ul {
   margin-top: 30px;
@@ -137,12 +165,16 @@ input, select {
         border-color: #009D49;
         color: #009D49;
         transition: all ease-in-out 0.2s; }
-#services button, #services .button {
+
+button, .button {
   border: 1px solid #009D49;
   border-radius: 50px;
-  padding: 10px; }
-  #services button a, #services .button a {
+  padding: .75em 1.25em; }
+  button a, .button a {
     color: #009D49; }
+    button a:hover, .button a:hover {
+      border-color: #009D49;
+      color: #009D49; }
 
 .image-text-block {
   clear: both;
@@ -173,6 +205,8 @@ input, select {
 .dark-bg {
   background-color: #09417A;
   color: white; }
+  .dark-bg p {
+    color: white; }
   .dark-bg a {
     color: white; }
     .dark-bg a:hover {
@@ -192,33 +226,41 @@ footer {
   font-size: 12px;
   width: 100%; }
   footer ul li {
-    float: left; }
+    float: left;
+    list-style-type: none; }
 
 /* GRID */
+[class*='col-'] {
+  float: left; }
+
+[class*='col-'] {
+  padding-right: 20px; }
+
+[class*='col-']:last-of-type {
+  padding-right: 0; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-2-3 {
+  width: 66.66%; }
+
+.col-1-3 {
+  width: 33.33%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .page-wrapper {
   max-width: 1024px;
   margin: 0 auto; }
-  .page-wrapper:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both; }
-
-.one-of-two {
-  float: left;
-  width: 50%; }
-
-.one-of-three {
-  float: left;
-  width: 33%; }
-
-.two-of-three {
-  float: left;
-  width: 66%; }
-
-.one-of-four {
-  float: left;
-  width: 25%; }
 
 /*# sourceMappingURL=styles.css.map */

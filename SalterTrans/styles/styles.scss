@@ -169,6 +169,7 @@ button, .button {
         border: 1px solid $green;
         border-radius: 50px;
         display: inline-block;
+        font-size: 14px;
         padding: .75em 1.25em;
         a {
             color: $green;
@@ -247,7 +248,6 @@ button, .button {
 
     a {
         color: white;
-        font-size: 14px;
         font-style: none;
         font-weight: 200;
         &:hover {
@@ -374,6 +374,12 @@ footer {
     }
 }
 
+.video {
+    iframe {
+        margin-bottom: 1em;
+    }
+}
+
 /* WEDDINGS */
 
 .wedding-gallery {
@@ -487,6 +493,59 @@ label {
     }
 
     ul {
+        font-size: 14px;
+    }
+}
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 900px) {
+
+    [class*="col-"] {
+        padding: .5em;
+    }
+
+    h1, .tagline {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 866px) {
+
+    h1, .tagline {
+        font-size: 24px;
+    }
+
+    p, a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .col-1-3, .col-2-3, {
+        width: 50%;
+    }
+
+    .wedding-gallery {
+        .col-1-3 {
+            width: 33.33%;
+        }
+
+        .col-2-3 {
+            width: 66.66%;
+        }
+    }
+
+    h1, .tagline {
+        font-size: 24px;
+    }
+
+    p, a {
         font-size: 14px;
     }
 }

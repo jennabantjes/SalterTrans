@@ -392,10 +392,12 @@ label {
 
   nav.main-menu {
     background: white;
-    float: left;
-    left: -9999px;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
     position: absolute;
     top: 97px;
+    transition: max-height 0.5s;
     width: 100%; }
     nav.main-menu ul {
       text-align: left; }
@@ -416,7 +418,7 @@ label {
       margin: 0; }
 
   input#menu:checked ~ nav.main-menu {
-    left: 0; }
+    max-height: 100%; }
 
   .wedding-gallery .col-1-3 {
     width: 33.33%; }

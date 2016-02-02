@@ -228,38 +228,38 @@ footer {
   text-align: right;
   width: 100%; }
   .main-menu ul li {
+    border-bottom: 1px solid transparent;
     display: inline-block;
-    margin-left: 25px; }
-.main-menu a {
-  color: #14281D; }
-  .main-menu a:hover {
-    border-color: #14281D; }
+    line-height: 1.5;
+    margin-left: 25px;
+    color: #14281D; }
+    .main-menu ul li:hover {
+      border-color: #009D49;
+      color: #009D49;
+      transition: all .2s; }
+  .main-menu ul .quote li {
+    border: 1px solid #14281D;
+    border-radius: 50px;
+    padding: .6em 1.25em;
+    transition: border color .2s; }
+    .main-menu ul .quote li:hover {
+      border-color: #009D49;
+      color: #009D49; }
 
 #resources {
   font-size: 14px;
   margin: 1em 0; }
-  #resources .button {
-    border: 1px solid #009D49;
-    border-radius: 50px;
-    padding: .75em 1.25em; }
-    #resources .button a {
-      color: #009D49; }
-      #resources .button a:hover {
-        border-color: #009D49;
-        color: #009D49; }
 
-#services ul {
-  margin-top: 18px; }
-  #services ul li a {
-    color: #14281D;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.9;
-    text-decoration: none; }
-    #services ul li a:hover, #services ul li a.active {
-      border-bottom: 5px solid #009D49;
-      color: #009D49;
-      transition: all ease-in-out 0.2s; }
+#services a li {
+  border-bottom: 5px solid transparent;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.9;
+  text-decoration: none; }
+#services a:hover li, #services a.active li {
+  border-color: #009D49;
+  color: #009D49;
+  transition: color border 0.2s; }
 
 /* SCHOOLS */
 #routes {
@@ -290,6 +290,13 @@ label {
   float: left;
   font-size: 12px;
   margin: 1em 0 .5em 0; }
+
+#menu-label, #menu {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 3em;
+  display: none; }
 
 /* GRID */
 [class*='col-'] {
@@ -369,12 +376,6 @@ label {
 
   p, a {
     font-size: 14px; } }
-#menu-label, #menu {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  display: none; }
-
 @media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden; }
@@ -383,8 +384,16 @@ label {
     width: 50%; }
 
   #menu-label, #menu {
-    display: block;
-    width: 30px; }
+    display: block; }
+    #menu-label:hover, #menu:hover {
+      color: #009D49;
+      cursor: pointer;
+      transition: all .2s; }
+
+  #menu {
+    margin: 0;
+    opacity: 0;
+    width: 4em; }
 
   #menu-label:after {
     content: "\2261";
@@ -402,20 +411,27 @@ label {
     nav.main-menu ul {
       text-align: left; }
       nav.main-menu ul li {
-        border: #cccccc 1px solid;
+        border-top: #cccccc 1px solid;
         padding: .5em;
         margin-left: 0;
         width: 100%; }
+      nav.main-menu ul .quote li {
+        border: none;
+        border-radius: 0;
+        border-top: #cccccc 1px solid;
+        border-bottom: 1px solid transparent;
+        padding: .5em; }
+        nav.main-menu ul .quote li:hover {
+          border-color: #009D49; }
     nav.main-menu #resources {
       margin: 0; }
       nav.main-menu #resources .button {
-        border: #cccccc 1px solid;
+        border: none;
+        border-top: #cccccc 1px solid;
         border-radius: 0;
         padding: .5em; }
         nav.main-menu #resources .button a {
           color: #14281D; }
-    nav.main-menu #services ul {
-      margin: 0; }
 
   input#menu:checked ~ nav.main-menu {
     max-height: 100%; }

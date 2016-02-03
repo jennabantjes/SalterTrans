@@ -63,7 +63,7 @@ h1, .tagline {
 h2 {
   font-size: 24px;
   font-weight: 400;
-  line-height: 3; }
+  line-height: 1.5; }
 
 h3 {
   line-height: 2; }
@@ -119,6 +119,9 @@ header:after {
   display: table;
   clear: both; }
 
+img {
+  width: 100%; }
+
 .logo {
   float: left;
   margin: 1em 0; }
@@ -126,8 +129,6 @@ header:after {
 .banner {
   text-align: center;
   width: 100%; }
-  .banner img {
-    width: 100%; }
 
 button, .button {
   border: 1px solid #009D49;
@@ -145,11 +146,8 @@ button, .button {
   clear: both;
   line-height: 1.5;
   padding: 30px 20px 30px 0; }
-  .image-text-block img {
-    width: 100%; }
   .image-text-block h2 {
     font-size: 24px;
-    line-height: 1.5;
     margin-bottom: .5em;
     margin-top: 1em; }
   .image-text-block a {
@@ -189,8 +187,7 @@ button, .button {
     color: white;
     font-size: 30px;
     font-style: italic;
-    font-weight: 200;
-    line-height: 1.5; }
+    font-weight: 200; }
   .callout a {
     color: white;
     font-style: none;
@@ -275,10 +272,6 @@ footer {
 .video iframe {
   margin-bottom: 1em; }
 
-/* WEDDINGS */
-.wedding-gallery img {
-  width: 100%; }
-
 /* FORMS */
 input, textarea {
   font-family: 'Open Sans', sans-serif;
@@ -340,7 +333,7 @@ label {
 .text-wrapper {
   max-width: 700px;
   margin: 0 auto;
-  padding: .5em;
+  padding: 1em 2em;
   text-align: center; }
   .text-wrapper h1, .text-wrapper .tagline {
     text-align: center; }
@@ -366,15 +359,23 @@ label {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 960px) {
-  h1, .tagline {
+  .image-text-block h1, .image-text-block .tagline {
     font-size: 26px; }
-
-  p, a {
+  .image-text-block p, .image-text-block a {
     font-size: 16px; } }
 @media only screen and (max-width: 866px) {
-  h1, .tagline {
+  h1, .tagline, .callout h2 {
     font-size: 24px;
     margin: .75em 0; }
+
+  h2 {
+    font-size: 18px; }
+
+  p, a {
+    font-size: 16px; }
+
+  #routes li a {
+    font-size: 14px; }
 
   .image-text-block h2 {
     margin-top: .5em; } }
@@ -443,16 +444,23 @@ label {
   .wedding-gallery .col-2-3 {
     width: 66.66%; }
 
-  h1, .tagline {
+  .image-text-block h1, .image-text-block .tagline {
     font-size: 24px;
     margin-top: 0; }
-
   .image-text-block h2 {
     margin-top: 0; } }
 @media only screen and (max-width: 674px) {
-  h1 {
-    font-size: 22px; }
+  .logo {
+    width: 50%; }
 
+  .col-1-2 {
+    width: 100%; }
+
+  #routes {
+    padding-top: 0; }
+
+  .image-text-block h1 {
+    font-size: 22px; }
   .image-text-block h2 {
     font-size: 18px; }
 
@@ -470,6 +478,12 @@ label {
 
   .col-2-3 {
     padding: 1em; }
+    .col-2-3 h1 {
+      font-size: 30px; }
+
+  .wedding-gallery .col-2-3, .wedding-gallery .col-1-3, .wedding-gallery .col-1-1 {
+    padding: .5em 1em;
+    width: 100%; }
 
   .image-text-block .col-1-3 {
     max-height: 330px;
@@ -481,9 +495,6 @@ label {
     padding: 0.5em; }
 
   p, a {
-    font-size: 16px; }
-
-  h1 {
-    font-size: 30px; } }
+    font-size: 16px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -41,51 +41,51 @@
 	<main role="main">
 		<section class="text-wrapper">
 			<h1>Request a quote</h1>
-			<form class="grid">
+			<form class="grid" method="post" action="contactengine.php">
 				<h2>Write us a message:</h2>
 				<span class="col-1-2">
-					<label for="name">Name</label>
-					<input type="text" id="name" value="Name">
+					<label for="Name">Name:</label>
+					<input type="text" name="Name" id="name" autocorrect="off" autocomplete="name" required />
 				</span>
 
 				<span class="col-1-2">
-					<label for="email">Email</label>
-					<input type="email" id="email" value="Email">
+					<label for="Email">Email:</label>
+					<input type="text" name="Email" id="Email" autocapitalize="off" autocorrect="off" autocomplete="email" required />
 				</span>
 
 				<span class="col-1-1">
-					<label for="subject">Subject</label>
-					<input type="text" id="subject" value="Subject">
+					<label for="Subject">Subject:</label>
+					<input type="text" name="Subject" id="subject" required>
 				</span>
 
 				<span class="col-1-1">
-					<label for="message">Message</label>
-					<textarea id="message"></textarea>
+					<label for="Message">Message:</label><br />
+					<textarea name="Message" rows="20" cols="20" id="Message" required></textarea>
 				</span>
 
 				<span class="col-1-2">
 					<h2>Tell us who you are:</h2>
 					
-					<label for="group">Group or Organization</label>
-					<input type="text" id="group" value="Group or Organization">
+					<label for="Group">Group or Organization:</label>
+					<input type="text" name="Group" id="group">
 
-					<label for="phone">Phone number</label>
-					<input type="tel" id="phone" value="Phone number">
+					<label for="Phone">Phone number:</label>
+					<input type="tel" name="Phone" id="phone" autocorrect="off" autocomplete="tel">
 
-					<label for="address">Address</label>
-					<input type="text" id="address" value="Address">
+					<label for="Address">Address:</label>
+					<input type="text" name="Address" id="address">
 
-					<label for="city">City</label>
-					<input type="text" id="city" value="City">
+					<label for="City">City:</label>
+					<input type="text" name="City" id="city">
 
 					<span class="col-1-2">
-						<label for="state">State</label>
-						<input type="text" id="state" value="State" maxlength="2">
+						<label for="State">State:</label>
+						<input type="text" name="State" id="state" maxlength="2">
 					</span>
 
 					<span class="col-1-2">
-						<label for="zip">Zip code</label>
-						<input type="text" id="zip" value="Zip Code" maxlength="5">
+						<label for="Zip">Zip code:</label>
+						<input type="text" pattern="\d*" novalidate autocorrect="off" autocomplete="postal-code" name="Zip" id="zip" maxlength="5" minlength="5">
 					</span>
 
 				</span>
@@ -94,51 +94,52 @@
 					<h2>Tell us where you're going:</h2>
 
 					<span class="col-1-1">
-						<label for="type">Type of vehicle needed</label>
-						<select type="text" id="type">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
+						<label for="Type">Type of vehicle needed</label>
+						<select name="Type" id="type">
+							<option>Yellow School Bus</option>
+							<option>White Mini Coach Bus</option>
+						</select>
 
 						</select>
 					</span>
 				
 					<span class="col-1-1">	
-						<label for="vehicles">Number of vehicles</label>
-						<input type="number" id="vehicles" value="# of vehicles">
+						<label for="Vehicles">Number of vehicles:</label>
+						<input type="text" pattern="[0-9]*" name="Vehicles" id="vehicles">
 					</span>
 					
 					<span class="col-1-2">
-						<label for="start">Date of trip (start)</label>
-						<input type="date" id="start" value="Start date">
+						<label for="Start">Date of trip (start):</label>
+						<input type="date" name="Start" id="start">
 					</span>
 					
 					<span class="col-1-2">
-						<label for="end">Date of trip (end)</label>
-						<input type="date" id="end" value="End date">
+						<label for="End">Date of trip (end):</label>
+						<input type="date" name="End" id="end">
 					</span>
 					
 					<span class="col-1-1">
-						<label for="pickup">Pickup location</label>
-						<input type="text" id="pickup" value="Pickup location">
+						<label for="Pickup">Pickup location:</label>
+						<input type="text" name="Pickup" id="pickup">
 					</span>
 					
 					<span class="col-1-1">
-						<label for="destination">Destination</label>
-						<input type="text" id="destionation" value="Destination">
+						<label for="Destination">Destination:</label>
+						<input type="text" name="Destination" id="destionation">
 					</span>
 					
 					<span class="col-1-2">
-						<label for="depart">Depart time</label>
-						<input type="time" id="depart" value="Depart time">
+						<label for="Depart">Depart time:</label>
+						<input type="time" name="Depart" id="depart">
 					</span>
 
 					<span class="col-1-2">
-						<label for="retun">Return time</label>
-						<input type="time" id="return" value="Return time">
+						<label for="Retun">Return time:</label>
+						<input type="time" name="Return" id="return">
 					</span>
+
+					<input type="submit" name="submit" value="Submit" class="submit-button" />
+
 				</span>
 			</form>
 		</section>

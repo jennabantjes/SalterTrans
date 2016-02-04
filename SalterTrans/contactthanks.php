@@ -20,9 +20,9 @@
 		<nav class="main-menu">
 			<div id="resources">
 				<ul>
-					<a href="parent-resources.html"><li>Parent Resources</li></a>
-					<a href="about.html"><li>About Us</li></a>
-					<a href="quote.html" class="quote"><li>Request a Quote</li></a>
+					<a href="parent-resources.html"><li>Parent resources</li></a>
+					<a href="about.html"><li>About us</li></a>
+					<a href="quote.html" class="quote"><li>Get in touch</li></a>
 				</ul>
 			</div>
 			<div id="services">
@@ -43,6 +43,75 @@
 		<p><a href="index.html">Back to Homepage</a></p>
 	
 	</main>
+		<footer>
+		<section class="dark-bg primary-bg">
+			<div class="page-wrapper grid">
+				<h4>View our other services &amp; resources:
+				<nav>
+					<ul>
+						<li class="col-1-7">
+							<a href="schools.html">Schools</a>
+						</li>
+						<li class="col-1-7">
+							<a href="weddings.html">Weddings</a>
+						</li>
+						<li class="col-1-7">
+							<a href="charters.html">Charters</a>
+						</li>
+						<li class="col-1-7">
+							<a href="careers.html">Careers</a>
+						</li>
+						<li class="col-1-7">
+							<a href="parent-resources.html">Parent resources </a>
+						</li>
+						<li class="col-1-7">
+							<a href="about.html">About us</a>
+						</li>
+						<li class="col-1-7">
+							<a href="quote.html">Get in touch</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<section class="dark-bg bright-bg">
+			<div class="page-wrapper grid">
+				<h4>Contact us:</h4>
+				<ul>
+					<li class="col-1-4">
+						New Hampshire <br />
+						(800) 479-6433
+					</li>
+					<li class="col-1-4">
+						Massachusetts <br />
+						(978) 462-6433
+					</li>
+					<li class="col-1-4">
+						Fax <br />
+						(978) 462-4198
+					</li>
+					<li class="col-1-4">
+						Email <br />
+						dispatch@saltertrans.com
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="dark-bg darker-bg">
+				<div class="legal grid">
+					<div class="col-1-3">
+						Copyright 2016
+					</div>
+					<div class="col-1-3">
+						Salter Transportation Inc.
+					</div>
+					<div class="col-1-3">
+						All rights reserved.
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
 
 </body>
 

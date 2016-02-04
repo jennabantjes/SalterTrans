@@ -1,8 +1,10 @@
 /* VARIABLES */
 $grey: #14281D;
 $green: #009D49;
-$light-blue: rgba(88,111,134,.1);
-$blue: #09417A;
+$light-blue: #F1F6FC;
+$bright-blue: #D9E8FF;
+$blue: #04294D;
+$dark-blue: #031C34;
 
 /* MIXINS */
 
@@ -238,8 +240,11 @@ button, .button, input[type="submit"] {
     }
 }
 
+.bright-bg {
+    background-color: $blue;
+}
+
 .dark-bg {
-    @include gradient;
     color: white;
     p {
         color: white;
@@ -269,6 +274,14 @@ button, .button, input[type="submit"] {
     }
 }
 
+.primary-bg {
+    @include gradient;
+}
+
+.darker-bg {
+    background-color: $dark-blue;
+}
+
 .callout {
     clear: both;
     padding: 2em;
@@ -282,11 +295,11 @@ button, .button, input[type="submit"] {
 
 footer {
     clear: both;
-    font-size: 12px;
-    text-align: center;
+    font-size: 14px;
     width: 100%;
 
     ul {
+        opacity: .8;
         li {
             float: left;
             line-height: 1.75;
@@ -294,23 +307,28 @@ footer {
         }
     }
 
-    section {
-        padding: 2em 0;
-        margin-bottom: 0;
+    a {
+        font-size: 14px;
     }
+
+    section {
+        padding: 1em 0;
+    }
+
+    h4 {
+        margin-left: .5em;
+    }
+
 
     nav {
-        padding-bottom: 5em;
-    }
-
-    a {
-        text-decoration: underline;
+        float: left;
+        width: 100%;
     }
 
     .legal {
         font-weight: 100;
-        margin-top: 2em;
         opacity: .5;
+        text-align: center;
     }
 }
 
@@ -321,11 +339,14 @@ footer {
         text-align: right;
         width: 100%;
 
+        a {
+            margin-left: 2em;
+        }
+
         li {
             border-bottom: 1px solid transparent;
             display: inline-block;
             line-height: 1.5;
-            margin-left: 25px;
             color: $grey;
             
             &:hover {
@@ -429,6 +450,12 @@ label {
     display: none;
 }
 
+form {
+    h2 {
+        text-align: left;
+    }
+}
+
 /* GRID */
 
 [class*='col-'] {
@@ -463,8 +490,8 @@ label {
     width: 25%;
 }
 
-.col-1-8{
-    width: 12.5%;
+.col-1-7{
+    width: 14.2%;
 }
 
 .grid:after {
@@ -487,6 +514,10 @@ label {
 
     p, h3, h4, label {
         text-align: left;
+    }
+
+    .tagline {
+        text-align: center;
     }
 }
 
@@ -519,10 +550,6 @@ label {
 p, a {
         font-size: 16px;
     }
-
-    footer a {
-        font-size: 12px;
-    }
 }
 
 @media only screen and (max-width: 866px) {
@@ -534,7 +561,7 @@ p, a {
         font-size: 14px;
     }
 
-    .col-1-8 {
+    .col-1-7 {
         width: 25%;
     }
 }
@@ -678,7 +705,7 @@ p, a {
         width: 50%;
     }
 
-    .col-1-8 {
+    .col-1-7 {
         width: 50%;
     }
 

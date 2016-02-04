@@ -45,6 +45,11 @@ q:before, q:after {
 section {
   padding: 1em 0 2em 0; }
 
+address {
+  font-style: none; }
+  address li {
+    list-style-type: none; }
+
 a {
   line-height: 1;
   margin: 0;

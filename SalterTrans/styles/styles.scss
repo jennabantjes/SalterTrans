@@ -63,7 +63,12 @@ q:before, q:after {
     content:none;
 }
 
+section {
+    padding: 1em 0 2em 0;
+}
+
 a {
+    line-height: 1;
     margin:0;
     padding:0;
     font-size:100%;
@@ -81,13 +86,16 @@ h1, .tagline {
     font-weight: 400;
     font-size: 30px;
     line-height: 1.5;
-    margin: 1em 0;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 h2 {
     font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
+    margin-bottom: .5em;
+    text-align: center;
 }
 
 h3 {
@@ -96,10 +104,14 @@ h3 {
 
 p {
     color: $grey;
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 18px;
     font-weight: 200;
     margin-bottom: 1em;
+}
+
+.small-body-copy {
+    font-size: 16px;
 }
 
 /* change colours to suit your needs */
@@ -194,13 +206,9 @@ button, .button {
     clear: both;
     line-height: 1.5;
     padding: 30px 20px 30px 0;
-    h2 {
-        font-size: 24px;
-        margin-bottom: .5em;
-        margin-top: 1em;
-    }
-    a {
-        line-height: 1;
+
+    h1, h2 {
+        text-align: left;
     }
 }
 
@@ -281,7 +289,8 @@ footer {
     }
 
     section {
-        padding: 3em 0;
+        padding: 2em 0;
+        margin-bottom: 0;
     }
 
     nav {
@@ -294,6 +303,7 @@ footer {
 
     .legal {
         font-weight: 100;
+        margin-top: 2em;
         opacity: .5;
     }
 }
@@ -344,6 +354,8 @@ footer {
             font-size: 18px;
             font-weight: 400;
             line-height: 1.9;
+            margin-bottom: 0;
+            margin-top: 0;
             text-decoration: none;
         }
 
@@ -360,7 +372,7 @@ footer {
 /* SCHOOLS */
 
 #routes {
-    padding: 2.5em;
+    padding-left: 2.5em;
     padding-right: 0;
 
     li {
@@ -377,6 +389,12 @@ footer {
 }
 
 /* FORMS */
+
+form {
+    .col-1-1, .col-1-2 {
+        padding: 0;
+    }
+}
 
 input, textarea {
     font-family: 'Open Sans', sans-serif;
@@ -457,13 +475,12 @@ label {
     padding: 1em 2em;
     text-align: center;
 
-    h1, .tagline {
-        text-align: center;
-    }
-
     p, h3, h4 {
         text-align: left;
     }
+}
+
+.text-wrapper, .page-wrapper {
 
     &:after {
         content: "";
@@ -480,18 +497,6 @@ label {
     }
 }
 
-.subsection {
-    margin: 2em 0;
-
-    p {
-        font-size: 16px;
-    }
-
-    ul {
-        font-size: 14px;
-    }
-}
-
 /* MEDIA QUERIES */
 
 
@@ -504,26 +509,19 @@ label {
 p, a {
         font-size: 16px;
     }
+
+    footer a {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 866px) {
     h1, .tagline, .dark-bg h2 {
         font-size: 24px;
-        margin: .75em 0;
-    }
-
-    h2 {
-        font-size: 18px;
     }
 
     #routes li a {
         font-size: 14px;
-    }
-    .image-text-block {
-        
-        h2 {
-            margin-top: .5em;
-        }
     }
 
     .col-1-8 {
@@ -538,6 +536,13 @@ p, a {
 
     .col-1-3, .col-2-3, {
         width: 50%;
+    }
+
+    .legal {
+        .col-1-3 {
+            margin: 1em 0;
+            width: 100%;
+        }
     }
 
     #menu-label, #menu {
@@ -619,15 +624,6 @@ p, a {
             width: 66.66%;
         }
     }
-
-    .image-text-block {
-        h1, .tagline {
-            margin-top: 0;
-        }
-        h2 {
-            margin-top: 0;
-        }
-    }
 }
 
 @media only screen and (max-width: 674px) {
@@ -666,6 +662,10 @@ p, a {
         h1 {
             font-size: 30px;
         }
+    }
+
+    .col-1-4 {
+        width: 50%;
     }
 
     .col-1-8 {

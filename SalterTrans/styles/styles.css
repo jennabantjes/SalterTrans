@@ -42,7 +42,11 @@ q:before, q:after {
   content: '';
   content: none; }
 
+section {
+  padding: 1em 0 2em 0; }
+
 a {
+  line-height: 1;
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -58,22 +62,28 @@ h1, .tagline {
   font-weight: 400;
   font-size: 30px;
   line-height: 1.5;
-  margin: 1em 0; }
+  margin-bottom: 1em;
+  text-align: center; }
 
 h2 {
   font-size: 24px;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-bottom: .5em;
+  text-align: center; }
 
 h3 {
   line-height: 2; }
 
 p {
   color: #14281D;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 18px;
   font-weight: 200;
   margin-bottom: 1em; }
+
+.small-body-copy {
+  font-size: 16px; }
 
 /* change colours to suit your needs */
 ins {
@@ -146,12 +156,8 @@ button, .button {
   clear: both;
   line-height: 1.5;
   padding: 30px 20px 30px 0; }
-  .image-text-block h2 {
-    font-size: 24px;
-    margin-bottom: .5em;
-    margin-top: 1em; }
-  .image-text-block a {
-    line-height: 1; }
+  .image-text-block h1, .image-text-block h2 {
+    text-align: left; }
 
 .light-bg {
   background-color: white; }
@@ -217,13 +223,15 @@ footer {
     line-height: 1.75;
     list-style-type: none; }
   footer section {
-    padding: 3em 0; }
+    padding: 2em 0;
+    margin-bottom: 0; }
   footer nav {
     padding-bottom: 5em; }
   footer a {
     text-decoration: underline; }
   footer .legal {
     font-weight: 100;
+    margin-top: 2em;
     opacity: .5; }
 
 /* INDEX */
@@ -258,6 +266,8 @@ footer {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.9;
+  margin-bottom: 0;
+  margin-top: 0;
   text-decoration: none; }
 #services a:hover li, #services a.active li, #services a:focus li {
   border-color: #009D49;
@@ -266,7 +276,7 @@ footer {
 
 /* SCHOOLS */
 #routes {
-  padding: 2.5em;
+  padding-left: 2.5em;
   padding-right: 0; }
   #routes li {
     font-size: 14px;
@@ -277,6 +287,9 @@ footer {
   margin-bottom: 1em; }
 
 /* FORMS */
+form .col-1-1, form .col-1-2 {
+  padding: 0; }
+
 input, textarea {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -339,27 +352,19 @@ label {
   margin: 0 auto;
   padding: 1em 2em;
   text-align: center; }
-  .text-wrapper h1, .text-wrapper .tagline {
-    text-align: center; }
   .text-wrapper p, .text-wrapper h3, .text-wrapper h4 {
     text-align: left; }
-  .text-wrapper:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .text-wrapper li {
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 1.5;
-    margin: .5em 0;
-    text-align: left; }
 
-.subsection {
-  margin: 2em 0; }
-  .subsection p {
-    font-size: 16px; }
-  .subsection ul {
-    font-size: 14px; }
+.text-wrapper:after, .page-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+.text-wrapper li, .page-wrapper li {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.5;
+  margin: .5em 0;
+  text-align: left; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 960px) {
@@ -367,20 +372,16 @@ label {
     font-size: 26px; }
 
   p, a {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  footer a {
+    font-size: 12px; } }
 @media only screen and (max-width: 866px) {
   h1, .tagline, .dark-bg h2 {
-    font-size: 24px;
-    margin: .75em 0; }
-
-  h2 {
-    font-size: 18px; }
+    font-size: 24px; }
 
   #routes li a {
     font-size: 14px; }
-
-  .image-text-block h2 {
-    margin-top: .5em; }
 
   .col-1-8 {
     width: 25%; } }
@@ -390,6 +391,10 @@ label {
 
   .col-1-3, .col-2-3 {
     width: 50%; }
+
+  .legal .col-1-3 {
+    margin: 1em 0;
+    width: 100%; }
 
   #menu-label, #menu {
     display: block; }
@@ -447,12 +452,7 @@ label {
   .wedding-gallery .col-1-3 {
     width: 33.33%; }
   .wedding-gallery .col-2-3 {
-    width: 66.66%; }
-
-  .image-text-block h1, .image-text-block .tagline {
-    margin-top: 0; }
-  .image-text-block h2 {
-    margin-top: 0; } }
+    width: 66.66%; } }
 @media only screen and (max-width: 674px) {
   .logo {
     width: 50%; }
@@ -476,6 +476,9 @@ label {
     padding: 1em; }
     .col-2-3 h1 {
       font-size: 30px; }
+
+  .col-1-4 {
+    width: 50%; }
 
   .col-1-8 {
     width: 50%; }

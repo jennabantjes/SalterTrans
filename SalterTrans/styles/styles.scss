@@ -1,10 +1,18 @@
 /* VARIABLES */
 $grey: #14281D;
 $green: #009D49;
-$light-blue: rgba(9,65,122,.1);
+$light-blue: rgba(88,111,134,.1);
 $blue: #09417A;
 
-/*changes*/
+/* MIXINS */
+
+@mixin gradient {
+background: #09417a; /* Old browsers */
+background: -moz-linear-gradient(top, #09417a 0%, #2154A1 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #09417a 0%,#2154A1 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #09417a 0%,#2154A1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09417a', endColorstr='#2154A1',GradientType=0 ); /* IE6-9 */
+}
 
 /* RESETS */
 
@@ -217,7 +225,7 @@ button, .button {
 }
 
 .dark-bg {
-    background-color: $blue;
+    @include gradient;
     color: white;
     p {
         color: white;

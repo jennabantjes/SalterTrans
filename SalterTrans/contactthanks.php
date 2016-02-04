@@ -22,7 +22,7 @@
 				<ul>
 					<a href="parent-resources.html"><li>Parent resources</li></a>
 					<a href="about.html"><li>About us</li></a>
-					<a href="quote.html" class="quote"><li>Get in touch</li></a>
+					<a href="contact.html" class="quote"><li>Get in touch</li></a>
 				</ul>
 			</div>
 			<div id="services">
@@ -68,7 +68,7 @@
 							<a href="about.html">About us</a>
 						</li>
 						<li class="col-1-7">
-							<a href="quote.html">Get in touch</a>
+							<a href="contact.html">Get in touch</a>
 						</li>
 					</ul>
 				</nav>

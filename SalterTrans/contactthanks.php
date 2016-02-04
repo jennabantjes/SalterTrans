@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
 
+<html>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -22,7 +24,7 @@
 				<ul>
 					<a href="parent-resources.html"><li>Parent resources</li></a>
 					<a href="about.html"><li>About us</li></a>
-					<a href="contact.html" class="quote"><li>Get in touch</li></a>
+					<a href="quote.html" class="quote"><li>Get in touch</li></a>
 				</ul>
 			</div>
 			<div id="services">
@@ -43,7 +45,7 @@
 		<p><a href="index.html">Back to Homepage</a></p>
 	
 	</main>
-		<footer>
+<footer>
 		<section class="dark-bg primary-bg">
 			<div class="page-wrapper grid">
 				<h4>View our other services &amp; resources:
@@ -68,7 +70,7 @@
 							<a href="about.html">About us</a>
 						</li>
 						<li class="col-1-7">
-							<a href="contact.html">Get in touch</a>
+							<a href="quote.html">Get in touch</a>
 						</li>
 					</ul>
 				</nav>

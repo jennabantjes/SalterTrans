@@ -259,7 +259,7 @@ footer {
   text-align: right;
   width: 100%; }
   .main-menu ul a {
-    margin-left: 2em; }
+    margin-left: 1.25em; }
   .main-menu ul li {
     border-bottom: 1px solid transparent;
     display: inline-block;
@@ -294,6 +294,10 @@ footer {
   border-color: #009D49;
   color: #009D49;
   transition: color border 0.2s; }
+
+/* CONTACT */
+.contact img {
+  max-width: 300px; }
 
 /* SCHOOLS */
 #routes {
@@ -334,7 +338,8 @@ label {
   position: absolute;
   top: 0;
   right: 3em;
-  display: none; }
+  display: none;
+  width: auto; }
 
 form h2 {
   text-align: left; }
@@ -454,7 +459,7 @@ form h2 {
       nav.main-menu ul li {
         border-top: #cccccc 1px solid;
         padding: .5em;
-        margin-left: 0;
+        margin: 0;
         width: 100%; }
       nav.main-menu ul .quote li {
         border: none;
@@ -464,6 +469,8 @@ form h2 {
         padding: .5em; }
         nav.main-menu ul .quote li:hover {
           border-color: #009D49; }
+    nav.main-menu a {
+      margin-left: 0; }
     nav.main-menu #resources {
       margin: 0; }
       nav.main-menu #resources .button {

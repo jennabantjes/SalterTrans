@@ -347,7 +347,7 @@ footer {
         width: 100%;
 
         a {
-            margin-left: 2em;
+            margin-left: 1.25em;
         }
 
         li {
@@ -403,6 +403,14 @@ footer {
     }
 }
 
+/* CONTACT */
+.contact {
+
+    img {
+        max-width: 300px;
+    }
+}
+
 /* SCHOOLS */
 
 #routes {
@@ -455,6 +463,7 @@ label {
     top: 0;
     right: 3em;
     display: none;
+    width: auto;
 }
 
 form {
@@ -624,7 +633,7 @@ p, a {
             li {
                 border-top: #cccccc 1px solid;
                 padding: .5em;
-                margin-left: 0;
+                margin: 0;
                 width: 100%;
             }
             .quote li {
@@ -638,6 +647,10 @@ p, a {
                     border-color: $green;
                 }
             }
+        }
+
+        a {
+            margin-left: 0;
         }
 
         #resources {

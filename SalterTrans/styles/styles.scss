@@ -186,9 +186,11 @@ img {
     width: 100%;
 }
 
-button, .button {
+button, .button, input[type="submit"] {
+        background: transparent;
         border: 1px solid $green;
         border-radius: 50px;
+        color: $green;
         display: inline-block;
         font-size: 14px;
         padding: .75em 1.25em;
@@ -198,6 +200,10 @@ button, .button {
                 border-color: $green;
                 color: $green;
             }
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -390,25 +396,29 @@ footer {
 
 /* FORMS */
 
-form {
-    .col-1-1, .col-1-2 {
-        padding: 0;
-    }
-}
-
-input, textarea {
+input, textarea, select {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 2px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     height: 3em;
     margin-bottom: 1em;
     padding: .5em;
     width: 100%;
+
+    &:focus {
+        background: white;
+        border: 1px solid $green;
+        outline: 0;
+    }
 }
 
 label {
     float: left;
     font-size: 12px;
-    margin: 1em 0 .5em 0;
+    margin-bottom: .5em;
+    width: 100%;
 }
 
 #menu-label, #menu {
@@ -475,7 +485,7 @@ label {
     padding: 1em 2em;
     text-align: center;
 
-    p, h3, h4 {
+    p, h3, h4, label {
         text-align: left;
     }
 }

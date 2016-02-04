@@ -140,17 +140,21 @@ img {
   text-align: center;
   width: 100%; }
 
-button, .button {
+button, .button, input[type="submit"] {
+  background: transparent;
   border: 1px solid #009D49;
   border-radius: 50px;
+  color: #009D49;
   display: inline-block;
   font-size: 14px;
   padding: .75em 1.25em; }
-  button a, .button a {
+  button a, .button a, input[type="submit"] a {
     color: #009D49; }
-    button a:hover, .button a:hover {
+    button a:hover, .button a:hover, input[type="submit"] a:hover {
       border-color: #009D49;
       color: #009D49; }
+  button:hover, .button:hover, input[type="submit"]:hover {
+    cursor: pointer; }
 
 .image-text-block {
   clear: both;
@@ -287,21 +291,26 @@ footer {
   margin-bottom: 1em; }
 
 /* FORMS */
-form .col-1-1, form .col-1-2 {
-  padding: 0; }
-
-input, textarea {
+input, textarea, select {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 2px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   height: 3em;
   margin-bottom: 1em;
   padding: .5em;
   width: 100%; }
+  input:focus, textarea:focus, select:focus {
+    background: white;
+    border: 1px solid #009D49;
+    outline: 0; }
 
 label {
   float: left;
   font-size: 12px;
-  margin: 1em 0 .5em 0; }
+  margin-bottom: .5em;
+  width: 100%; }
 
 #menu-label, #menu {
   font-size: 18px;
@@ -352,7 +361,7 @@ label {
   margin: 0 auto;
   padding: 1em 2em;
   text-align: center; }
-  .text-wrapper p, .text-wrapper h3, .text-wrapper h4 {
+  .text-wrapper p, .text-wrapper h3, .text-wrapper h4, .text-wrapper label {
     text-align: left; }
 
 .text-wrapper:after, .page-wrapper:after {

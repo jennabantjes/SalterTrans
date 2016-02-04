@@ -181,33 +181,28 @@ button, .button {
   color: white; }
   .dark-bg p {
     color: white; }
-  .dark-bg a {
-    color: white; }
-    .dark-bg a:hover {
-      border-color: white; }
-
-.callout {
-  background-color: #09417A;
-  clear: both;
-  padding: 2em;
-  text-align: center;
-  width: 100%; }
-  .callout h2 {
+  .dark-bg h2 {
     color: white;
     font-size: 30px;
     font-style: italic;
     font-weight: 200; }
-  .callout a {
+  .dark-bg a {
     color: white;
     font-style: none;
     font-weight: 200; }
-    .callout a:hover {
+    .dark-bg a:hover {
       border-color: white;
       color: white; }
-  .callout .button {
+  .dark-bg .button {
     border-color: white;
     color: white;
     margin-top: 1em; }
+
+.callout {
+  clear: both;
+  padding: 2em;
+  text-align: center;
+  width: 100%; }
 
 .indented {
   margin-left: 2em; }
@@ -368,26 +363,27 @@ label {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 960px) {
-  .image-text-block h1, .image-text-block .tagline {
+  h1, .tagline {
     font-size: 26px; }
-  .image-text-block p, .image-text-block a {
+
+  p, a {
     font-size: 16px; } }
 @media only screen and (max-width: 866px) {
-  h1, .tagline, .callout h2 {
+  h1, .tagline, .dark-bg h2 {
     font-size: 24px;
     margin: .75em 0; }
 
   h2 {
     font-size: 18px; }
 
-  p, a {
-    font-size: 16px; }
-
   #routes li a {
     font-size: 14px; }
 
   .image-text-block h2 {
-    margin-top: .5em; } }
+    margin-top: .5em; }
+
+  .col-1-8 {
+    width: 25%; } }
 @media only screen and (max-width: 774px) {
   body {
     overflow-x: hidden; }
@@ -454,7 +450,6 @@ label {
     width: 66.66%; }
 
   .image-text-block h1, .image-text-block .tagline {
-    font-size: 24px;
     margin-top: 0; }
   .image-text-block h2 {
     margin-top: 0; } }
@@ -466,15 +461,7 @@ label {
     width: 100%; }
 
   #routes {
-    padding-top: 0; }
-
-  .image-text-block h1 {
-    font-size: 22px; }
-  .image-text-block h2 {
-    font-size: 18px; }
-
-  p, a {
-    font-size: 14px; } }
+    padding-top: 0; } }
 @media only screen and (max-width: 600px) {
   [class*='col-'].float-right {
     float: left; }
@@ -490,6 +477,9 @@ label {
     .col-2-3 h1 {
       font-size: 30px; }
 
+  .col-1-8 {
+    width: 50%; }
+
   .wedding-gallery .col-2-3, .wedding-gallery .col-1-3, .wedding-gallery .col-1-1 {
     padding: .5em 1em;
     width: 100%; }
@@ -501,9 +491,6 @@ label {
     font-size: 24px; }
 
   header.page-wrapper {
-    padding: 0.5em; }
-
-  p, a {
-    font-size: 16px; } }
+    padding: 0.5em; } }
 
 /*# sourceMappingURL=styles.css.map */

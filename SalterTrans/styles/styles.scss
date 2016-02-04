@@ -230,20 +230,6 @@ button, .button {
     p {
         color: white;
     }
-    a {
-        color: white;
-        &:hover {
-            border-color: white;
-        }
-    }
-}
-
-.callout {
-    background-color: $blue;
-    clear: both;
-    padding: 2em;
-    text-align: center;
-    width: 100%;
 
     h2 {
         color: white;
@@ -267,6 +253,13 @@ button, .button {
         color: white;
         margin-top: 1em;
     }
+}
+
+.callout {
+    clear: both;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
 }
 
 .indented {
@@ -504,41 +497,37 @@ label {
 
 @media only screen and (max-width: 960px) {
 
-    .image-text-block {
-        h1, .tagline {
-            font-size: 26px;
-        }
-
-    p, a {
-            font-size: 16px;
-        }
+    h1, .tagline {
+        font-size: 26px;
     }
 
-
+p, a {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 866px) {
-        h1, .tagline, .callout h2 {
-            font-size: 24px;
-            margin: .75em 0;
-        }
+    h1, .tagline, .dark-bg h2 {
+        font-size: 24px;
+        margin: .75em 0;
+    }
 
-        h2 {
-            font-size: 18px;
-        }
+    h2 {
+        font-size: 18px;
+    }
 
-        p, a {
-            font-size: 16px;
-        }
-
-        #routes li a {
-            font-size: 14px;
-        }
+    #routes li a {
+        font-size: 14px;
+    }
     .image-text-block {
         
         h2 {
             margin-top: .5em;
         }
+    }
+
+    .col-1-8 {
+        width: 25%;
     }
 }
 
@@ -633,7 +622,6 @@ label {
 
     .image-text-block {
         h1, .tagline {
-            font-size: 24px;
             margin-top: 0;
         }
         h2 {
@@ -654,19 +642,6 @@ label {
 
     #routes {
         padding-top: 0;
-    }
-    
-    .image-text-block {
-        h1 {
-            font-size: 22px;
-        }
-        h2 {
-            font-size: 18px;
-        }
-    }
-
-    p, a {
-        font-size: 14px;
     }
 }
 
@@ -693,6 +668,10 @@ label {
         }
     }
 
+    .col-1-8 {
+        width: 50%;
+    }
+
     .wedding-gallery {
         .col-2-3, .col-1-3, .col-1-1 {
             padding: .5em 1em;
@@ -713,10 +692,6 @@ label {
 
     header.page-wrapper {
         padding: 0.5em;
-    }
-
-    p, a {
-        font-size: 16px;
     }
 }
 

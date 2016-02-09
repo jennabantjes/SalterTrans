@@ -77,7 +77,7 @@ address {
 }
 
 a {
-    line-height: 1;
+    line-height: 1.5;
     margin:0;
     padding:0;
     font-size:100%;
@@ -458,10 +458,10 @@ label {
 }
 
 #menu-label, #menu {
-    font-size: 18px;
+    font-size: 14px;
     position: absolute;
-    top: 0;
-    right: 3em;
+    top: 2em;
+    right: 1em;
     display: none;
     width: auto;
 }
@@ -558,6 +558,9 @@ form {
 
 
 @media only screen and (max-width: 960px) {
+    body {
+        overflow-x: hidden;
+    }
 
     h1, .tagline {
         font-size: 26px;
@@ -583,12 +586,20 @@ p, a {
 }
 
 @media only screen and (max-width: 774px) {
-    body {
-        overflow-x: hidden; 
-    }
 
     .col-1-3, .col-2-3, {
         width: 50%;
+    }
+
+    .banner {
+        min-height: 125px;
+        overflow-x: hidden;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
     }
 
     .legal {
@@ -599,6 +610,7 @@ p, a {
     }
 
     #menu-label, #menu {
+        color: $green;  
         display: block;
         &:hover {
             color: $green;
@@ -613,18 +625,14 @@ p, a {
         width: 4em;
     }
 
-    #menu-label:after {
-        content: "\2261";
-        font-size: 36px;
-    }
-
     nav.main-menu {
         background: white;
+        box-shadow: 0 1px 3px #595959;
         left: 0;
         max-height: 0;
         overflow: hidden;
         position: absolute;
-        top: 97px;
+        top: 75px;
         transition: max-height 0.5s;
         width: 100%;
 
@@ -714,8 +722,6 @@ p, a {
     }
 
     .col-2-3 {
-        padding: 1em;
-
         h1 {
             font-size: 30px;
         }
@@ -742,12 +748,16 @@ p, a {
             overflow: hidden;
         }
 
+        .col-2-3 {
+            padding: 1em;
+        }
+
         h2 {
             font-size: 24px;
         }
     }
 
-    header.page-wrapper {
+    header.page-wrapper, footer .page-wrapper {
         padding: 0.5em;
     }
 }

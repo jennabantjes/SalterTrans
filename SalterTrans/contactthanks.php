@@ -25,7 +25,7 @@
 				<ul>
 					<a href="parent-resources.html"><li>Parent resources</li></a>
 					<a href="about.html"><li>About us</li></a>
-					<a href="quote.html" class="quote"><li>Get in touch</li></a>
+					<a href="#" class="quote"><li>Get in touch</li></a>
 				</ul>
 			</div>
 			<div id="services">

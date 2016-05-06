@@ -39,12 +39,15 @@
 		</nav>
 	</header>
 
-	<main class="page-wrapper">
-		
-		<h1>Your message has been sent!</h1><br />
-		
-		<p><a href="index.html">Back to Homepage</a></p>
-	
+	<main role="main">
+		<section class="medium-bg">
+			<div class="page-wrapper">
+				<h1>Your message has been sent!</h1><br />
+				
+				<a href="index.html"><h2>Return to the homepage </h2> <br /> </a>
+				<img src="images/schoolbusinautumn.jpg" alt="School bus driving down a road surrounded by fall leaves." />
+			</div>
+		<section>
 	</main>
 <footer>
 		<section class="dark-bg primary-bg">

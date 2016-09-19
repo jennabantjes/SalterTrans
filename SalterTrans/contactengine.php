@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "SalterTrans.com";
-$EmailTo = "Maryannk@saltertrans.com, smith@saltertrans.com";
+$EmailTo = "Maryannk@saltertrans.com, smith@saltertrans.com, jennabantjes@gmail.com";
 $Subject = Trim(stripslashes($_POST['Subject']));
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
@@ -27,6 +27,21 @@ if (!$validationOK) {
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
   exit;
 }
+
+$SpamErrorMessage = "No website URLs permitted.";
+
+if (preg_match("/http/i", "$Name")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Subject")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Email")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Message")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Group")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Address")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$City")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$State")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Zip")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Vehicles")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Pickup")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Destination")) {echo "$SpamErrorMessage"; exit();}
 
 // prepare email body text
 $Body = "";

@@ -299,6 +299,9 @@ footer {
 .contact img {
   max-width: 300px; }
 
+#contact-submit {
+  width: 100%; }
+
 /* SCHOOLS */
 #routes {
   padding-left: 2.5em;
@@ -319,7 +322,6 @@ input, textarea, select {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   height: 3em;
-  margin-bottom: 1em;
   padding: .5em;
   width: 100%; }
   input:focus, textarea:focus, select:focus {
@@ -343,6 +345,9 @@ label {
 
 form h2 {
   text-align: left; }
+
+.label {
+  line-height: 3; }
 
 /* GRID */
 [class*='col-'] {

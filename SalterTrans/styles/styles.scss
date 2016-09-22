@@ -458,6 +458,10 @@ label {
     font-size: 12px;
     margin-bottom: .5em;
     width: 100%;
+
+    input, textarea, select {
+        margin-top: .5em;
+    }
 }
 
 #menu-label, #menu {
@@ -471,6 +475,7 @@ label {
 
 form {
     h2 {
+        margin-bottom: 0;
         text-align: left;
     }
 }

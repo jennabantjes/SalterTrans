@@ -334,6 +334,8 @@ label {
   font-size: 12px;
   margin-bottom: .5em;
   width: 100%; }
+  label input, label textarea, label select {
+    margin-top: .5em; }
 
 #menu-label, #menu {
   font-size: 14px;
@@ -344,6 +346,7 @@ label {
   width: auto; }
 
 form h2 {
+  margin-bottom: 0;
   text-align: left; }
 
 .label {

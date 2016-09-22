@@ -1,7 +1,7 @@
 <?php
 
-$EmailFrom = "SalterTrans.com";
-$EmailTo = "Maryannk@saltertrans.com, smith@saltertrans.com, jennabantjes@gmail.com";
+$EmailFrom = 'SalterTrans.com';
+$EmailTo = 'Maryannk@saltertrans.com, smith@saltertrans.com, jennabantjes@gmail.com';
 $Subject = Trim(stripslashes($_POST['Subject']));
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
@@ -100,14 +100,23 @@ $Body .= "Return: ";
 $Body .= $Return;
 $Body .= "\n";
 
-// send email 
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+// check to see if fields are empty
+if (trim($value) !== '') {
+	    // the string wasn't empty
+	    // after calling trim()
 
-// redirect to success page 
-if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
-}
+		// send email 
+		$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+
+		// redirect to success page 
+		if ($success){
+		  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
+		}
+		else{
+		  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.php\">";
+		}
+	}
 else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.php\">";
 }
 ?>

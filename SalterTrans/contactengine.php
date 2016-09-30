@@ -1,27 +1,31 @@
 <?php
 
 $EmailFrom = 'SalterTrans.com';
-$EmailTo = 'Maryannk@saltertrans.com, smith@saltertrans.com, jennabantjes@gmail.com';
-$Subject = Trim(stripslashes($_POST['Subject']));
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message']));
-$Group = Trim(stripslashes($_POST['Group']));
-$Phone = Trim(stripslashes($_POST['Phone']));
-$Address = Trim(stripslashes($_POST['Address']));
-$City = Trim(stripslashes($_POST['City']));
-$State = Trim(stripslashes($_POST['State']));
-$Zip = Trim(stripslashes($_POST['Zip']));
-$Type = Trim(stripslashes($_POST['Type']));
-$Vehicles = Trim(stripslashes($_POST['Vehicles']));
-$Start = Trim(stripslashes($_POST['Start']));
-$End = Trim(stripslashes($_POST['End']));
-$Pickup = Trim(stripslashes($_POST['Pickup']));
-$Destination = Trim(stripslashes($_POST['Destination']));
-$Depart = Trim(stripslashes($_POST['Depart']));
-$Return = Trim(stripslashes($_POST['Return']));
+$EmailTo = 'jennabantjes@gmail.com';
+$Subject = trim(stripslashes($_POST['Subject']));
+$Name = trim(stripslashes($_POST['Name']));
+$Email = trim(stripslashes($_POST['Email'])); 
+$Message = trim(stripslashes($_POST['Message']));
+$Group = trim(stripslashes($_POST['Group']));
+$Phone = trim(stripslashes($_POST['Phone']));
+$Address = trim(stripslashes($_POST['Address']));
+$City = trim(stripslashes($_POST['City']));
+$State = trim(stripslashes($_POST['State']));
+$Zip = trim(stripslashes($_POST['Zip']));
+$Type = trim(stripslashes($_POST['Type']));
+$Vehicles = trim(stripslashes($_POST['Vehicles']));
+$Start = trim(stripslashes($_POST['Start']));
+$End = trim(stripslashes($_POST['End']));
+$Pickup = trim(stripslashes($_POST['Pickup']));
+$Destination = trim(stripslashes($_POST['Destination']));
+$Depart = trim(stripslashes($_POST['Depart']));
+$Return = trim(stripslashes($_POST['Return']));
 
-// validation
+// check to see if fields are empty
+
+
+
+// check to see if URLs have been injected
 $validationOK=true;
 if (!$validationOK) {
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
@@ -43,80 +47,74 @@ if (preg_match("/http/i", "$Vehicles")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Pickup")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Destination")) {echo "$SpamErrorMessage"; exit();}
 
+function clean_string($string) {
+	  $bad = array("content-type","bcc:","to:","cc:","href");
+	  return str_replace($bad,"",$string);
+	}
+
 // prepare email body text
-$Body = "";
-$Body .= "Name: ";
-$Body .= $Name;
-$Body .= "\n";
-$Body .= "Email: ";
-$Body .= $Email;
-$Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $Subject;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $Message;
-$Body .= "\n";
-$Body .= "Group: ";
-$Body .= $Group;
-$Body .= "\n";
-$Body .= "Phone: ";
-$Body .= $Phone;
-$Body .= "\n";
-$Body .= "Address: ";
-$Body .= $Address;
-$Body .= "\n";
-$Body .= "City: ";
-$Body .= $City;
-$Body .= "\n";
-$Body .= "State: ";
-$Body .= $State;
-$Body .= "\n";
-$Body .= "Zip: ";
-$Body .= $Zip;
-$Body .= "\n";
-$Body .= "Type: ";
-$Body .= $Type;
-$Body .= "\n";
-$Body .= "Vehicles: ";
-$Body .= $Vehicles;
-$Body .= "\n";
-$Body .= "Start: ";
-$Body .= $Start;
-$Body .= "\n";
-$Body .= "End: ";
-$Body .= $End;
-$Body .= "\n";
-$Body .= "Pickup: ";
-$Body .= $Pickup;
-$Body .= "\n";
-$Body .= "Destination: ";
-$Body .= $Destination;
-$Body .= "\n";
-$Body .= "Depart: ";
-$Body .= $Depart;
-$Body .= "\n";
-$Body .= "Return: ";
-$Body .= $Return;
-$Body .= "\n";
+$EmailBody .= "Name: ".($Name)."\n";
+$EmailBody .= "Email: ".($Email)."\n";
+$EmailBody .= "Subject: ".($Subject)."\n";
+$EmailBody .= "Message: ".($Message)."\n";
 
-// check to see if fields are empty
-if (trim($value) !== '') {
-	    // the string wasn't empty
-	    // after calling trim()
-
-	// send email 
-	$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
-
-	// redirect to success page 
-	if ($success){
-	  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
-	}
-	else{
-	  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.php\">";
-	}
+// check to see if optional fields are populated and if so, put into email body
+if(isset($Group)&&$Group!=''){
+	$EmailBody .= "Group: ".($Group)."\n";
 }
-else{
+if(isset($Phone)&&$Phone!=''){
+	$EmailBody .= "Phone: ".($Phone)."\n";
+}
+if(isset($Address)&&$Address!=''){
+	$EmailBody .= "Address: ".($Address)."\n";
+}
+if(isset($City)&&$City!=''){
+	$EmailBody .= "City: ".($City)."\n";
+}
+if(isset($State)&&$State!=''){
+	$EmailBody .= "State: ".($State)."\n";
+}
+if(isset($Zip)&&$Zip!=''){
+	$EmailBody .= "Zip: ".($Zip)."\n";
+}
+if(isset($Type)&&$Type!=''){
+	$EmailBody .= "Type: ".($Type)."\n";
+}
+if(isset($Vehicles)&&$Vehicles!=''){
+	$EmailBody .= "Vehicles: ".($Vehicles)."\n";
+}
+if(isset($Start)&&$Start!=''){
+	$EmailBody .= "Start: ".($Start)."\n";
+}
+if(isset($End)&&$End!=''){
+	$EmailBody .= "End: ".($End)."\n";
+}
+if(isset($Pickup)&&$Pickup!=''){
+	$EmailBody .= "Pickup: ".($Pickup)."\n";
+}
+if(isset($Destination)&&$Destination!=''){
+	$EmailBody .= "Destination: ".($Destination)."\n";
+}
+if(isset($Depart)&&$Depart!=''){
+	$EmailBody .= "Depart: ".($Depart)."\n";
+}
+if(isset($Return)&&$Return!=''){
+	$EmailBody .= "Return: ".($Return)."\n";
+}
+
+
+
+// if ($req == '1'){
+// send email 
+$success = mail($EmailTo, $Subject, $EmailBody, "From: <$EmailFrom>");
+
+// redirect to success page 
+if ($success){
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
+}
+// }
+
+else {
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.php\">";
 }
 ?>

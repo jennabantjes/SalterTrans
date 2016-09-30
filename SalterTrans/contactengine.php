@@ -1,5 +1,13 @@
 <?php
 
+if (isset($_POST['SpamButton'])) {
+    echo "No spam allowed."; exit ();
+} 
+
+else {
+//assume btnSubmit
+
+// Pull in info from form
 $EmailFrom = 'SalterTrans.com';
 $EmailTo = 'jennabantjes@gmail.com';
 $Subject = trim(stripslashes($_POST['Subject']));
@@ -21,17 +29,14 @@ $Destination = trim(stripslashes($_POST['Destination']));
 $Depart = trim(stripslashes($_POST['Depart']));
 $Return = trim(stripslashes($_POST['Return']));
 
-// check to see if fields are empty
-
-
-
-// check to see if URLs have been injected
+// Check to see if URLs have been injected
 $validationOK=true;
 if (!$validationOK) {
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
   exit;
 }
 
+// Check to see if URLs have been injected 
 $SpamErrorMessage = "No website URLs permitted.";
 
 if (preg_match("/http/i", "$Name")) {echo "$SpamErrorMessage"; exit();}
@@ -39,26 +44,28 @@ if (preg_match("/http/i", "$Subject")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Email")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Message")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Group")) {echo "$SpamErrorMessage"; exit();}
+if (preg_match("/http/i", "$Phone")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Address")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$City")) {echo "$SpamErrorMessage"; exit();}
-if (preg_match("/http/i", "$State")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Zip")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Vehicles")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Pickup")) {echo "$SpamErrorMessage"; exit();}
 if (preg_match("/http/i", "$Destination")) {echo "$SpamErrorMessage"; exit();}
+
+// Check to see if emails have been injected
 
 function clean_string($string) {
 	  $bad = array("content-type","bcc:","to:","cc:","href");
 	  return str_replace($bad,"",$string);
 	}
 
-// prepare email body text
+// Prepare email body text
 $EmailBody .= "Name: ".($Name)."\n";
 $EmailBody .= "Email: ".($Email)."\n";
 $EmailBody .= "Subject: ".($Subject)."\n";
 $EmailBody .= "Message: ".($Message)."\n";
 
-// check to see if optional fields are populated and if so, put into email body
+// Check to see if optional fields are populated and if so, put into email body
 if(isset($Group)&&$Group!=''){
 	$EmailBody .= "Group: ".($Group)."\n";
 }
@@ -102,19 +109,16 @@ if(isset($Return)&&$Return!=''){
 	$EmailBody .= "Return: ".($Return)."\n";
 }
 
-
-
-// if ($req == '1'){
-// send email 
+// Send email 
 $success = mail($EmailTo, $Subject, $EmailBody, "From: <$EmailFrom>");
 
-// redirect to success page 
+// Redirect to success page 
 if ($success){
   print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
 }
-// }
 
 else {
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.php\">";
+}
 }
 ?>

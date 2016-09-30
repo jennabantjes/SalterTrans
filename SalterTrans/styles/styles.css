@@ -126,9 +126,6 @@ hr {
 input, select {
   vertical-align: middle; }
 
-option:first {
-  color: #999; }
-
 /* STYLES */
 header.page-wrapper {
   padding-bottom: 0; }
@@ -163,6 +160,10 @@ button, .button, input[type="submit"] {
       color: #009D49; }
   button:hover, .button:hover, input[type="submit"]:hover {
     cursor: pointer; }
+
+.spam-button {
+  position: absolute;
+  left: -9999px; }
 
 .image-text-block {
   clear: both;

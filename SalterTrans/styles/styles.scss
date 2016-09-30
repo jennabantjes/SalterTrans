@@ -166,10 +166,6 @@ input, select {
     vertical-align:middle;
 }
 
-option:first {
-    color: #999;
-}
-
 /* STYLES */
 
 header{
@@ -219,7 +215,10 @@ button, .button, input[type="submit"] {
             cursor: pointer;
         }
     }
-
+.spam-button {
+    position: absolute;
+    left: -9999px;
+}
 
 .image-text-block {
     clear: both;

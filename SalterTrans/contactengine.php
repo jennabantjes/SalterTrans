@@ -9,7 +9,7 @@ else {
 
 // Pull in info from form
 $EmailFrom = 'SalterTrans.com';
-$EmailTo = 'jennabantjes@gmail.com';
+$EmailTo = 'MaryannK@saltertrans.com, smith@saltertrans.com';
 $Subject = trim(stripslashes($_POST['Subject']));
 $Name = trim(stripslashes($_POST['Name']));
 $Email = trim(stripslashes($_POST['Email'])); 

@@ -218,6 +218,7 @@ button, .button, input[type="submit"] {
 .spam-button {
     position: absolute;
     left: -9999px;
+    visibility: hidden;
 }
 
 .image-text-block {

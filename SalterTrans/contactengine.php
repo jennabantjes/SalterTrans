@@ -52,14 +52,14 @@ else {
 	if (preg_match("/(http|www)/i", "$Subject")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$Email")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$Message")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Group")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Phone")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Address")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$City")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Zip")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Vehicles")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www|)/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Group")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Phone")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Address")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$City")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Zip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Vehicles")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
 
 	// Check to see if emails have been injected
 

@@ -29,6 +29,15 @@ else {
 	$Depart = trim(stripslashes($_POST['Depart']));
 	$Return = trim(stripslashes($_POST['Return']));
 
+	// Check to see if form field are spaces
+	$SpamBlankMessage = "No blank spaces permitted.";
+
+	if(empty($Name)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($Subject)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($Email)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($Message)) {echo "$SpamBlankMessage"; exit();}
+
+
 	// Check to see if URLs have been injected
 	$validationOK=true;
 	if (!$validationOK) {
@@ -39,26 +48,18 @@ else {
 	// Check to see if URLs have been injected 
 	$SpamURLMessage = "No website URLs permitted.";
 
-	if (preg_match("/http/i", "$Name")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Subject")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Email")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Message")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Group")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Phone")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Address")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$City")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Zip")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Vehicles")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/http/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
-
-	// Check to see if URLs have been injected 
-	$SpamBlankMessage = "Form cannot be filled in with blank spaces.";
-
-	if (preg_match(" ", "$Name")) {echo "$SpamBlankMessage"; exit();}
-	if (preg_match(" ", "$Subject")) {echo "$SpamBlankMessage"; exit();}
-	if (preg_match(" ", "$Email")) {echo "$SpamBlankMessage"; exit();}
-	if (preg_match(" ", "$Message")) {echo "$SpamBlankMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Name")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Subject")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Email")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$Message")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Group")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Phone")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Address")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$City")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Zip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Vehicles")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www|)/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
 
 	// Check to see if emails have been injected
 

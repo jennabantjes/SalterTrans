@@ -333,6 +333,9 @@ input, textarea, select {
     border: 1px solid #009D49;
     outline: 0; }
 
+option:first {
+  color: #999; }
+
 label {
   float: left;
   font-size: 12px;

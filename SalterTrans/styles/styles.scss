@@ -456,6 +456,10 @@ input, textarea, select {
     }
 }
 
+option:first {
+    color: #999;
+}
+
 label {
     float: left;
     font-size: 12px;

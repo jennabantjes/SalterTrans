@@ -61,8 +61,25 @@ else {
 	if (preg_match("/(http|www)/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
 
+	// Check to see if scripts have been embedded.
 
-	// Patterm match search to strip out the invalid charcaters, this prevents the mail injection spammer 
+	$ScriptAlertMessage = "No scripts permitted.";
+
+	if (preg_match("/script/i", "$Name")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Subject")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Email")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Message")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Group")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Phone")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Address")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$City")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Zip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Vehicles")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Pickup")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$Destination")) {echo "$ScriptAlertMessage"; exit();}
+
+
+	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
 	$pattern = '/(;|\||`|>|<|&|^|"|'."\n|\r|'".'|{|}|[|]|\)|\()/i'; // build the pattern match string 
 
 	$Subject = preg_replace($pattern, "", $Subject);

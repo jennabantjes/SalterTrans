@@ -215,6 +215,11 @@ button, .button, input[type="submit"] {
             cursor: pointer;
         }
     }
+
+.hide {
+  display: none;
+}
+
 .spam-button {
     position: absolute;
     left: -9999px;

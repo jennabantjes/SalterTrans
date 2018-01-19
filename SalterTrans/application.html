@@ -82,13 +82,14 @@
 
 					<span class="col-1-1">
 						<h3>Have you lived at a different address during the past 7 years?</h3>
-							<input type="radio" name="addresslength" id="addressyes" value="yes">
+							<input type="radio" name="addresslength" value="yes" id="addressyes" onclick="show1();">
 							<label for="addressyes">Yes</label>
-							<input type="radio" name="addressno" id="addressno" value="no">
+							<input type="radio" name="addresslength" value="no" id="addressno" onclick="show2();">
 							<label for="addressno">No</label>
 					</span>
 
-				<div id="previous-addresses">
+				<div id="previous-addresses" class="hide">
+
 					<span class="col-1-1">
 						<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
 					</span>
@@ -120,7 +121,7 @@
 					</span>
 
 					<span class="col-1-1">
-						<a href="#">Add another address</a>
+						<a onclick="anotheraddress();">Add another address</a>
 					</span>
 				</div>
 
@@ -220,6 +221,18 @@
 				</div>
 			</section>
 		</footer>
+
+	<script type="text/javascript">
+
+		function show1(){
+		  document.getElementById('previous-addresses').style.display = 'block';
+		}
+		function show2(){
+		  document.getElementById('previous-addresses').style.display ='none';
+		}
+
+	</script>
+
 
 	</body>
 

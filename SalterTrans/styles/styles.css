@@ -161,6 +161,9 @@ button, .button, input[type="submit"] {
   button:hover, .button:hover, input[type="submit"]:hover {
     cursor: pointer; }
 
+.hide {
+  display: none; }
+
 .spam-button {
   position: absolute;
   left: -9999px;

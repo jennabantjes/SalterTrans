@@ -1,327 +1,226 @@
-<!DOCTYPE HTML>
-
 <html>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>	
-	<title>Salter Transportation</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>	
+		<title>Salter Transportation</title>
 
-</head>
+	</head>
 
-<body>
+	<body>
 
-	<header class="page-wrapper">
-		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" /></a>
-		</div>
-		
-		<input type="checkbox" id="menu">
-		<label for="menu" id="menu-label" onclick>Menu </label>
-		
-		<nav class="main-menu">
-			<div id="resources">
-				<ul>
-					<a href="parent-resources.html"><li>Parent resources</li></a>
-					<a href="about.html"><li>About us</li></a>
-					<a href="contact.html" class="quote"><li>Get in touch</li></a>
-				</ul>
+		<header class="page-wrapper">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" /></a>
 			</div>
-			<div id="services">
-				<ul>
-					<a href="schools.html"><li>Schools</li></a>
-					<a href="weddings.html"><li>Weddings</li></a>
-					<a href="charters.html"><li>Charter</li></a>
-					<a href="careers.html"><li>Careers</li></a>
-				</ul>
-			</div>
-		</nav>
-	</header>
+			
+			<input type="checkbox" id="menu">
+			<label for="menu" id="menu-label" onclick>Menu </label>
+			
+			<nav class="main-menu">
+				<div id="resources">
+					<ul>
+						<a href="parent-resources.html"><li>Parent resources</li></a>
+						<a href="about.html"><li>About us</li></a>
+						<a href="contact.html" class="quote"><li>Get in touch</li></a>
+					</ul>
+				</div>
+				<div id="services">
+					<ul>
+						<a href="schools.html"><li>Schools</li></a>
+						<a href="weddings.html"><li>Weddings</li></a>
+						<a href="charters.html"><li>Charter</li></a>
+						<a href="careers.html"><li>Careers</li></a>
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-	<main role="main">
-		<section class="medium-bg">
-			<div class="text-wrapper">
-				<h1>Driver's Application for Employment</h1>
-				<p>In compliance with Federal and State equal employment opportunity laws, qualified applicants are considered for all positions without regard to race, color, religion, sex, national origin, age, marital status, veteran status, non-job related disability, sexual orientation, or any other protected group status.</p>
-			</div>
-		</section>
+		<main role="main">
 
 		<section class="medium-bg">
-			<form class="text-wrapper grid" method="post" action="contactengine.php">
-				<h2>Please fill out the application:</h2>
-				<h3>Tell us who you are:</h3>
-				<span class="col-1-2">
-					<label for="name">First name:
-						<input type="text" name="Name" id="name" autocorrect="off" required />
-					</label>
-				</span>
+			<form class="text-wrapper grid" method="post" action="applicationengine.php">
+				<h2>Apply to drive for us</h2>
+				<h3>Please provide your contact information:</h3>
+					<span class="col-1-2">
+						<label for="name-1">Name:
+							<input type="text" name="Name1" id="name-1" autocorrect="off" required />
+						</label>
+					</span>
+					<span class="col-1-2">
+						<label for="phone-1">Phone number:
+							<input type="tel" name="Phone1" id="phone-1" autocorrect="off">
+						</label>
+					</span>
+					<span class="col-1-2">
+						<label for="address-1">Address:
+							<input type="text" name="Address1" id="address-1">
+						</label>
+					</span>
 
-				<span class="col-1-2">
-					<label for="name">Last name:
-						<input type="text" name="Name" id="name" autocorrect="off" required />
-					</label>
-				</span>
+					<span class="col-1-2">
+						<label for="city-1">City:
+							<input type="text" name="City1" id="city-1">
+						</label>
+					</span>
 
-				<span class="col-1-2">
-					<label for="email">Date:
-						<input type="date" name="Date" id="date" required />
-					</label>
-				</span>
+					<span class="col-1-2">
+						<span class="col-1-2 no-padding">
+							<label for="state-1">State:
+								<input type="text" name="State1" id="state-1" maxlength="2">
+							</label>
+						</span>
 
-				<span class="col-1-2">
-					<label for="phone">Phone number:
-						<input type="tel" name="Phone" id="phone" autocorrect="off">
-					</label>
-				</span>
+						<span class="col-1-2 no-padding">
+							<label for="zip-1">Zip code:
+								<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip1" id="zip-1" maxlength="5" minlength="5">
+							</label>
+						</span>
+					</span>
 
-				<span class="col-1-2">
-					<label for="message">Date of birth:<br />
-						<input type="date" name="DOB" id="DOB" required>
-					</label>
-				</span>
+					<span class="col-1-1">
+						<h3>Have you lived at a different address during the past 7 years?</h3>
+							<input type="radio" name="addresslength" id="addressyes" value="yes">
+							<label for="addressyes">Yes</label>
+							<input type="radio" name="addressno" id="addressno" value="no">
+							<label for="addressno">No</label>
+					</span>
 
-				<span class="col-1-2">
-					<label for="message">SSN:<br />
-						<input type="number" name="SSN" id="SSN" required>
-					</label>
-				</span>
+				<div id="previous-addresses">
+					<span class="col-1-1">
+						<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
+					</span>
 
-				<span class="col-1-1">
-					<h3>Tell us where you live:</h3>
-										<span class="col-1-1">
+					<span class="col-1-2">
 						<label for="address">Address:
 							<input type="text" name="Address" id="address">
 						</label>
 					</span>
 
-					<span class="col-1-1">
+					<span class="col-1-2">
 						<label for="city">City:
 							<input type="text" name="City" id="city">
 						</label>
 					</span>
 
 					<span class="col-1-2">
-						<label for="state">State:
-							<input type="text" name="State" id="state" maxlength="2">
-						</label>
+						<span class="col-1-2">
+							<label for="state">State:
+								<input type="text" name="State" id="state" maxlength="2">
+							</label>
+						</span>
+
+						<span class="col-1-2">
+							<label for="zip">Zip code:
+								<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip" id="zip" maxlength="5" minlength="5">
+							</label>
+						</span>
+					</span>
+
+					<span class="col-1-1">
+						<a href="#">Add another address</a>
+					</span>
+				</div>
+
+					<span class="col-1-1">
+						<h3>Have you ever worked for this company or an affiliated company?</h3>
+							<label for="previouscompanyyes">
+								<input type="radio" name="previouscompany" id="previouscompanyyes" value="yes">Yes
+							</label>
+							<label for="previouscompanyno">
+								<input type="radio" name="previouscompany" value="no" id="previouscompanyno">No
+							</label>
+					</span>
+
+				<div id="former-employer">
+					<span class="col-1-1">
+						<h4>Please provide the information for your former employer.</h4>
 					</span>
 
 					<span class="col-1-2">
-						<label for="zip">Zip code:
-							<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip" id="zip" maxlength="5" minlength="5">
+						<label for="name">Name of former employer:
+							<input type="text" name="Name" id="name" autocorrect="off" required />
 						</label>
 					</span>
-				</span>
+					<span class="col-1-2">
+						<span class="col-1-2">
+							<label for="date-from">From:
+								<input type="date" name="date-from" id="date-from" autocorrect="off" required />
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label for="date-to">To:
+								<input type="date" name="date-to" id="date-to" autocorrect="off" required />
+							</label>
+						</span>
+					</span>
+					<span class="col-1-2">
+						<label for="reasonforleaving">Reason for leaving:
+							<input type="text" name="reasonforleaving" id="reasonforleaving" autocorrect="off" required />
+						</label>
+					</span>
+				</div>
 
-				<span class="col-1-1">
-					<h3>List your addresses of residency for the past 7 years.</h3>
-										<span class="col-1-1">
-						<label for="address">Address:
-							<input type="text" name="Address" id="address">
+					<span class="col-1-1">
+						<label for="legalstatus">Do you have legal right to work in the United States?
+							<input type="radio" name="legalstatus" id="legalstatus" value="yes">Yes
+							<input type="radio" name="legalstatus" value="no">No
 						</label>
 					</span>
 
 					<span class="col-1-1">
-						<label for="city">City:
-							<input type="text" name="City" id="city">
+						<label for="conviction">Have you ever been convicted of a crime?
+							<input type="radio" name="conviction" id="legalstatus" value="yes">Yes
+							<input type="radio" name="conviction" value="no">No
 						</label>
 					</span>
-
-					<span class="col-1-2">
-						<label for="state">State:
-							<input type="text" name="State" id="state" maxlength="2">
-						</label>
-					</span>
-
-					<span class="col-1-2">
-						<label for="zip">Zip code:
-							<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip" id="zip" maxlength="5" minlength="5">
-						</label>
-					</span>
-
-				</span>
-
-
-				<span class="col-1-1">
-					<h3>Tell us where you're going:</h3> <p class="small-body-copy">(optional)</p>
-
-					<span class="col-1-1">
-						<label for="type">Type of vehicle needed:
-						<select name="Type" id="type">
-							<option>What type of bus do you need?</option>
-							<option>Yellow School Bus</option>
-							<option>White Mini Coach Bus</option>
-						</select>
-
-						</label>
-					</span>
-				
-					<span class="col-1-1">	
-						<label for="vehicles">Number of vehicles:
-							<input type="text" pattern="[0-9]*" name="Vehicles" id="vehicles">
-						</label>
-					</span>
-					
-					<span class="col-1-2">
-						<label for="start">Date of trip (start):
-							<input type="date" name="Start" id="start">
-						</label>
-					</span>
-					
-					<span class="col-1-2">
-						<label for="end">Date of trip (end):
-							<input type="date" name="End" id="end">
-						</label>
-					</span>
-					
-					<span class="col-1-1">
-						<label for="pickup">Pickup location:
-							<input type="text" name="Pickup" id="pickup">
-						</label>
-					</span>
-					
-					<span class="col-1-1">
-						<label for="destination">Destination:
-							<input type="text" name="Destination" id="destination">
-						</label>
-					</span>
-					
-					<span class="col-1-2">
-						<label for="depart">Depart time:
-							<input type="time" name="Depart" id="depart">
-						</label>
-					</span>
-
-					<span class="col-1-2">
-						<label for="retun">Return time:
-							<input type="time" name="Return" id="return">
-						</label>
-					</span>
-
-				   	<span class="col-1-1">
-						<input type="submit" name="SpamButton" value="Click if spam" class="spam-button" alt="This button is for spammers" tabindex="-1"/>
-						<input type="submit" name="Submit" value="Submit" class="submit-button" alt="This button is to submit the form"/>
-					</span>
-
-				</span>
 			</form>
 		</section>
-	</main>
 
-	<section class="light-bg">
-		<div class="text-wrapper grid">
-			<div class="col-1-2 contact">
-				<img src="images/logo-nh.png">
-				<address>
+		</main>
+
+		<footer>
+			<section class="dark-bg bright-bg">
+				<div class="page-wrapper grid">
+					<h4>Contact us:</h4>
 					<ul>
-					<li>Phone<br />
-						(800)479-6433</li>
-					<li>Fax <br />
-						(978)462-4198</li>
-					<li>Email <br />
-						<a href="mailto:dispatch@saltertrans.com">dispatch@saltertrans.com</a></li>
-					</ul>
-				</address>
-			</div>
-			<div class="col-1-2 contact">
-				<img src="images/logo-small.png">
-				<address>
-					<ul>
-						<li>Phone <br />
-							(978)462-6433 </li>
-						<li>Fax <br />
-							(978)462-4198</li>
-						<li>Email<br />
-							<a href="mailto:dispatch@saltertrans.com">dispatch@saltertrans.com</a></li>
-					</ul>
-				</address>
-			</div>
-		</div>
-	</section>
-	
-	<footer>
-		<section class="dark-bg primary-bg">
-			<div class="page-wrapper grid">
-				<h4>View our other services &amp; resources:
-				<nav>
-					<ul>
-						<li class="col-1-7">
-							<a href="schools.html">Schools</a>
+						<li class="col-1-4">
+							New Hampshire <br />
+							(800) 479-6433
 						</li>
-						<li class="col-1-7">
-							<a href="weddings.html">Weddings</a>
+						<li class="col-1-4">
+							Massachusetts <br />
+							(978) 462-6433
 						</li>
-						<li class="col-1-7">
-							<a href="charters.html">Charters</a>
+						<li class="col-1-4">
+							Fax <br />
+							(978) 462-4198
 						</li>
-						<li class="col-1-7">
-							<a href="careers.html">Careers</a>
-						</li>
-						<li class="col-1-7">
-							<a href="parent-resources.html">Parent resources </a>
-						</li>
-						<li class="col-1-7">
-							<a href="about.html">About us</a>
-						</li>
-						<li class="col-1-7">
-							<a href="quote.html">Get in touch</a>
+						<li class="col-1-4">
+							Email <br />
+							dispatch@saltertrans.com
 						</li>
 					</ul>
-				</nav>
-			</div>
-		</section>
-		<section class="dark-bg bright-bg">
-			<div class="page-wrapper grid">
-				<h4>Contact us:</h4>
-				<ul>
-					<li class="col-1-4">
-						New Hampshire <br />
-						(800) 479-6433
-					</li>
-					<li class="col-1-4">
-						Massachusetts <br />
-						(978) 462-6433
-					</li>
-					<li class="col-1-4">
-						Fax <br />
-						(978) 462-4198
-					</li>
-					<li class="col-1-4">
-						Email <br />
-						<a href="mailto:dispatch@saltertrans.com">dispatch@saltertrans.com</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="dark-bg darker-bg">
-				<div class="legal grid">
-					<div class="col-1-3">
-						Copyright 2016
-					</div>
-					<div class="col-1-3">
-						Salter Transportation Inc.
-					</div>
-					<div class="col-1-3">
-						All rights reserved.
+				</div>
+			</section>
+			<section class="dark-bg darker-bg">
+					<div class="legal grid">
+						<div class="col-1-3">
+							Copyright 2016
+						</div>
+						<div class="col-1-3">
+							Salter Transportation Inc.
+						</div>
+						<div class="col-1-3">
+							All rights reserved.
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	</footer>
+			</section>
+		</footer>
 
-</body>
+	</body>
 
 </html>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-84604994-1', 'auto');
-  ga('send', 'pageview');
-
-</script>

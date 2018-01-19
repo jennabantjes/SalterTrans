@@ -126,7 +126,7 @@ hr {
 input, select {
   vertical-align: middle; }
 
-/* STYLES */
+/* GENERAL STYLES */
 header.page-wrapper {
   padding-bottom: 0; }
 header:after {
@@ -163,7 +163,8 @@ button, .button, input[type="submit"] {
 
 .spam-button {
   position: absolute;
-  left: -9999px; }
+  left: -9999px;
+  visibility: hidden; }
 
 .image-text-block {
   clear: both;

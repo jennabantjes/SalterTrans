@@ -82,10 +82,12 @@
 
 					<span class="col-1-1">
 						<h3>Have you lived at a different address during the past 7 years?</h3>
-							<input type="radio" name="addresslength" value="yes" id="addressyes" onclick="show1();">
-							<label for="addressyes">Yes</label>
-							<input type="radio" name="addresslength" value="no" id="addressno" onclick="show2();">
-							<label for="addressno">No</label>
+							<label for="addressyes" class="radio">
+								<input type="radio" name="addresslength" value="yes" id="addressyes" onclick="show1();">Yes
+							</label>
+							<label for="addressno" class="radio">
+								<input type="radio" name="addresslength" value="no" id="addressno" onclick="show2();">No
+							</label>
 					</span>
 
 				<div id="previous-addresses" class="hide">
@@ -127,15 +129,15 @@
 
 					<span class="col-1-1">
 						<h3>Have you ever worked for this company or an affiliated company?</h3>
-							<label for="previouscompanyyes">
-								<input type="radio" name="previouscompany" id="previouscompanyyes" value="yes">Yes
+							<label for="previouscompanyyes" class="radio">
+								<input type="radio" name="previouscompany" id="previouscompanyyes" value="yes" onclick="show3();">Yes
 							</label>
-							<label for="previouscompanyno">
-								<input type="radio" name="previouscompany" value="no" id="previouscompanyno">No
+							<label for="previouscompanyno" class="radio">
+								<input type="radio" name="previouscompany" value="no" id="previouscompanyno" onclick="show4();">No
 							</label>
 					</span>
 
-				<div id="former-employer">
+				<div id="previous-employers" class="hide">
 					<span class="col-1-1">
 						<h4>Please provide the information for your former employer.</h4>
 					</span>
@@ -165,18 +167,32 @@
 				</div>
 
 					<span class="col-1-1">
-						<label for="legalstatus">Do you have legal right to work in the United States?
-							<input type="radio" name="legalstatus" id="legalstatus" value="yes">Yes
-							<input type="radio" name="legalstatus" value="no">No
+						<h3>Do you have legal right to work in the United States?</h3>
+							<label for="legalstatusyes" class="radio">
+								<input type="radio" name="legalstatus" value="yes" id="legalstatusyes">Yes
+							</label>
+							<label for="legalstatusno" class="radio">
+								<input type="radio" name="legalstatus" value="no" id="legalstatusno">No
+							</label>
 						</label>
 					</span>
 
 					<span class="col-1-1">
-						<label for="conviction">Have you ever been convicted of a crime?
-							<input type="radio" name="conviction" id="legalstatus" value="yes">Yes
-							<input type="radio" name="conviction" value="no">No
+						<h3>Have you ever been convicted of a crime?</h3>
+							<label for="convictionyes" class="radio">
+								<input type="radio" name="conviction" id="convictionyes" value="yes" onclick="show5();">Yes
+							</label>
+							<label for="convictionno" class="radio">
+								<input type="radio" name="conviction" value="no"onclick="show6();" id="convictionno">No
+							</label>
 						</label>
 					</span>
+
+					<div id="criminal-status" class="hide">
+						<label for="criminalstatus">Please explain
+							<input type="text" name="CriminalStatus" id="criminalstatus">
+						</label>
+					</div>
 			</form>
 		</section>
 
@@ -229,6 +245,20 @@
 		}
 		function show2(){
 		  document.getElementById('previous-addresses').style.display ='none';
+		}
+
+		function show3(){
+		  document.getElementById('previous-employers').style.display = 'block';
+		}
+		function show4(){
+		  document.getElementById('previous-employers').style.display ='none';
+		}
+
+		function show5(){
+		  document.getElementById('criminal-status').style.display = 'block';
+		}
+		function show6(){
+		  document.getElementById('criminal-status').style.display ='none';
 		}
 
 	</script>

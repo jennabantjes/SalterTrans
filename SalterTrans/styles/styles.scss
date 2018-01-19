@@ -462,6 +462,10 @@ input, textarea, select {
     }
 }
 
+input[type="radio"], label.radio{
+    width: auto;
+}
+
 option:first {
     color: #999;
 }

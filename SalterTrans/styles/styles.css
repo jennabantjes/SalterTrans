@@ -337,6 +337,9 @@ input, textarea, select {
     border: 1px solid #009D49;
     outline: 0; }
 
+input[type="radio"], label.radio {
+  width: auto; }
+
 option:first {
   color: #999; }
 

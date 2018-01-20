@@ -193,6 +193,93 @@
 							<input type="text" name="CriminalStatus" id="criminalstatus">
 						</label>
 					</div>
+
+					<span class="col-1-1">
+						<h3>Have you been in any driving accidents in the past 3 years? If none, write 'none'.</h3>
+							<label for="accidentsyes" class="radio">
+								<input type="radio" name="accidents" id="accidentsyes" value="yes" onclick="show7();">Yes
+							</label>
+							<label for="accidentsno" class="radio">
+								<input type="radio" name="accidents" value="no" onclick="show8();" id="accidentsno">No
+							</label>
+						</label>
+					</span>
+
+					<div id="driving-accidents" class="hide">
+						<span class="col-1-2">
+							<label for="accidentdate">Date of accident
+								<input type="date" name="accidentdate" id="accidentdate">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2">
+								<label for="accidentfatalities">Fatalities
+									<input type="text" name="accidentfatalities" id="accidentfatalities">
+								</label>
+							</span>
+							<span class="col-1-2">
+								<label for="accidentinjuries">Injuries
+									<input type="text" name="accidentinjuries" id="accidentinjuries">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-1">
+							<label for="accidentdetails">Nature of accident
+								<input type="text" name="accidentdetails" id="accidentdetails">
+							</label>
+						</span>
+					</div>
+
+					<span class="col-1-1">
+						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)? If none, write 'none'.</h3>
+							<label for="trafficconvictionyes" class="radio">
+								<input type="radio" name="trafficconvictinos" id="trafficconvictionyes" value="yes" onclick="show9();">Yes
+							</label>
+							<label for="trafficconvictionno" class="radio">
+								<input type="radio" name="trafficconvictions" value="no" onclick="show10();" id="trafficconvictionno">No
+							</label>
+						</label>
+					</span>
+
+					<div id="traffic-convictions" class="hide">
+						<span class="col-1-2">
+							<label for="accidentdate">Date of conviction
+								<input type="date" name="accidentdate" id="accidentdate">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2">
+								<label for="accidentfatalities">location
+									<input type="text" name="accidentfatalities" id="accidentfatalities">
+								</label>
+							</span>
+							<span class="col-1-2">
+								<label for="accidentinjuries">Charge
+									<input type="text" name="accidentinjuries" id="accidentinjuries">
+								</label>
+							</span>
+						</span>
+						<label for="accidentdetails">Penalty
+							<input type="text" name="accidentdetails" id="accidentdetails">
+						</label>
+					</div>
+
+					<span class="col-1-1">
+						<h3>Have you ever been denied a license, permit, or priviledge to operate a motor vehicle?</h3>
+							<label for="deniedno" class="radio">
+								<input type="radio" name="deniedlicense" value="no"onclick="show11();" id="deniedno">No
+							</label>
+							<label for="deniedyes" class="radio">
+								<input type="radio" name="deniedlicense" id="deniedyes" value="yes" onclick="show12();">Yes
+							</label>
+						</label>
+					</span>
+
+					<div id="denied-license" class="hide">
+						<label for="deniedexplanation">Please explain
+							<input type="text" name="deniedexplanation" id="deniedexplanation">
+						</label>
+					</div>
 			</form>
 		</section>
 
@@ -259,6 +346,27 @@
 		}
 		function show6(){
 		  document.getElementById('criminal-status').style.display ='none';
+		}
+
+		function show7(){
+		  document.getElementById('driving-accidents').style.display = 'block';
+		}
+		function show8(){
+		  document.getElementById('driving-accidents').style.display ='none';
+		}
+
+		function show9(){
+		  document.getElementById('traffic-convictions').style.display = 'block';
+		}
+		function show10(){
+		  document.getElementById('traffic-convictions').style.display ='none';
+		}
+
+		function show12(){
+		  document.getElementById('denied-license').style.display = 'block';
+		}
+		function show11(){
+		  document.getElementById('denied-license').style.display ='none';
 		}
 
 	</script>

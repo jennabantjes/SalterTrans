@@ -41,9 +41,15 @@
 		<main role="main">
 
 		<section class="medium-bg">
+			<div class="text-wrapper">
+				<h1>Apply to drive for us.</h1>
+				<p>Interested in driving one of our buses? Please fill out the form below and we'll get back to you as soon as possible. It will take about 10 minutes of your time.</p>
+			</div>
+		</section>
+
+		<section class="light-bg">
 			<form class="text-wrapper grid" method="post" action="applicationengine.php">
-				<h2>Apply to drive for us</h2>
-				<h3>Please provide your contact information:</h3>
+				<h2>Contact Information:</h2>
 					<span class="col-1-2">
 						<label>Name:
 							<input type="text" name="Name1" autocorrect="off" required />
@@ -66,7 +72,7 @@
 						</label>
 					</span>
 
-					<span class="col-1-2">
+					<span class="col-1-2 no-padding">
 						<span class="col-1-2 no-padding">
 							<label>State:
 								<input type="text" name="State1" maxlength="2">
@@ -108,14 +114,14 @@
 						</label>
 					</span>
 
-					<span class="col-1-2">
+					<span class="col-1-2 no-padding">
 						<span class="col-1-2">
 							<label>State:
 								<input type="text" name="State" maxlength="2">
 							</label>
 						</span>
 
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>Zip code:
 								<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip" maxlength="5" minlength="5">
 							</label>
@@ -128,79 +134,13 @@
 				</div>
 
 					<span class="col-1-1">
-						<h3>Have you ever worked for this company or an affiliated company?</h3>
-							<label class="radio">
-								<input type="radio" name="previouscompany"  value="yes" onclick="show3();">Yes
-							</label>
-							<label class="radio">
-								<input type="radio" name="previouscompany" value="no" onclick="show4();">No
-							</label>
-					</span>
-
-				<div id="previous-employers" class="hide">
-					<span class="col-1-1">
-						<h4>Please provide the information for your former employer.</h4>
-					</span>
-
-					<span class="col-1-2">
-						<label for="name">Name of former employer:
-							<input type="text" name="NameOfEmployer" autocorrect="off" required />
-						</label>
-					</span>
-					<span class="col-1-2">
-						<span class="col-1-2">
-							<label>From:
-								<input type="date" name="date-from"  autocorrect="off" required />
-							</label>
-						</span>
-						<span class="col-1-2">
-							<label>To:
-								<input type="date" name="date-to" autocorrect="off" required />
-							</label>
-						</span>
-					</span>
-					<span class="col-1-2">
-						<label>Reason for leaving:
-							<input type="text" name="reasonforleaving" autocorrect="off" required />
-						</label>
-					</span>
-				</div>
-
-					<span class="col-1-1">
-						<h3>Do you have legal right to work in the United States?</h3>
-							<label for="legalstatusyes" class="radio">
-								<input type="radio" name="legalstatus" value="yes">Yes
-							</label>
-							<label for="legalstatusno" class="radio">
-								<input type="radio" name="legalstatus" value="no">No
-							</label>
-						</label>
-					</span>
-
-					<span class="col-1-1">
-						<h3>Have you ever been convicted of a crime?</h3>
-							<label class="radio">
-								<input type="radio" name="conviction" value="yes" onclick="show5();">Yes
-							</label>
-							<label class="radio">
-								<input type="radio" name="conviction" value="no"onclick="show6();">No
-							</label>
-						</label>
-					</span>
-
-					<div id="criminal-status" class="hide">
-						<label>Please explain
-							<input type="text" name="CriminalStatus">
-						</label>
-					</div>
-
-					<span class="col-1-1">
-						<h3>Have you been in any driving accidents in the past 3 years? If none, write 'none'.</h3>
-							<label class="radio">
-								<input type="radio" name="accidents" value="yes" onclick="show7();">Yes
-							</label>
+						<h2>Driving History</h2>
+						<h3>Have you been in any driving accidents in the past 3 years?</h3>
 							<label class="radio">
 								<input type="radio" name="accidents" value="no" onclick="show8();">No
+							</label>
+							<label class="radio">
+								<input type="radio" name="accidents" value="yes" onclick="show7();">Yes
 							</label>
 						</label>
 					</span>
@@ -211,13 +151,13 @@
 								<input type="date" name="accidentdate">
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<span class="col-1-2">
 								<label>Fatalities
 									<input type="text" name="accidentfatalities">
 								</label>
 							</span>
-							<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>Injuries
 									<input type="text" name="accidentinjuries">
 								</label>
@@ -228,32 +168,32 @@
 								<input type="text" name="accidentdetails">
 							</label>
 						</span>
+						<a>Add another driving accident</a>
 					</div>
 
 					<span class="col-1-1">
-						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)? If none, write 'none'.</h3>
+						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)?</h3>
 							<label class="radio">
-								<input type="radio" name="trafficconvictinos" value="yes" onclick="show9();">Yes
+								<input type="radio" value="no" onclick="show10();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="trafficconvictions" value="no" onclick="show10();">No
+								<input type="radio" value="yes" onclick="show9();">Yes
 							</label>
-						</label>
 					</span>
 
-					<div id="traffic-convictions" class="hide">
+					<div id="traffic-convictions no-padding" class="hide">
 						<span class="col-1-2">
 							<label>Date of conviction
 								<input type="date" name="accidentdate">
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<span class="col-1-2">
 								<label>Location
 									<input type="text" name="accidentfatalities">
 								</label>
 							</span>
-							<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>Charge
 									<input type="text" name="accidentinjuries">
 								</label>
@@ -262,34 +202,36 @@
 						<label>Penalty
 							<input type="text" name="accidentdetails">
 						</label>
+						<a>Add another traffic conviction</a>
 					</div>
 
 					<span class="col-1-1">
 						<h3>Have you ever been denied a license, permit, or priviledge to operate a motor vehicle?</h3>
 							<label class="radio">
-								<input type="radio" name="deniedlicense" value="no"onclick="show11();">No
+								<input type="radio" value="no" onclick="show11();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="deniedlicense" value="yes" onclick="show12();">Yes
+								<input type="radio" value="yes" onclick="show12();">Yes
 							</label>
 						</label>
 					</span>
 
 					<div id="denied-license" class="hide">
 						<label>Please explain
-							<input type="text" name="deniedexplanation">
+							<textarea></textarea>
 						</label>
 					</div>
 
-					<div class="col-1-1">
-						<h3>Education History</h3>
+					<div class="col-1-1 no-padding">
+						<h2>Education History</h2>
+						<h3>High school and/or G.E.D.</h3>
 						<span class="col-1-2">
 							<label>Name of School
 								<input type="text" name="nameofschool">
 							</label>
 						</span>
 						<span class="col-1-2">
-							<label>Highest Grade Completed
+							<label>Highest grade completed
 								<select>
 									<option>9</option>
 									<option>10</option>
@@ -298,7 +240,214 @@
 								</select>
 							</label>
 						</span>
+						<span class="col-1-2">
+							<h4>Did you graduate?</h4>
+							<label class="radio">
+								<input type="radio" name="graduationstatus" value="yes">Yes
+							</label>
+							<label class="radio">
+								<input type="radio" name="graduationstatus" value="no">No
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label>Last calendar year you studied
+								<input type="text" name="graduationyear">
+							</label>
+						</span>
 					</div>
+
+					<div class="col-1-1">
+						<h4>College</h4>
+						<span class="col-1-2">
+							<label>Name of School
+								<input type="text" name="nameofschool">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label>Highest year completed
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+								</select>
+							</label>
+						</span>
+						<span class="col-1-2">
+							<h4>Did you graduate?</h4>
+							<label class="radio">
+								<input type="radio" name="graduationstatus" value="yes">Yes
+							</label>
+							<label class="radio">
+								<input type="radio" name="graduationstatus" value="no">No
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label>Last calendar year you studied
+								<input type="text" name="graduationyear">
+							</label>
+						</span>
+						<span class="col-1-1">
+							<label>Degree or Major
+								<input type="text">
+							</label>
+						</span>
+					</div>
+
+					<div class="col-1-1">
+						<h2>Employment History</h2>
+
+
+						<span class="col-1-1">
+							<h3>Have you ever worked for this company or an affiliated company?</h3>
+							<label class="radio">
+								<input type="radio" name="previouscompany" value="no" onclick="show4();">No
+							</label>
+							<label class="radio">
+								<input type="radio" name="previouscompany"  value="yes" onclick="show3();">Yes
+							</label>
+						</span>
+
+						<div id="previous-employers" class="hide">
+							<span class="col-1-1">
+								<h4>Please provide the information for your former employer.</h4>
+							</span>
+
+							<span class="col-1-2">
+								<label for="name">Name of former employer:
+									<input type="text" name="NameOfEmployer" autocorrect="off" required />
+								</label>
+							</span>
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>From:
+										<input type="date" name="date-from"  autocorrect="off" required />
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>To:
+										<input type="date" name="date-to" autocorrect="off" required />
+									</label>
+								</span>
+							</span>
+							<span class="col-1-2">
+								<label>Reason for leaving:
+									<input type="text" name="reasonforleaving" autocorrect="off" required />
+								</label>
+							</span>
+						</div>
+
+						<h3>Please list your prior employment history for the past 10 years.</h3>
+						<span class="col-1-2">
+							<label>Employer Name
+								<input type="text">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2">
+								<label>From
+									<input type="date">
+								</label>
+							</span>
+							<span class="col-1-2">
+								<label>To
+									<input type="date">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-2">
+							<label>Employer's Address
+								<input type="text">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label>City
+								<input type="text">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
+								<label>State
+									<input type="text" name="State1" maxlength="2">
+								</label>
+							</span>
+							<span class="col-1-2 no-padding">
+								<label>Zip Code
+									<input type="text">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
+								<label>Position held
+									<input type="text">
+								</label>
+							</span>
+							<span class="col-1-2 no-padding">
+								<label>Salary/Wage
+									<input type="text">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-2">
+							<label>Supervisor's Name
+								<input type="text">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<label>Phone number
+								<input type="tel">
+							</lable>
+						</span>
+						<span class="col-1-1">
+							<label>Reason for leaving
+								<textarea></textarea>
+							</label>
+						</span>
+						<a>Add another employer</a>
+					</div>
+
+					<div class="col-1-1">
+						<h2>Other Qualifications</h2>
+
+						<span class="col-1-1">
+							<h3>Do you have legal right to work in the United States?</h3>
+								<label for="legalstatusyes" class="radio">
+									<input type="radio" name="legalstatus" value="yes">Yes
+								</label>
+								<label for="legalstatusno" class="radio">
+									<input type="radio" name="legalstatus" value="no">No
+								</label>
+							</label>
+						</span>
+
+						<span class="col-1-1">
+							<h3>Have you ever been convicted of a crime?</h3>
+								<label class="radio">
+									<input type="radio" name="conviction" value="yes" onclick="show5();">Yes
+								</label>
+								<label class="radio">
+									<input type="radio" name="conviction" value="no"onclick="show6();">No
+								</label>
+							</label>
+						</span>
+
+						<div id="criminal-status" class="hide">
+							<label>Please explain
+								<input type="text" name="CriminalStatus">
+							</label>
+						</div>
+
+							<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
+							<label>Additional qualifications
+								<textarea></textarea>
+							</label>
+							<a>Add another qualification</a>
+						</div>
 			</form>
 		</section>
 
@@ -381,12 +530,14 @@
 		  document.getElementById('traffic-convictions').style.display ='none';
 		}
 
-		function show12(){
-		  document.getElementById('denied-license').style.display = 'block';
-		}
 		function show11(){
 		  document.getElementById('denied-license').style.display ='none';
 		}
+
+		function show12(){
+		  document.getElementById('denied-license').style.display = 'block';
+		}
+
 
 	</script>
 

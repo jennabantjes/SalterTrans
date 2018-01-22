@@ -78,7 +78,7 @@ h2 {
   text-align: center; }
 
 h3 {
-  line-height: 2; }
+  line-height: 1.6; }
 
 p {
   color: #14281D;
@@ -346,6 +346,7 @@ option:first {
 label {
   float: left;
   font-size: 12px;
+  line-height: 1.5;
   margin-bottom: .5em;
   width: 100%; }
   label input, label textarea, label select {
@@ -423,6 +424,12 @@ form h2 {
   line-height: 1.5;
   margin: .5em 0;
   text-align: left; }
+
+/* RESETS */
+span.no-padding, div.no-padding {
+  padding: 0 0.5em 0 0; }
+  span.no-padding:last-child, div.no-padding:last-child {
+    padding: 0; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 960px) {

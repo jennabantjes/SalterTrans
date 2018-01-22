@@ -108,7 +108,7 @@ h2 {
 }
 
 h3 {
-    line-height: 2;
+    line-height: 1.6;
 }
 
 p {
@@ -473,6 +473,7 @@ option:first {
 label {
     float: left;
     font-size: 12px;
+    line-height: 1.5;
     margin-bottom: .5em;
     width: 100%;
 
@@ -580,6 +581,16 @@ form {
         line-height: 1.5;
         margin: .5em 0;
         text-align: left;
+    }
+}
+
+/* RESETS */
+
+span.no-padding, div.no-padding {
+    padding: 0 0.5em 0 0;
+
+    &:last-child {
+        padding: 0;
     }
 }
 

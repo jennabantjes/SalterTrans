@@ -9,33 +9,69 @@ else {
 
 	// Pull in info from form
 	$EmailFrom = 'SalterTrans.com';
-	$EmailTo = 'Maryannk@saltertrans.com, smith@saltertrans.com, jennabantjes@gmail.com';
-	$Subject = htmlentities(trim(stripslashes($_POST['Subject'] )));
-	$Name = htmlentities(trim(stripslashes($_POST['Name'] )));
-	$Email = htmlentities(trim(stripslashes($_POST['Email'] ))); 
-	$Message = htmlentities(trim(stripslashes($_POST['Message'] )));
-	$Group = htmlentities(trim(stripslashes($_POST['Group'] )));
-	$Phone = htmlentities(trim(stripslashes($_POST['Phone'] )));
-	$Address = htmlentities(trim(stripslashes($_POST['Address'] )));
-	$City = htmlentities(trim(stripslashes($_POST['City'] )));
-	$State = htmlentities(trim(stripslashes($_POST['State'] )));
-	$Zip = htmlentities(trim(stripslashes($_POST['Zip'] )));
-	$Type = htmlentities(trim(stripslashes($_POST['Type'] )));
-	$Vehicles = htmlentities(trim(stripslashes($_POST['Vehicles'] )));
-	$Start = htmlentities(trim(stripslashes($_POST['Start'] )));
-	$End = htmlentities(trim(stripslashes($_POST['End'] )));
-	$Pickup = htmlentities(trim(stripslashes($_POST['Pickup'] )));
-	$Destination = htmlentities(trim(stripslashes($_POST['Destination'] )));
-	$Depart = htmlentities(trim(stripslashes($_POST['Depart'] )));
-	$Return = htmlentities(trim(stripslashes($_POST['Return'] )));
+	$EmailTo = 'jennabantjes@gmail.com';
+	$ApplicantName = htmlentities(trim(stripslashes($_POST['Applicant Name'] )));
+	$ApplicantPhone = htmlentities(trim(stripslashes($_POST['Applicant Phone'] )));
+	$ApplicantEmail = htmlentities(trim(stripslashes($_POST['Applicant email'] )));
+	$ApplicantAddress = htmlentities(trim(stripslashes($_POST['Applicant Address'] ))); 
+	$ApplicantCity = htmlentities(trim(stripslashes($_POST['City'] )));
+	$ApplicantState = htmlentities(trim(stripslashes($_POST['State'] )));
+	$ApplicantZip = htmlentities(trim(stripslashes($_POST['Zip'] )));
+	$DifferentAddress = htmlentities(trim(stripslashes($_POST['Another address in last 7 years?'] )));
+	$PreviousAddress = htmlentities(trim(stripslashes($_POST['Previous Address'] )));
+	$PreviousCity = htmlentities(trim(stripslashes($_POST['City'] )));
+	$PreviousState = htmlentities(trim(stripslashes($_POST['State'] )));
+	$PreviousZip = htmlentities(trim(stripslashes($_POST['Zip'] )));
+	$DrivingAccidents = htmlentities(trim(stripslashes($_POST['Driving accidents in past 3 years?'] )));
+	$AccidentDate = htmlentities(trim(stripslashes($_POST['Accident Date'] )));
+	$AccidentFatalities = htmlentities(trim(stripslashes($_POST['Accident Fatalities'] )));
+	$AccidentInjuries = htmlentities(trim(stripslashes($_POST['Accident Injuries'] )));
+	$AccidentDetails = htmlentities(trim(stripslashes($_POST['Nature of Accident'] )));
+	$TrafficConvictions = htmlentities(trim(stripslashes($_POST['Traffic convictions or forfeitures in past 3 years?'] )));
+	$TrafficConvictionDate = htmlentities(trim(stripslashes($_POST['Date of traffic conviction'] )));
+	$TrafficConvictionLocation = htmlentities(trim(stripslashes($_POST['Location'] )));
+	$TrafficConvictionCharge = htmlentities(trim(stripslashes($_POST['Charge'] )));
+	$TrafficConvictionPenalty = htmlentities(trim(stripslashes($_POST['Penalty'] )));
+	$DeniedLicense = htmlentities(trim(stripslashes($_POST['Denied license?'] )));
+	$DeniedLicenseExplanation = htmlentities(trim(stripslashes($_POST['Denied License Exmplanation'] )));
+	$HighSchoolName = htmlentities(trim(stripslashes($_POST['High School'] )));
+	$HighSchoolCompletion = htmlentities(trim(stripslashes($_POST['Highest grade completed'] )));
+	$HighSchoolGraduationStatus = htmlentities(trim(stripslashes($_POST['Graduation status'] )));
+	$HighSchoolGraduationYear = htmlentities(trim(stripslashes($_POST['Graduation Year'] )));
+	$CollegeName = htmlentities(trim(stripslashes($_POST['College'] )));
+	$CollegeCompletion = htmlentities(trim(stripslashes($_POST['Highest level completed'] )));
+	$CollegeGraduationStatus = htmlentities(trim(stripslashes($_POST['Graduation status'] )));
+	$CollegeYear = htmlentities(trim(stripslashes($_POST['Year'] )));
+	$CollegeMajor = htmlentities(trim(stripslashes($_POST['Major'] )));
+	$PreviousAffiliation = htmlentities(trim(stripslashes($_POST['Have you worked for this company or affiliated company?'] )));
+	$AffiliatedEmployerName = htmlentities(trim(stripslashes($_POST['Affiliated Employer name'] )));
+	$AffiliatedEmployerFrom = htmlentities(trim(stripslashes($_POST['Date from'] )));
+	$AffiliatedEmployerTo = htmlentities(trim(stripslashes($_POST['Date to'] )));
+	$AffiliatedEmployerReasonForLeaving = htmlentities(trim(stripslashes($_POST['Reason for leaving'] )));
+	$FormerEmployerName = htmlentities(trim(stripslashes($_POST['Former employer'] )));
+	$FormerEmployerDateFrom = htmlentities(trim(stripslashes($_POST['Date from'] )));
+	$FormerEmployerDateto = htmlentities(trim(stripslashes($_POST['Date to'] )));
+	$FormerEmployerAddress = htmlentities(trim(stripslashes($_POST['Employer address'] )));
+	$FormerEmployerCity = htmlentities(trim(stripslashes($_POST['City'] )));
+	$FormerEmployerState = htmlentities(trim(stripslashes($_POST['State'] )));
+	$FormerEmployerZip = htmlentities(trim(stripslashes($_POST['Zip'] )));
+	$FormerPositionHeld = htmlentities(trim(stripslashes($_POST['Position'] )));
+	$FormerSalary = htmlentities(trim(stripslashes($_POST['Salary/Wage'] )));
+	$FormerSupervisorName = htmlentities(trim(stripslashes($_POST['Supervisor'] )));
+	$FormerSupervisorPhone = htmlentities(trim(stripslashes($_POST['Phone'] )));
+	$FormerEmployerReasonForLeaving = htmlentities(trim(stripslashes($_POST['Reason for leaving'] )));
+	$LegalStatus = htmlentities(trim(stripslashes($_POST['Legal right to work?'] )));
+	$Conviction = htmlentities(trim(stripslashes($_POST['Convicted of a crime?'] )));
+	$ConvictionExplanation = htmlentities(trim(stripslashes($_POST['Conviction explanation'] )));
+	$AdditionalQualifications = htmlentities(trim(stripslashes($_POST['Additional qualifications'] )));
+
 
 	// Check to see if form field are spaces
 	$SpamBlankMessage = "No blank spaces permitted.";
 
-	if(empty($Name)) {echo "$SpamBlankMessage"; exit();}
-	if(empty($Subject)) {echo "$SpamBlankMessage"; exit();}
-	if(empty($Email)) {echo "$SpamBlankMessage"; exit();}
-	if(empty($Message)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($ApplicantName)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($ApplicantPhone)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($ApplicantEmail)) {echo "$SpamBlankMessage"; exit();}
 
 
 	// Check to see if URLs have been injected
@@ -48,58 +84,121 @@ else {
 	// Check to see if URLs have been injected 
 	$SpamURLMessage = "No website URLs permitted.";
 
-	if (preg_match("/(http|www)/i", "$Name")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Subject")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Email")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Message")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Group")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Phone")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Address")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$City")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Zip")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Vehicles")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Pickup")) {echo "$SpamURLMessage"; exit();}
-	if (preg_match("/(http|www)/i", "$Destination")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantEmail")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantAddress")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantCity")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantState")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantZip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousAddress")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousCity")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousState")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousZip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentFatalities")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentInjuries")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentDetails")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionLocation")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionCharge")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionPenalty")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$HighSchoolName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$HighSchoolGraduationYear")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$CollegeName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$CollegeYear")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$CollegeMajor")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AffiliatedEmployerName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerAddress")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerCity")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerState")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerZip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerPositionHeld")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerSalary")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerSupervisorName")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$DeniedLicenseExplanation")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AffiliatedEmployerReasonForLeaving")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$FormerEmployerReasonForLeaving")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ConvictionExplanation")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AdditionalQualifications")) {echo "$SpamURLMessage"; exit();}
 
 	// Check to see if scripts have been embedded.
 
 	$ScriptAlertMessage = "No scripts permitted.";
 
-	if (preg_match("/script/i", "$Name")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Subject")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Email")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Message")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Group")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Phone")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Address")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$City")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Zip")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Vehicles")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Pickup")) {echo "$ScriptAlertMessage"; exit();}
-	if (preg_match("/script/i", "$Destination")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantEmail")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantAddress")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantCity")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantState")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantZip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousAddress")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousCity")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousState")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousZip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentFatalities")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentInjuries")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentDetails")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionLocation")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionCharge")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionPenalty")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$HighSchoolName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$HighSchoolGraduationYear")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$CollegeName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$CollegeYear")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$CollegeMajor")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AffiliatedEmployerName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerAddress")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerCity")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerState")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerZip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerPositionHeld")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerSalary")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerSupervisorName")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$DeniedLicenseExplanation")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AffiliatedEmployerReasonForLeaving")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$FormerEmployerReasonForLeaving")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ConvictionExplanation")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AdditionalQualifications")) {echo "$ScriptAlertMessage"; exit();}
 
 
 	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
 	$pattern = '/(;|\||`|>|<|&|^|"|'."\n|\r|'".'|{|}|[|]|\)|\()/i'; // build the pattern match string 
 
-	$Subject = preg_replace($pattern, "", $Subject);
-	$Name = preg_replace($pattern, "", $Name);
-	$Email = preg_replace($pattern, "", $Email);
-	$Message = preg_replace($pattern, "", $Message);
-	$Group = preg_replace($pattern, "", $Group);
-	$Phone = preg_replace($pattern, "", $Phone);
-	$Address = preg_replace($pattern, "", $Address);
-	$City = preg_replace($pattern, "", $City);
-	$State = preg_replace($pattern, "", $State);
-	$Zip = preg_replace($pattern, "", $Zip);
-	$Type = preg_replace($pattern, "", $Type);
-	$Vehicles = preg_replace($pattern, "", $Vehicles);
-	$Start = preg_replace($pattern, "", $Start);
-	$End = preg_replace($pattern, "", $End);
-	$Pickup = preg_replace($pattern, "", $Pickup);
-	$Destination = preg_replace($pattern, "", $Destination);
-	$Depart = preg_replace($pattern, "", $Depart);
-	$Return = preg_replace($pattern, "", $Return);
+	$ApplicantName = preg_replace($pattern, "", $ApplicantName);
+	$ApplicantEmail = preg_replace($pattern, "", $ApplicantEmail);
+	$ApplicantAddress = preg_replace($pattern, "", $ApplicantAddress);
+	$ApplicantCity = preg_replace($pattern, "", $ApplicantCity);
+	$ApplicantState = preg_replace($pattern, "", $ApplicantState);
+	$ApplicantZip = preg_replace($pattern, "", $ApplicantZip);
+	$PreviousAddress = preg_replace($pattern, "", $PreviousAddress);
+	$PreviousCity = preg_replace($pattern, "", $PreviousCity);
+	$PreviousState = preg_replace($pattern, "", $PreviousState);
+	$PreviousZip = preg_replace($pattern, "", $PreviousZip);
+	$AccidentFatalities = preg_replace($pattern, "", $AccidentFatalities);
+	$AccidentInjuries = preg_replace($pattern, "", $AccidentInjuries);
+	$AccidentDetails = preg_replace($pattern, "", $AccidentDetails);
+	$TrafficConvictionLocation = preg_replace($pattern, "", $TrafficConvictionLocation);
+	$TrafficConvictionCharge = preg_replace($pattern, "", $TrafficConvictionCharge);
+	$TrafficConvictionPenalty = preg_replace($pattern, "", $TrafficConvictionPenalty);
+	$HighSchoolName = preg_replace($pattern, "", $HighSchoolName);
+	$HighSchoolGraduationYear = preg_replace($pattern, "", $HighSchoolGraduationYear);
+	$CollegeName = preg_replace($pattern, "", $CollegeName);
+	$CollegeYear = preg_replace($pattern, "", $CollegeYear);
+	$CollegeMajor = preg_replace($pattern, "", $CollegeMajor);
+	$AffiliatedEmployerName = preg_replace($pattern, "", $AffiliatedEmployerName);
+	$FormerEmployerName = preg_replace($pattern, "", $FormerEmployerName);
+	$FormerEmployerAddress = preg_replace($pattern, "", $FormerEmployerAddress);
+	$FormerEmployerCity = preg_replace($pattern, "", $FormerEmployerCity);
+	$FormerEmployerState = preg_replace($pattern, "", $FormerEmployerState);
+	$FormerEmployerZip = preg_replace($pattern, "", $FormerEmployerZip);
+	$FormerPositionHeld = preg_replace($pattern, "", $FormerPositionHeld);
+	$FormerSalary = preg_replace($pattern, "", $FormerSalary);
+	$FormerSupervisorName = preg_replace($pattern, "", $FormerSupervisorName);
+	$DeniedLicenseExplanation = preg_replace($pattern, "", $DeniedLicenseExplanation);
+	$AffiliatedEmployerReasonForLeaving = preg_replace($pattern, "", $AffiliatedEmployerReasonForLeaving);
+	$FormerEmployerReasonForLeaving = preg_replace($pattern, "", $FormerEmployerReasonForLeaving);
+	$ConvictionExplanation = preg_replace($pattern, "", $ConvictionExplanation);
+	$AdditionalQualifications = preg_replace($pattern, "", $AdditionalQualifications);
 
 	$SpamReplaceText = "*content removed*";
 

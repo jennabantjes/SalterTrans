@@ -49,39 +49,44 @@
 
 		<section class="light-bg">
 			<form class="text-wrapper grid" method="post" action="applicationengine.php">
-				<h2>Contact Information:</h2>
+				<h2>Contact Information</h2>
 					<span class="col-1-2">
-						<label>Name:
-							<input type="text" name="Name1" autocorrect="off" required />
+						<label>Name
+							<input type="text" name="ApplicantName" autocorrect="off" required />
 						</label>
 					</span>
 					<span class="col-1-2">
-						<label>Phone number:
-							<input type="tel" name="Phone1" autocorrect="off">
+						<label>Phone number
+							<input type="tel" name="ApplicantPhone" autocorrect="off">
 						</label>
 					</span>
 					<span class="col-1-2">
-						<label>Address:
-							<input type="text" name="Address1">
+						<label for="email">Email
+							<input type="text" name="ApplicantEmail" id="email" autocapitalize="off" autocorrect="off" required />
+						</label>
+					</span>
+					<span class="col-1-2">
+						<label>Address
+							<input type="text" name="ApplicantAddress">
 						</label>
 					</span>
 
 					<span class="col-1-2">
-						<label>City:
-							<input type="text" name="City1">
+						<label>City
+							<input type="text" name="ApplicantCity">
 						</label>
 					</span>
 
 					<span class="col-1-2">
 						<span class="col-1-2 no-padding">
-							<label>State:
-								<input type="text" name="State1" maxlength="2">
+							<label>State
+								<input type="text" name="ApplicantState" maxlength="2">
 							</label>
 						</span>
 
 						<span class="col-1-2 no-padding">
-							<label>Zip code:
-								<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip1" maxlength="5" minlength="5">
+							<label>Zip code
+								<input type="text" pattern="\d*" novalidate autocorrect="off" name="ApplicantZip" maxlength="5" minlength="5">
 							</label>
 						</span>
 					</span>
@@ -89,10 +94,10 @@
 					<span class="col-1-1">
 						<h3>Have you lived at a different address during the past 7 years?</h3>
 							<label class="radio">
-								<input type="radio" name="addresslength" value="no" onclick="show1();">No
+								<input type="radio" name="DifferentAddress" value="no" onclick="show1();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="addresslength" value="yes" onclick="show2();">Yes
+								<input type="radio" name="DifferentAddress" value="yes" onclick="show2();">Yes
 							</label>
 					</span>
 
@@ -103,27 +108,27 @@
 					</span>
 
 					<span class="col-1-2">
-						<label>Address:
-							<input type="text" name="Address">
+						<label>Address
+							<input type="text" name="PreviousAddress">
 						</label>
 					</span>
 
 					<span class="col-1-2">
-						<label>City:
-							<input type="text" name="City">
+						<label>City
+							<input type="text" name="PreviousCity">
 						</label>
 					</span>
 
 					<span class="col-1-2">
 						<span class="col-1-2 no-padding">
-							<label>State:
-								<input type="text" name="State" maxlength="2">
+							<label>State
+								<input type="text" name="PreviousState" maxlength="2">
 							</label>
 						</span>
 
 						<span class="col-1-2 no-padding">
-							<label>Zip code:
-								<input type="text" pattern="\d*" novalidate autocorrect="off" name="Zip" maxlength="5" minlength="5">
+							<label>Zip code
+								<input type="text" pattern="\d*" novalidate autocorrect="off" name="PreviousZip" maxlength="5" minlength="5">
 							</label>
 						</span>
 					</span>
@@ -137,34 +142,34 @@
 						<h2>Driving History</h2>
 						<h3>Have you been in any driving accidents in the past 3 years?</h3>
 							<label class="radio">
-								<input type="radio" name="accidents" value="no" onclick="show3();">No
+								<input type="radio" name="DrivingAccidents" value="no" onclick="show3();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="accidents" value="yes" onclick="show4();">Yes
+								<input type="radio" name="DrivingAccidents" value="yes" onclick="show4();">Yes
 							</label>
 					</span>
 
 					<div id="driving-accidents" class="hide">
 						<span class="col-1-2">
 							<label>Date of accident
-								<input type="date" name="accidentdate">
+								<input type="date" name="AccidentDate">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<span class="col-1-2 no-padding">
 								<label>Fatalities
-									<input type="text" name="accidentfatalities">
+									<input type="text" name="AccidentFatalities">
 								</label>
 							</span>
 							<span class="col-1-2 no-padding">
 								<label>Injuries
-									<input type="text" name="accidentinjuries">
+									<input type="text" name="AccidentInjuries">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-1">
 							<label>Nature of accident
-								<input type="text" name="accidentdetails">
+								<input type="text" name="AccidentDetails">
 							</label>
 						</span>
 						<a>Add another driving accident</a>
@@ -173,34 +178,34 @@
 					<span class="col-1-1">
 						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)?</h3>
 							<label class="radio">
-								<input type="radio" name="forfeitures" value="no" onclick="show5();">No
+								<input type="radio" name="TrafficConvictions" value="no" onclick="show5();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="forfeitures" value="yes" onclick="show6();">Yes
+								<input type="radio" name="TrafficConvictions" value="yes" onclick="show6();">Yes
 							</label>
 					</span>
 
 					<div id="traffic-convictions" class="hide">
 						<span class="col-1-2">
 							<label>Date of conviction
-								<input type="date" name="accidentdate">
+								<input type="date" name="TrafficConvictionDate">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<span class="col-1-2 no-padding">
 								<label>Location
-									<input type="text" name="accidentfatalities">
+									<input type="text" name="TrafficConvictionLocation">
 								</label>
 							</span>
 							<span class="col-1-2 no-padding">
 								<label>Charge
-									<input type="text" name="accidentinjuries">
+									<input type="text" name="TrafficConvictionCharge">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-1">
 							<label>Penalty
-								<input type="text" name="accidentdetails">
+								<input type="text" name="TrafficConvictionPenalty">
 							</label>
 							<a>Add another traffic conviction</a>
 						</span>
@@ -209,32 +214,32 @@
 					<span class="col-1-1">
 						<h3>Have you ever been denied a license, permit, or priviledge to operate a motor vehicle?</h3>
 							<label class="radio">
-								<input type="radio" name="denied" value="no" onclick="show7();">No
+								<input type="radio" name="DeniedLicense" value="no" onclick="show7();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="denied" value="yes" onclick="show8();">Yes
+								<input type="radio" name="DeniedLicense" value="yes" onclick="show8();">Yes
 							</label>
 					</span>
 
 					<div id="denied-license" class="hide">
 						<span class="col-1-1">
 							<label>Please explain
-								<textarea></textarea>
+								<textarea name="DeniedLicenseExplanation"></textarea>
 							</label>
 						</span>
 					</div>
 
-					<div class="col-1-1 no-padding">
+					<div class="col-1-1">
 						<h2>Education History</h2>
 						<h3>High school and/or G.E.D.</h3>
-						<span class="col-1-2">
-							<label>Name of School
-								<input type="text" name="nameofschool">
+						<span class="col-1-2 no-padding">
+							<label>Name of school
+								<input type="text" name="HighSchoolName">
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>Highest grade completed
-								<select>
+								<select name="HighSchoolCompletion">
 									<option>9</option>
 									<option>10</option>
 									<option>11</option>
@@ -242,32 +247,32 @@
 								</select>
 							</label>
 						</span>
-						<span class="col-1-2">
-							<h4>Did you graduate?</h4>
+						<span class="col-1-2 no-padding">
+							<h4 class="small-text">Did you graduate?</h4>
 							<label class="radio">
-								<input type="radio" name="graduationstatus" value="yes">Yes
+								<input type="radio" name="HighSchoolGraduationStatus" value="yes">Yes
 							</label>
 							<label class="radio">
-								<input type="radio" name="graduationstatus" value="no">No
+								<input type="radio" name="HighSchoolGraduationStatus" value="no">No
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>Last calendar year you studied
-								<input type="text" name="graduationyear">
+								<input type="text" name="HighSchoolGraduationYear" maxlength="4">
 							</label>
 						</span>
 					</div>
 
 					<div class="col-1-1">
 						<h4>College</h4>
-						<span class="col-1-2">
-							<label>Name of School
-								<input type="text" name="nameofschool">
+						<span class="col-1-2 no-padding">
+							<label>Name of school
+								<input type="text" name="CollegeName">
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>Highest year completed
-								<select>
+								<select name="CollegeCompletion">
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -279,23 +284,23 @@
 								</select>
 							</label>
 						</span>
-						<span class="col-1-2">
-							<h4>Did you graduate?</h4>
+						<span class="col-1-2 no-padding">
+							<h4 class="small-text">Did you graduate?</h4>
 							<label class="radio">
-								<input type="radio" name="graduationstatus" value="yes">Yes
+								<input type="radio" name="CollegeGraduationStatus" value="yes">Yes
 							</label>
 							<label class="radio">
-								<input type="radio" name="graduationstatus" value="no">No
+								<input type="radio" name="CollegeGraduationStatus" value="no">No
 							</label>
 						</span>
-						<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>Last calendar year you studied
-								<input type="text" name="graduationyear">
+								<input type="text" name="CollegeYear" maxlength="4">
 							</label>
 						</span>
-						<span class="col-1-1">
+						<span class="col-1-1 no-padding">
 							<label>Degree or Major
-								<input type="text">
+								<input type="text" name="CollegeMajor">
 							</label>
 						</span>
 					</div>
@@ -303,14 +308,13 @@
 					<div class="col-1-1">
 						<h2>Employment History</h2>
 
-
 						<span class="col-1-1">
 							<h3>Have you ever worked for this company or an affiliated company?</h3>
 							<label class="radio">
-								<input type="radio" name="previouscompany" value="no" onclick="show9();">No
+								<input type="radio" name="PreviousAffiliation" value="no" onclick="show9();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="previouscompany"  value="yes" onclick="show10();">Yes
+								<input type="radio" name="PreviousAffiliation"  value="yes" onclick="show10();">Yes
 							</label>
 						</span>
 
@@ -320,25 +324,25 @@
 							</span>
 
 							<span class="col-1-2">
-								<label for="name">Name of former employer:
-									<input type="text" name="NameOfEmployer" autocorrect="off" required />
+								<label for="name">Name of former employer
+									<input type="text" name="AffiliatedEmployerName" autocorrect="off" required />
 								</label>
 							</span>
 							<span class="col-1-2">
 								<span class="col-1-2 no-padding">
-									<label>From:
-										<input type="date" name="date-from"  autocorrect="off" required />
+									<label>From
+										<input type="date" name="AffiliatedEmployerFrom"  autocorrect="off" required />
 									</label>
 								</span>
 								<span class="col-1-2 no-padding">
-									<label>To:
-										<input type="date" name="date-to" autocorrect="off" required />
+									<label>To
+										<input type="date" name="AffiliatedEmployerTo" autocorrect="off" required />
 									</label>
 								</span>
 							</span>
 							<span class="col-1-1">
-								<label>Reason for leaving:
-									<textarea></textarea>
+								<label>Reason for leaving
+									<textarea name="AffiliatedEmployerReasonForLeaving"></textarea>
 								</label>
 							</span>
 						</div>
@@ -347,69 +351,69 @@
 							<h3>Please list your prior employment history for the past 10 years.</h3>
 						</span>
 						<span class="col-1-2">
-							<label>Employer Name
-								<input type="text">
+							<label>Employer name
+								<input type="text" name="FormerEmployerName">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<span class="col-1-2 no-padding">
 								<label>From
-									<input type="date">
+									<input type="FormerEmployerDateFrom">
 								</label>
 							</span>
 							<span class="col-1-2 no-padding">
 								<label>To
-									<input type="date">
+									<input type="FormerEmployerDateTo">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-2">
-							<label>Employer's Address
-								<input type="text">
+							<label>Employer's address
+								<input type="text" name="FormerEmployerAddress">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<label>City
-								<input type="text">
+								<input type="text" name="FormerEmployerCity">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<span class="col-1-2 no-padding">
 								<label>State
-									<input type="text" name="State1" maxlength="2">
+									<input type="text" name="FormerEmployerState" maxlength="2">
 								</label>
 							</span>
 							<span class="col-1-2 no-padding">
-								<label>Zip Code
-									<input type="text">
+								<label>Zip code
+									<input type="text" name="FormerEmployerZip" maxlength="5">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-2">
 							<span class="col-1-2 no-padding">
 								<label>Position held
-									<input type="text">
+									<input type="text" name="FormerPositionHeld">
 								</label>
 							</span>
 							<span class="col-1-2 no-padding">
 								<label>Salary/Wage
-									<input type="text">
+									<input type="text" name="FormerSalary">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-2">
-							<label>Supervisor's Name
-								<input type="text">
+							<label>Supervisor's name
+								<input type="text" name="FormerSupervisorName">
 							</label>
 						</span>
 						<span class="col-1-2">
 							<label>Phone number
-								<input type="tel">
+								<input type="tel" name="FormerSupervisorPhone">
 							</lable>
 						</span>
 						<span class="col-1-1">
 							<label>Reason for leaving
-								<textarea></textarea>
+								<textarea name="FormerEmployerReasonForLeaving"></textarea>
 							</label>
 							<a>Add another employer</a>
 						</span>
@@ -421,10 +425,10 @@
 						<span class="col-1-1">
 							<h3>Do you have legal right to work in the United States?</h3>
 								<label class="radio">
-									<input type="radio" name="legalstatus" value="yes">Yes
+									<input type="radio" name="LegalStatus" value="yes">Yes
 								</label>
 								<label class="radio">
-									<input type="radio" name="legalstatus" value="no">No
+									<input type="radio" name="LegalStatus" value="no">No
 								</label>
 							</label>
 						</span>
@@ -432,10 +436,10 @@
 						<span class="col-1-1">
 							<h3>Have you ever been convicted of a crime?</h3>
 								<label class="radio">
-									<input type="radio" name="conviction" value="yes" onclick="show11();">No
+									<input type="radio" name="Conviction" value="yes" onclick="show11();">No
 								</label>
 								<label class="radio">
-									<input type="radio" name="conviction" value="no" onclick="show12();">Yes
+									<input type="radio" name="Conviction" value="no" onclick="show12();">Yes
 								</label>
 							</label>
 						</span>
@@ -443,7 +447,7 @@
 						<div id="criminal-status" class="hide">
 							<span class="col-1-1">
 								<label>Please explain
-									<textarea></textarea>
+									<textarea name="ConvictionExplanation"></textarea>
 								</label>
 							</span>
 						</div>
@@ -452,7 +456,7 @@
 							<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
 							<br />
 							<label>Additional qualifications
-								<textarea></textarea>
+								<textarea name="AdditionalQualifications"></textarea>
 							</label>
 							<a>Add another qualification</a>
 						</span>

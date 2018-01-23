@@ -72,7 +72,7 @@
 						</label>
 					</span>
 
-					<span class="col-1-2 no-padding">
+					<span class="col-1-2">
 						<span class="col-1-2 no-padding">
 							<label>State:
 								<input type="text" name="State1" maxlength="2">
@@ -89,10 +89,10 @@
 					<span class="col-1-1">
 						<h3>Have you lived at a different address during the past 7 years?</h3>
 							<label class="radio">
-								<input type="radio" name="addresslength" value="yes" onclick="show1();">Yes
+								<input type="radio" name="addresslength" value="no" onclick="show1();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="addresslength" value="no" onclick="show2();">No
+								<input type="radio" name="addresslength" value="yes" onclick="show2();">Yes
 							</label>
 					</span>
 
@@ -114,8 +114,8 @@
 						</label>
 					</span>
 
-					<span class="col-1-2 no-padding">
-						<span class="col-1-2">
+					<span class="col-1-2">
+						<span class="col-1-2 no-padding">
 							<label>State:
 								<input type="text" name="State" maxlength="2">
 							</label>
@@ -137,12 +137,11 @@
 						<h2>Driving History</h2>
 						<h3>Have you been in any driving accidents in the past 3 years?</h3>
 							<label class="radio">
-								<input type="radio" name="accidents" value="no" onclick="show8();">No
+								<input type="radio" name="accidents" value="no" onclick="show3();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="accidents" value="yes" onclick="show7();">Yes
+								<input type="radio" name="accidents" value="yes" onclick="show4();">Yes
 							</label>
-						</label>
 					</span>
 
 					<div id="driving-accidents" class="hide">
@@ -151,8 +150,8 @@
 								<input type="date" name="accidentdate">
 							</label>
 						</span>
-						<span class="col-1-2 no-padding">
-							<span class="col-1-2">
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>Fatalities
 									<input type="text" name="accidentfatalities">
 								</label>
@@ -174,21 +173,21 @@
 					<span class="col-1-1">
 						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)?</h3>
 							<label class="radio">
-								<input type="radio" value="no" onclick="show10();">No
+								<input type="radio" name="forfeitures" value="no" onclick="show5();">No
 							</label>
 							<label class="radio">
-								<input type="radio" value="yes" onclick="show9();">Yes
+								<input type="radio" name="forfeitures" value="yes" onclick="show6();">Yes
 							</label>
 					</span>
 
-					<div id="traffic-convictions no-padding" class="hide">
+					<div id="traffic-convictions" class="hide">
 						<span class="col-1-2">
 							<label>Date of conviction
 								<input type="date" name="accidentdate">
 							</label>
 						</span>
-						<span class="col-1-2 no-padding">
-							<span class="col-1-2">
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>Location
 									<input type="text" name="accidentfatalities">
 								</label>
@@ -199,27 +198,30 @@
 								</label>
 							</span>
 						</span>
-						<label>Penalty
-							<input type="text" name="accidentdetails">
-						</label>
-						<a>Add another traffic conviction</a>
+						<span class="col-1-1">
+							<label>Penalty
+								<input type="text" name="accidentdetails">
+							</label>
+							<a>Add another traffic conviction</a>
+						</span>
 					</div>
 
 					<span class="col-1-1">
 						<h3>Have you ever been denied a license, permit, or priviledge to operate a motor vehicle?</h3>
 							<label class="radio">
-								<input type="radio" value="no" onclick="show11();">No
+								<input type="radio" name="denied" value="no" onclick="show7();">No
 							</label>
 							<label class="radio">
-								<input type="radio" value="yes" onclick="show12();">Yes
+								<input type="radio" name="denied" value="yes" onclick="show8();">Yes
 							</label>
-						</label>
 					</span>
 
 					<div id="denied-license" class="hide">
-						<label>Please explain
-							<textarea></textarea>
-						</label>
+						<span class="col-1-1">
+							<label>Please explain
+								<textarea></textarea>
+							</label>
+						</span>
 					</div>
 
 					<div class="col-1-1 no-padding">
@@ -305,10 +307,10 @@
 						<span class="col-1-1">
 							<h3>Have you ever worked for this company or an affiliated company?</h3>
 							<label class="radio">
-								<input type="radio" name="previouscompany" value="no" onclick="show4();">No
+								<input type="radio" name="previouscompany" value="no" onclick="show9();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="previouscompany"  value="yes" onclick="show3();">Yes
+								<input type="radio" name="previouscompany"  value="yes" onclick="show10();">Yes
 							</label>
 						</span>
 
@@ -334,26 +336,28 @@
 									</label>
 								</span>
 							</span>
-							<span class="col-1-2">
+							<span class="col-1-1">
 								<label>Reason for leaving:
-									<input type="text" name="reasonforleaving" autocorrect="off" required />
+									<textarea></textarea>
 								</label>
 							</span>
 						</div>
 
-						<h3>Please list your prior employment history for the past 10 years.</h3>
+						<span class="col-1-1">
+							<h3>Please list your prior employment history for the past 10 years.</h3>
+						</span>
 						<span class="col-1-2">
 							<label>Employer Name
 								<input type="text">
 							</label>
 						</span>
 						<span class="col-1-2">
-							<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>From
 									<input type="date">
 								</label>
 							</span>
-							<span class="col-1-2">
+							<span class="col-1-2 no-padding">
 								<label>To
 									<input type="date">
 								</label>
@@ -407,8 +411,8 @@
 							<label>Reason for leaving
 								<textarea></textarea>
 							</label>
+							<a>Add another employer</a>
 						</span>
-						<a>Add another employer</a>
 					</div>
 
 					<div class="col-1-1">
@@ -416,10 +420,10 @@
 
 						<span class="col-1-1">
 							<h3>Do you have legal right to work in the United States?</h3>
-								<label for="legalstatusyes" class="radio">
+								<label class="radio">
 									<input type="radio" name="legalstatus" value="yes">Yes
 								</label>
-								<label for="legalstatusno" class="radio">
+								<label class="radio">
 									<input type="radio" name="legalstatus" value="no">No
 								</label>
 							</label>
@@ -428,26 +432,31 @@
 						<span class="col-1-1">
 							<h3>Have you ever been convicted of a crime?</h3>
 								<label class="radio">
-									<input type="radio" name="conviction" value="yes" onclick="show5();">Yes
+									<input type="radio" name="conviction" value="yes" onclick="show11();">No
 								</label>
 								<label class="radio">
-									<input type="radio" name="conviction" value="no"onclick="show6();">No
+									<input type="radio" name="conviction" value="no" onclick="show12();">Yes
 								</label>
 							</label>
 						</span>
 
 						<div id="criminal-status" class="hide">
-							<label>Please explain
-								<input type="text" name="CriminalStatus">
-							</label>
+							<span class="col-1-1">
+								<label>Please explain
+									<textarea></textarea>
+								</label>
+							</span>
 						</div>
 
+						<span class="col-1-1">
 							<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
+							<br />
 							<label>Additional qualifications
 								<textarea></textarea>
 							</label>
 							<a>Add another qualification</a>
-						</div>
+						</span>
+					</div>
 			</form>
 		</section>
 
@@ -496,47 +505,47 @@
 	<script type="text/javascript">
 
 		function show1(){
-		  document.getElementById('previous-addresses').style.display = 'block';
+		  document.getElementById('previous-addresses').style.display = 'none';
 		}
 		function show2(){
-		  document.getElementById('previous-addresses').style.display ='none';
+		  document.getElementById('previous-addresses').style.display ='block';
 		}
 
 		function show3(){
-		  document.getElementById('previous-employers').style.display = 'block';
+		  document.getElementById('driving-accidents').style.display = 'none';
 		}
 		function show4(){
-		  document.getElementById('previous-employers').style.display ='none';
+		  document.getElementById('driving-accidents').style.display ='block';
 		}
 
 		function show5(){
-		  document.getElementById('criminal-status').style.display = 'block';
+		  document.getElementById('traffic-convictions').style.display = 'none';
 		}
 		function show6(){
-		  document.getElementById('criminal-status').style.display ='none';
+		  document.getElementById('traffic-convictions').style.display ='block';
 		}
 
 		function show7(){
-		  document.getElementById('driving-accidents').style.display = 'block';
+		  document.getElementById('denied-license').style.display = 'none';
 		}
 		function show8(){
-		  document.getElementById('driving-accidents').style.display ='none';
+		  document.getElementById('denied-license').style.display ='block';
 		}
 
 		function show9(){
-		  document.getElementById('traffic-convictions').style.display = 'block';
+		  document.getElementById('previous-employers').style.display = 'none';
 		}
 		function show10(){
-		  document.getElementById('traffic-convictions').style.display ='none';
+		  document.getElementById('previous-employers').style.display ='block';
 		}
 
 		function show11(){
-		  document.getElementById('denied-license').style.display ='none';
+		  document.getElementById('criminal-status').style.display = 'none';
+		}
+		function show12(){
+		  document.getElementById('criminal-status').style.display ='block';
 		}
 
-		function show12(){
-		  document.getElementById('denied-license').style.display = 'block';
-		}
 
 
 	</script>

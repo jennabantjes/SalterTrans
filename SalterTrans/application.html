@@ -217,6 +217,24 @@
 					</div>
 
 					<span class="col-1-1">
+						<h3>Have you ever been denied a license, permit, or priviledge to operate a motor vehicle?</h3>
+							<label class="radio">
+								<input type="radio" name="DeniedLicense" value="no" onclick="show7();">No
+							</label>
+							<label class="radio">
+								<input type="radio" name="DeniedLicense" value="yes" onclick="show8();">Yes
+							</label>
+					</span>
+
+					<div id="denied-license" class="hide">
+						<span class="col-1-1">
+							<label>Please explain
+								<textarea name="DeniedLicenseExplanation"></textarea>
+							</label>
+						</span>
+					</div>
+
+					<span class="col-1-1">
 						<input type="submit" name="SpamButton" value="Click if spam" class="spam-button" alt="This button is for spammers" tabindex="-1"/>
 						<input type="submit" name="Submit" value="Submit" class="submit-button" alt="This button is to submit the form"/>
 					</span>
@@ -316,6 +334,13 @@
 		}
 		function show6(){
 		  document.getElementById('traffic-convictions').style.display ='block';
+		}
+
+		function show7(){
+		  document.getElementById('denied-license').style.display = 'none';
+		}
+		function show8(){
+		  document.getElementById('denied-license').style.display ='block';
 		}
 
 	</script>

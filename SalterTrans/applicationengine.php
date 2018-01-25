@@ -27,6 +27,13 @@ else {
 	$AccidentFatalities = htmlentities(trim(stripslashes($_POST['AccidentFatalities'] )));
 	$AccidentInjuries = htmlentities(trim(stripslashes($_POST['AccidentInjuries'] )));
 	$AccidentDetails = htmlentities(trim(stripslashes($_POST['AccidentDetails'] )));
+	$TrafficConvictions = htmlentities(trim(stripslashes($_POST['TrafficConvictions'] )));
+	$TrafficConvictionDate = htmlentities(trim(stripslashes($_POST['TrafficConvictionDate'] )));
+	$TrafficConvictionLocation = htmlentities(trim(stripslashes($_POST['TrafficConvictionLocation'] )));
+	$TrafficConvictionCharge = htmlentities(trim(stripslashes($_POST['TrafficConvictionCharge'] )));
+	$TrafficConvictionPenalty = htmlentities(trim(stripslashes($_POST['TrafficConvictionPenalty'] )));
+	$DeniedLicense = htmlentities(trim(stripslashes($_POST['DeniedLicense'] )));
+	$DeniedLicenseExplanation = htmlentities(trim(stripslashes($_POST['DeniedLicenseExplanation'] )));
 
 	// Check to see if form field are spaces
 	$SpamBlankMessage = "No blank spaces permitted.";
@@ -62,6 +69,10 @@ else {
 	if (preg_match("/(http|www)/i", "$AccidentFatalities")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$AccidentInjuries")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$AccidentDetails")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionLocation")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionCharge")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$TrafficConvictionPenalty")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$DeniedLicenseExplanation")) {echo "$SpamURLMessage"; exit();}
 
 
 	// Check to see if scripts have been embedded.
@@ -82,6 +93,10 @@ else {
 	if (preg_match("/script/i", "$AccidentFatalities")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$AccidentInjuries")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$AccidentDetails")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionLocation")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionCharge")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$TrafficConvictionPenalty")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$DeniedLicenseExplanation")) {echo "$ScriptAlertMessage"; exit();}
 
 
 	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
@@ -101,6 +116,11 @@ else {
 	$AccidentFatalities = preg_replace($pattern, "", $AccidentFatalities);
 	$AccidentInjuries = preg_replace($pattern, "", $AccidentInjuries);
 	$AccidentDetails = preg_replace($pattern, "", $AccidentDetails);
+	$TrafficConvictionLocation = preg_replace($pattern, "", $TrafficConvictionLocation);
+	$TrafficConvictionCharge = preg_replace($pattern, "", $TrafficConvictionCharge);
+	$TrafficConvictionPenalty = preg_replace($pattern, "", $TrafficConvictionPenalty);
+	$DeniedLicenseExplanation = preg_replace($pattern, "", $DeniedLicenseExplanation);
+
 
 	$SpamReplaceText = "*content removed*";
 
@@ -122,6 +142,11 @@ else {
 	$AccidentFatalities = preg_replace($find, "SpamReplaceText", $AccidentFatalities);
 	$AccidentInjuries = preg_replace($find, "SpamReplaceText", $AccidentInjuries);
 	$AccidentDetails = preg_replace($find, "SpamReplaceText", $AccidentDetails);
+	$TrafficConvictionLocation = preg_replace($find, "SpamReplaceText", $TrafficConvictionLocation);
+	$TrafficConvictionCharge = preg_replace($find, "SpamReplaceText", $TrafficConvictionCharge);
+	$TrafficConvictionPenalty = preg_replace($find, "SpamReplaceText", $TrafficConvictionPenalty);
+	$DeniedLicenseExplanation = preg_replace($find, "SpamReplaceText", $DeniedLicenseExplanation);
+
 
 	// Check to see if the fields contain any content we want to ban
 // 	if(stristr($name, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -140,6 +165,11 @@ else {
 	if(stristr($AccidentFatalities, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($AccidentInjuries, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($AccidentDetails, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($TrafficConvictionLocation, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($TrafficConvictionCharge, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($TrafficConvictionPenalty, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($DeniedLicenseExplanation, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+
 
 	// Do a check on the send email and subject text
  	if(stristr($EmailTo, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -186,6 +216,27 @@ else {
 	}
 	if(isset($AccidentDetails)&&$AccidentDetails!=''){
 		$EmailBody .= "AccidentDetails: ".($AccidentDetails)."\n";
+	}
+	if(isset($TrafficConvictions)&&$TrafficConvictions!=''){
+		$EmailBody .= "TrafficConvictions: ".($TrafficConvictions)."\n";
+	}
+	if(isset($TrafficConvictionDate)&&$TrafficConvictionDate!=''){
+		$EmailBody .= "TrafficConvictionDate: ".($TrafficConvictionDate)."\n";
+	}
+	if(isset($TrafficConvictionLocation)&&$TrafficConvictionLocation!=''){
+		$EmailBody .= "TrafficConvictionLocation: ".($TrafficConvictionLocation)."\n";
+	}
+	if(isset($TrafficConvictionCharge)&&$TrafficConvictionCharge!=''){
+		$EmailBody .= "TrafficConvictionCharge: ".($TrafficConvictionCharge)."\n";
+	}
+	if(isset($TrafficConvictionPenalty)&&$TrafficConvictionPenalty!=''){
+		$EmailBody .= "TrafficConvictionPenalty: ".($TrafficConvictionPenalty)."\n";
+	}
+	if(isset($DeniedLicense)&&$DeniedLicense!=''){
+		$EmailBody .= "DeniedLicense: ".($DeniedLicense)."\n";
+	}
+	if(isset($DeniedLicenseExplanation)&&$DeniedLicenseExplanation!=''){
+		$EmailBody .= "DeniedLicenseExplanation: ".($DeniedLicenseExplanation)."\n";
 	}
 
 

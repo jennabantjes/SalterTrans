@@ -13,13 +13,14 @@ else {
 	$ApplicantName = htmlentities(trim(stripslashes($_POST['ApplicantName'] )));
 	$ApplicantEmail = htmlentities(trim(stripslashes($_POST['ApplicantEmail'] ))); 
 	$ApplicantPhone = htmlentities(trim(stripslashes($_POST['ApplicantPhone'] )));
+	$ApplicantAddress = htmlentities(trim(stripslashes($_POST['ApplicantAddress'] ))); 
 
 	// Check to see if form field are spaces
 	$SpamBlankMessage = "No blank spaces permitted.";
 
 	if(empty($ApplicantName)) {echo "$SpamBlankMessage"; exit();}
 	if(empty($ApplicantEmail)) {echo "$SpamBlankMessage"; exit();}
-
+	//if(empty($ApplicantAddress)) {echo "$SpamBlankMessage"; exit();}
 
 	// Check to see if URLs have been injected
 	$validationOK=true;
@@ -34,6 +35,7 @@ else {
 	if (preg_match("/(http|www)/i", "$ApplicantName")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$ApplicantEmail")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$ApplicantPhone")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$ApplicantAddress")) {echo "$SpamURLMessage"; exit();}
 
 
 	// Check to see if scripts have been embedded.
@@ -43,6 +45,7 @@ else {
 	if (preg_match("/script/i", "$ApplicantName")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$ApplicantEmail")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$ApplicantPhone")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$ApplicantAddress")) {echo "$ScriptAlertMessage"; exit();}
 
 
 	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
@@ -51,6 +54,7 @@ else {
 	$ApplicantName = preg_replace($pattern, "", $ApplicantName);
 	$ApplicantEmail = preg_replace($pattern, "", $ApplicantEmail);
 	$ApplicantPhone = preg_replace($pattern, "", $ApplicantPhone);
+	$ApplicantAddress = preg_replace($pattern, "", $ApplicantAddress);
 
 	$SpamReplaceText = "*content removed*";
 
@@ -61,6 +65,7 @@ else {
 	$ApplicantName = preg_replace($find, "SpamReplaceText", $ApplicantName);
 	$ApplicantEmail = preg_replace($find, "SpamReplaceText", $ApplicantEmail);
 	$ApplicantPhone = preg_replace($find, "SpamReplaceText", $ApplicantPhone);
+	$ApplicantAddress = preg_replace($find, "SpamReplaceText", $ApplicantAddress);
 
 	// Check to see if the fields contain any content we want to ban
 // 	if(stristr($name, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -68,7 +73,8 @@ else {
 	if(stristr($ApplicantName, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($ApplicantEmail, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($ApplicantPhone, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
- 
+ 	if(stristr($ApplicantAddress, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+
 	// Do a check on the send email and subject text
  	if(stristr($EmailTo, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
  	if(stristr($EmailFrom, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
@@ -76,12 +82,12 @@ else {
 	// Prepare email body text
 	$EmailBody .= "Name: ".($ApplicantName)."\n";
 	$EmailBody .= "Email: ".($ApplicantEmail)."\n";
-
 	// Check to see if optional fields are populated and if so, put into email body
-
 	if(isset($ApplicantPhone)&&$ApplicantPhone!=''){
 		$EmailBody .= "Phone: ".($ApplicantPhone)."\n";
 	}
+	$EmailBody .= "Address: ".($ApplicantAddress)."\n";
+
 
 	// Send email 
 	$success = mail($EmailTo, $Subject, $EmailBody, "From: <$EmailFrom>");

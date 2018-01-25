@@ -143,6 +143,43 @@
 					</span>
 				</div>
 
+				<span class="col-1-1">
+					<h2>Driving History</h2>
+					<h3>Have you been in any driving accidents in the past 3 years?</h3>
+						<label class="radio">
+							<input type="radio" name="DrivingAccidents" value="no" onclick="show3();">No
+						</label>
+						<label class="radio">
+							<input type="radio" name="DrivingAccidents" value="yes" onclick="show4();">Yes
+						</label>
+					</span>
+
+					<div id="driving-accidents" class="hide">
+						<span class="col-1-2">
+							<label>Date of accident
+								<input type="date" name="AccidentDate">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
+								<label>Fatalities
+									<input type="text" name="AccidentFatalities">
+								</label>
+							</span>
+							<span class="col-1-2 no-padding">
+								<label>Injuries
+									<input type="text" name="AccidentInjuries">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-1">
+							<label>Nature of accident
+								<input type="text" name="AccidentDetails">
+							</label>
+						</span>
+						<a>Add another driving accident</a>
+					</div>
+
 					<span class="col-1-1">
 						<input type="submit" name="SpamButton" value="Click if spam" class="spam-button" alt="This button is for spammers" tabindex="-1"/>
 						<input type="submit" name="Submit" value="Submit" class="submit-button" alt="This button is to submit the form"/>
@@ -229,6 +266,13 @@
 		}
 		function show2(){
 		  document.getElementById('previous-addresses').style.display ='block';
+		}
+
+		function show3(){
+		  document.getElementById('driving-accidents').style.display = 'none';
+		}
+		function show4(){
+		  document.getElementById('driving-accidents').style.display ='block';
 		}
 
 	</script>

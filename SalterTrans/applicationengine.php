@@ -22,6 +22,11 @@ else {
 	$PreviousCity = htmlentities(trim(stripslashes($_POST['PreviousCity'] )));
 	$PreviousState = htmlentities(trim(stripslashes($_POST['PreviousState'] )));
 	$PreviousZip = htmlentities(trim(stripslashes($_POST['PreviousZip'] )));
+	$DrivingAccidents = htmlentities(trim(stripslashes($_POST['DrivingAccidents'] )));
+	$AccidentDate = htmlentities(trim(stripslashes($_POST['AccidentDate'] )));
+	$AccidentFatalities = htmlentities(trim(stripslashes($_POST['AccidentFatalities'] )));
+	$AccidentInjuries = htmlentities(trim(stripslashes($_POST['AccidentInjuries'] )));
+	$AccidentDetails = htmlentities(trim(stripslashes($_POST['AccidentDetails'] )));
 
 	// Check to see if form field are spaces
 	$SpamBlankMessage = "No blank spaces permitted.";
@@ -54,6 +59,9 @@ else {
 	if (preg_match("/(http|www)/i", "$PreviousCity")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$PreviousState")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$PreviousZip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentFatalities")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentInjuries")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$AccidentDetails")) {echo "$SpamURLMessage"; exit();}
 
 
 	// Check to see if scripts have been embedded.
@@ -71,6 +79,9 @@ else {
 	if (preg_match("/script/i", "$PreviousCity")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$PreviousState")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$PreviousZip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentFatalities")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentInjuries")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$AccidentDetails")) {echo "$ScriptAlertMessage"; exit();}
 
 
 	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
@@ -87,6 +98,9 @@ else {
 	$PreviousCity = preg_replace($pattern, "", $PreviousCity);
 	$PreviousState = preg_replace($pattern, "", $PreviousState);
 	$PreviousZip = preg_replace($pattern, "", $PreviousZip);
+	$AccidentFatalities = preg_replace($pattern, "", $AccidentFatalities);
+	$AccidentInjuries = preg_replace($pattern, "", $AccidentInjuries);
+	$AccidentDetails = preg_replace($pattern, "", $AccidentDetails);
 
 	$SpamReplaceText = "*content removed*";
 
@@ -105,6 +119,9 @@ else {
 	$PreviousCity = preg_replace($find, "SpamReplaceText", $PreviousCity);
 	$PreviousState = preg_replace($find, "SpamReplaceText", $PreviousState);
 	$PreviousZip = preg_replace($find, "SpamReplaceText", $PreviousZip);
+	$AccidentFatalities = preg_replace($find, "SpamReplaceText", $AccidentFatalities);
+	$AccidentInjuries = preg_replace($find, "SpamReplaceText", $AccidentInjuries);
+	$AccidentDetails = preg_replace($find, "SpamReplaceText", $AccidentDetails);
 
 	// Check to see if the fields contain any content we want to ban
 // 	if(stristr($name, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -120,6 +137,9 @@ else {
 	if(stristr($PreviousCity, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($PreviousState, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($PreviousZip, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($AccidentFatalities, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($AccidentInjuries, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($AccidentDetails, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 
 	// Do a check on the send email and subject text
  	if(stristr($EmailTo, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -151,6 +171,21 @@ else {
 	}
 	if(isset($PreviousZip)&&$PreviousZip!=''){
 		$EmailBody .= "PreviousZip: ".($PreviousZip)."\n";
+	}
+	if(isset($DrivingAccidents)&&$DrivingAccidents!=''){
+		$EmailBody .= "DrivingAccidents: ".($DrivingAccidents)."\n";
+	}
+	if(isset($AccidentDate)&&$AccidentDate!=''){
+		$EmailBody .= "AccidentDate: ".($AccidentDate)."\n";
+	}
+	if(isset($AccidentFatalities)&&$AccidentFatalities!=''){
+		$EmailBody .= "AccidentFatalities: ".($AccidentFatalities)."\n";
+	}
+	if(isset($AccidentInjuries)&&$AccidentInjuries!=''){
+		$EmailBody .= "AccidentInjuries: ".($AccidentInjuries)."\n";
+	}
+	if(isset($AccidentDetails)&&$AccidentDetails!=''){
+		$EmailBody .= "AccidentDetails: ".($AccidentDetails)."\n";
 	}
 
 

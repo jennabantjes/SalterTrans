@@ -328,10 +328,10 @@
 						<span class="col-1-1">
 							<h3>Have you ever worked for this company or an affiliated company?</h3>
 							<label class="radio">
-								<input type="radio" name="PreviousAffiliation" value="no" onclick="show9();">No
+								<input type="radio" name="PreviousAffiliation" value="No" onclick="show9();">No
 							</label>
 							<label class="radio">
-								<input type="radio" name="PreviousAffiliation"  value="yes" onclick="show10();">Yes
+								<input type="radio" name="PreviousAffiliation"  value="Yes" onclick="show10();">Yes
 							</label>
 						</span>
 
@@ -437,7 +437,50 @@
 							<a>Add another employer</a>
 						</span>
 					</div>
+				</section>
 
+				<section>
+					<div class="col-1-1">
+						<h2>Other Qualifications</h2>
+
+						<span class="col-1-1">
+							<h3>Do you have legal right to work in the United States?</h3>
+								<label class="radio">
+									<input type="radio" name="LegalStatus" value="Yes">Yes
+								</label>
+								<label class="radio">
+									<input type="radio" name="LegalStatus" value="No">No
+								</label>
+							</label>
+						</span>
+
+						<span class="col-1-1">
+							<h3>Have you ever been convicted of a crime?</h3>
+								<label class="radio">
+									<input type="radio" name="Conviction" value="No" onclick="show11();">No
+								</label>
+								<label class="radio">
+									<input type="radio" name="Conviction" value="Yes" onclick="show12();">Yes
+								</label>
+						</span>
+
+						<div id="criminal-status" class="hide">
+							<span class="col-1-1">
+								<label>Please explain
+									<textarea name="ConvictionExplanation"></textarea>
+								</label>
+							</span>
+						</div>
+
+						<span class="col-1-1">
+							<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
+							<br />
+							<label>Additional qualifications
+								<textarea name="AdditionalQualifications"></textarea>
+							</label>
+							<a>Add another qualification</a>
+						</span>
+					</div>
 				</section>
 
 					<span class="col-1-1">
@@ -556,6 +599,12 @@
 		  document.getElementById('previous-employers').style.display ='block';
 		}
 
+		function show11(){
+		  document.getElementById('criminal-status').style.display = 'none';
+		}
+		function show12(){
+		  document.getElementById('criminal-status').style.display ='block';
+		}
 	</script>
 
 </body>

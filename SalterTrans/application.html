@@ -181,6 +181,42 @@
 					</div>
 
 					<span class="col-1-1">
+						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)?</h3>
+							<label class="radio">
+								<input type="radio" name="TrafficConvictions" value="no" onclick="show5();">No
+							</label>
+							<label class="radio">
+								<input type="radio" name="TrafficConvictions" value="yes" onclick="show6();">Yes
+							</label>
+					</span>
+
+					<div id="traffic-convictions" class="hide">
+						<span class="col-1-2">
+							<label>Date of conviction
+								<input type="date" name="TrafficConvictionDate">
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
+								<label>Location
+									<input type="text" name="TrafficConvictionLocation">
+								</label>
+							</span>
+							<span class="col-1-2 no-padding">
+								<label>Charge
+									<input type="text" name="TrafficConvictionCharge">
+								</label>
+							</span>
+						</span>
+						<span class="col-1-1">
+							<label>Penalty
+								<input type="text" name="TrafficConvictionPenalty">
+							</label>
+							<a>Add another traffic conviction</a>
+						</span>
+					</div>
+
+					<span class="col-1-1">
 						<input type="submit" name="SpamButton" value="Click if spam" class="spam-button" alt="This button is for spammers" tabindex="-1"/>
 						<input type="submit" name="Submit" value="Submit" class="submit-button" alt="This button is to submit the form"/>
 					</span>
@@ -273,6 +309,13 @@
 		}
 		function show4(){
 		  document.getElementById('driving-accidents').style.display ='block';
+		}
+
+		function show5(){
+		  document.getElementById('traffic-convictions').style.display = 'none';
+		}
+		function show6(){
+		  document.getElementById('traffic-convictions').style.display ='block';
 		}
 
 	</script>

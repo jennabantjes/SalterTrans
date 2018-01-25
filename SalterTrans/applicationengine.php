@@ -307,144 +307,144 @@ else {
 	// Check to see if optional fields are populated and if so, put into email body
 
 	if(isset($DifferentAddress)&&$DifferentAddress!=''){
-		$EmailBody .= "DifferentAddress: ".($DifferentAddress)."\n";
+		$EmailBody .= "Different address in past 7 years?: ".($DifferentAddress)."\n";
 	}
 	if(isset($PreviousAddress)&&$PreviousAddress!=''){
-		$EmailBody .= "PreviousAddress: ".($PreviousAddress)."\n";
+		$EmailBody .= "Previous Address: ".($PreviousAddress)."\n";
 	}
 	if(isset($PreviousCity)&&$PreviousCity!=''){
-		$EmailBody .= "PreviousCity: ".($PreviousCity)."\n";
+		$EmailBody .= "Previous City: ".($PreviousCity)."\n";
 	}
 	if(isset($PreviousState)&&$PreviousState!=''){
-		$EmailBody .= "PreviousState: ".($PreviousState)."\n";
+		$EmailBody .= "Previous State: ".($PreviousState)."\n";
 	}
 	if(isset($PreviousZip)&&$PreviousZip!=''){
-		$EmailBody .= "PreviousZip: ".($PreviousZip)."\n";
+		$EmailBody .= "Previous Zip: ".($PreviousZip)."\n";
 	}
 	if(isset($DrivingAccidents)&&$DrivingAccidents!=''){
-		$EmailBody .= "DrivingAccidents: ".($DrivingAccidents)."\n";
+		$EmailBody .= "Any driving accidents?: ".($DrivingAccidents)."\n";
 	}
 	if(isset($AccidentDate)&&$AccidentDate!=''){
-		$EmailBody .= "AccidentDate: ".($AccidentDate)."\n";
+		$EmailBody .= "Accident Date: ".($AccidentDate)."\n";
 	}
 	if(isset($AccidentFatalities)&&$AccidentFatalities!=''){
-		$EmailBody .= "AccidentFatalities: ".($AccidentFatalities)."\n";
+		$EmailBody .= "Accident Fatalities: ".($AccidentFatalities)."\n";
 	}
 	if(isset($AccidentInjuries)&&$AccidentInjuries!=''){
-		$EmailBody .= "AccidentInjuries: ".($AccidentInjuries)."\n";
+		$EmailBody .= "Accident Injuries: ".($AccidentInjuries)."\n";
 	}
 	if(isset($AccidentDetails)&&$AccidentDetails!=''){
-		$EmailBody .= "AccidentDetails: ".($AccidentDetails)."\n";
+		$EmailBody .= "Accident Details: ".($AccidentDetails)."\n";
 	}
 	if(isset($TrafficConvictions)&&$TrafficConvictions!=''){
-		$EmailBody .= "TrafficConvictions: ".($TrafficConvictions)."\n";
+		$EmailBody .= "Any traffic convictions?: ".($TrafficConvictions)."\n";
 	}
 	if(isset($TrafficConvictionDate)&&$TrafficConvictionDate!=''){
-		$EmailBody .= "TrafficConvictionDate: ".($TrafficConvictionDate)."\n";
+		$EmailBody .= "Traffic Conviction Date: ".($TrafficConvictionDate)."\n";
 	}
 	if(isset($TrafficConvictionLocation)&&$TrafficConvictionLocation!=''){
-		$EmailBody .= "TrafficConvictionLocation: ".($TrafficConvictionLocation)."\n";
+		$EmailBody .= "Traffic Conviction Location: ".($TrafficConvictionLocation)."\n";
 	}
 	if(isset($TrafficConvictionCharge)&&$TrafficConvictionCharge!=''){
-		$EmailBody .= "TrafficConvictionCharge: ".($TrafficConvictionCharge)."\n";
+		$EmailBody .= "Traffic Conviction Charge: ".($TrafficConvictionCharge)."\n";
 	}
 	if(isset($TrafficConvictionPenalty)&&$TrafficConvictionPenalty!=''){
-		$EmailBody .= "TrafficConvictionPenalty: ".($TrafficConvictionPenalty)."\n";
+		$EmailBody .= "Traffic Conviction Penalty: ".($TrafficConvictionPenalty)."\n";
 	}
 	if(isset($DeniedLicense)&&$DeniedLicense!=''){
-		$EmailBody .= "DeniedLicense: ".($DeniedLicense)."\n";
+		$EmailBody .= "Have you been denied a license?: ".($DeniedLicense)."\n";
 	}
 	if(isset($DeniedLicenseExplanation)&&$DeniedLicenseExplanation!=''){
-		$EmailBody .= "DeniedLicenseExplanation: ".($DeniedLicenseExplanation)."\n";
+		$EmailBody .= "Denied License Explanation: ".($DeniedLicenseExplanation)."\n";
 	}
 	if(isset($HighSchoolName)&&$HighSchoolName!=''){
-		$EmailBody .= "HighSchoolName: ".($HighSchoolName)."\n";
+		$EmailBody .= "High School Name: ".($HighSchoolName)."\n";
 	}
 	if(isset($HighSchoolCompletion)&&$HighSchoolCompletion!=''){
-		$EmailBody .= "HighSchoolCompletion: ".($HighSchoolCompletion)."\n";
+		$EmailBody .= "High School Completion: ".($HighSchoolCompletion)."\n";
 	}
 	if(isset($HighSchoolGraduationStatus)&&$HighSchoolGraduationStatus!=''){
-		$EmailBody .= "HighSchoolGraduationStatus: ".($HighSchoolGraduationStatus)."\n";
+		$EmailBody .= "High School Graduation Status: ".($HighSchoolGraduationStatus)."\n";
 	}
 	if(isset($HighSchoolGraduationYear)&&$HighSchoolGraduationYear!=''){
-		$EmailBody .= "HighSchoolGraduationYear: ".($HighSchoolGraduationYear)."\n";
+		$EmailBody .= "High School Graduation Year: ".($HighSchoolGraduationYear)."\n";
 	}
 	if(isset($CollegeName)&&$CollegeName!=''){
-		$EmailBody .= "CollegeName: ".($CollegeName)."\n";
+		$EmailBody .= "College Name: ".($CollegeName)."\n";
 	}
 	if(isset($CollegeCompletion)&&$CollegeCompletion!=''){
-		$EmailBody .= "CollegeCompletion: ".($CollegeCompletion)."\n";
+		$EmailBody .= "College Completion: ".($CollegeCompletion)."\n";
 	}
 	if(isset($CollegeGraduationStatus)&&$CollegeGraduationStatus!=''){
-		$EmailBody .= "CollegeGraduationStatus: ".($CollegeGraduationStatus)."\n";
+		$EmailBody .= "College Graduation Status: ".($CollegeGraduationStatus)."\n";
 	}
 	if(isset($CollegeYear)&&$CollegeYear!=''){
-		$EmailBody .= "CollegeYear: ".($CollegeYear)."\n";
+		$EmailBody .= "College Year: ".($CollegeYear)."\n";
 	}
 	if(isset($CollegeMajor)&&$CollegeMajor!=''){
-		$EmailBody .= "CollegeMajor: ".($CollegeMajor)."\n";
+		$EmailBody .= "College Major: ".($CollegeMajor)."\n";
 	}
 	if(isset($PreviousAffiliation)&&$PreviousAffiliation!=''){
-		$EmailBody .= "PreviousAffiliation: ".($PreviousAffiliation)."\n";
+		$EmailBody .= "Have you worked for an affiliated employer?: ".($PreviousAffiliation)."\n";
 	}
 	if(isset($AffiliatedEmployerName)&&$AffiliatedEmployerName!=''){
-		$EmailBody .= "AffiliatedEmployerName: ".($AffiliatedEmployerName)."\n";
+		$EmailBody .= "Affiliated Employer Name: ".($AffiliatedEmployerName)."\n";
 	}
 	if(isset($AffiliatedEmployerFrom)&&$AffiliatedEmployerFrom!=''){
-		$EmailBody .= "AffiliatedEmployerFrom: ".($AffiliatedEmployerFrom)."\n";
+		$EmailBody .= "Date From: ".($AffiliatedEmployerFrom)."\n";
 	}
 	if(isset($AffiliatedEmployerTo)&&$AffiliatedEmployerTo!=''){
-		$EmailBody .= "AffiliatedEmployerTo: ".($AffiliatedEmployerTo)."\n";
+		$EmailBody .= "Date To: ".($AffiliatedEmployerTo)."\n";
 	}
 	if(isset($AffiliatedEmployerReasonForLeaving)&&$AffiliatedEmployerReasonForLeaving!=''){
-		$EmailBody .= "AffiliatedEmployerReasonForLeaving: ".($AffiliatedEmployerReasonForLeaving)."\n";
+		$EmailBody .= "Reason For Leaving: ".($AffiliatedEmployerReasonForLeaving)."\n";
 	}
 /* --> */	$EmailBody .= "Former Employer: ".($FormerEmployerName)."\n";
 
 	if(isset($FormerEmployerDateFrom)&&$FormerEmployerDateFrom!=''){
-		$EmailBody .= "FormerEmployerDateFrom: ".($FormerEmployerDateFrom)."\n";
+		$EmailBody .= "Date From: ".($FormerEmployerDateFrom)."\n";
 	}
 	if(isset($FormerEmployerDateTo)&&$FormerEmployerDateTo!=''){
-		$EmailBody .= "FormerEmployerDateTo: ".($FormerEmployerDateTo)."\n";
+		$EmailBody .= "Date To: ".($FormerEmployerDateTo)."\n";
 	}
 	if(isset($FormerEmployerAddress)&&$FormerEmployerAddress!=''){
-		$EmailBody .= "FormerEmployerAddress: ".($FormerEmployerAddress)."\n";
+		$EmailBody .= "Employer Address: ".($FormerEmployerAddress)."\n";
 	}
 	if(isset($FormerEmployerCity)&&$FormerEmployerCity!=''){
-		$EmailBody .= "FormerEmployerCity: ".($FormerEmployerCity)."\n";
+		$EmailBody .= "Employer City: ".($FormerEmployerCity)."\n";
 	}
 	if(isset($FormerEmployerState)&&$FormerEmployerState!=''){
-		$EmailBody .= "FormerEmployerState: ".($FormerEmployerState)."\n";
+		$EmailBody .= "Employer State: ".($FormerEmployerState)."\n";
 	}
 	if(isset($FormerEmployerZip)&&$FormerEmployerZip!=''){
-		$EmailBody .= "FormerEmployerZip: ".($FormerEmployerZip)."\n";
+		$EmailBody .= "Employer Zip: ".($FormerEmployerZip)."\n";
 	}
 	
 /*-->*/	$EmailBody .= "Former Position: ".($FormerPositionHeld)."\n";
 
 	if(isset($FormerSalary)&&$FormerSalary!=''){
-		$EmailBody .= "FormerSalary: ".($FormerSalary)."\n";
+		$EmailBody .= "Former Salary: ".($FormerSalary)."\n";
 	}
 	if(isset($FormerSupervisorName)&&$FormerSupervisorName!=''){
-		$EmailBody .= "FormerSupervisorName: ".($FormerSupervisorName)."\n";
+		$EmailBody .= "Former Supervisor Name: ".($FormerSupervisorName)."\n";
 	}
 	if(isset($FormerSupervisorPhone)&&$FormerSupervisorPhone!=''){
-		$EmailBody .= "FormerSupervisorPhone: ".($FormerSupervisorPhone)."\n";
+		$EmailBody .= "Former Supervisor Phone: ".($FormerSupervisorPhone)."\n";
 	}
 	if(isset($FormerEmployerReasonForLeaving)&&$FormerEmployerReasonForLeaving!=''){
-		$EmailBody .= "FormerEmployerReasonForLeaving: ".($FormerEmployerReasonForLeaving)."\n";
+		$EmailBody .= "Reason For Leaving: ".($FormerEmployerReasonForLeaving)."\n";
 	}
 	if(isset($LegalStatus)&&$LegalStatus!=''){
-		$EmailBody .= "LegalStatus: ".($LegalStatus)."\n";
+		$EmailBody .= "Legal Status: ".($LegalStatus)."\n";
 	}
 	if(isset($Conviction)&&$Conviction!=''){
 		$EmailBody .= "Conviction: ".($Conviction)."\n";
 	}
 	if(isset($ConvictionExplanation)&&$ConvictionExplanation!=''){
-		$EmailBody .= "ConvictionExplanation: ".($ConvictionExplanation)."\n";
+		$EmailBody .= "Conviction Explanation: ".($ConvictionExplanation)."\n";
 	}
 	if(isset($AdditionalQualifications)&&$AdditionalQualifications!=''){
-		$EmailBody .= "AdditionalQualifications: ".($AdditionalQualifications)."\n";
+		$EmailBody .= "Additional Qualifications: ".($AdditionalQualifications)."\n";
 	}
 
 	// Send email 

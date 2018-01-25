@@ -42,9 +42,11 @@
 	<main role="main">
 		<section class="medium-bg">
 			<div class="page-wrapper">
-				<h1>Your form has been submitted!</h1><br />
-				<p>Thank you for your interest. We will get back to you as soon as possible.</p>
-				
+				<div class="text-wrapper">
+					<h1>Your information has been submitted.</h1><br />
+					<p>Thank you for your interest! We will get back to you as soon as possible.</p>
+				</div>
+
 				<a href="index.html"><h2>Return to the homepage </h2> <br /> </a>
 				<img src="images/schoolbusinautumn.jpg" alt="School bus driving down a road surrounded by fall leaves." />
 			</div>

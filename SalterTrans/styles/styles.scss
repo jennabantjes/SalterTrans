@@ -201,9 +201,9 @@ img {
 
 button, .button, input[type="submit"] {
         background: transparent;
-        border: 1px solid $green;
+        border: 1px solid $grey;
         border-radius: 50px;
-        color: $green;
+        color: $grey;
         display: inline-block;
         font-size: 14px;
         padding: .75em 1.25em;
@@ -217,6 +217,8 @@ button, .button, input[type="submit"] {
 
         &:hover {
             cursor: pointer;
+            color: $green;
+            border-color: $green;
         }
     }
 

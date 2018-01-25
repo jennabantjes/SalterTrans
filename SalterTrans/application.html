@@ -97,6 +97,53 @@
 					</span>
 
 					<span class="col-1-1">
+						<h3>Have you lived at a different address during the past 7 years?</h3>
+							<label class="radio">
+								<input type="radio" name="DifferentAddress" value="no" onclick="show1();">No
+							</label>
+							<label class="radio">
+								<input type="radio" name="DifferentAddress" value="yes" onclick="show2();">Yes
+							</label>
+					</span>
+
+				<div id="previous-addresses" class="hide">
+
+					<span class="col-1-1">
+						<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
+					</span>
+
+					<span class="col-1-2">
+						<label>Address
+							<input type="text" name="PreviousAddress">
+						</label>
+					</span>
+
+					<span class="col-1-2">
+						<label>City
+							<input type="text" name="PreviousCity">
+						</label>
+					</span>
+
+					<span class="col-1-2">
+						<span class="col-1-2 no-padding">
+							<label>State
+								<input type="text" name="PreviousState" maxlength="2">
+							</label>
+						</span>
+
+						<span class="col-1-2 no-padding">
+							<label>Zip code
+								<input type="text" pattern="\d*" novalidate autocorrect="off" name="PreviousZip" maxlength="5" minlength="5">
+							</label>
+						</span>
+					</span>
+
+					<span class="col-1-1">
+						<a onclick="anotheraddress();">Add another address</a>
+					</span>
+				</div>
+
+					<span class="col-1-1">
 						<input type="submit" name="SpamButton" value="Click if spam" class="spam-button" alt="This button is for spammers" tabindex="-1"/>
 						<input type="submit" name="Submit" value="Submit" class="submit-button" alt="This button is to submit the form"/>
 					</span>
@@ -174,6 +221,17 @@
 			</div>
 		</section>
 	</footer>
+
+	<script type="text/javascript">
+
+		function show1(){
+		  document.getElementById('previous-addresses').style.display = 'none';
+		}
+		function show2(){
+		  document.getElementById('previous-addresses').style.display ='block';
+		}
+
+	</script>
 
 </body>
 

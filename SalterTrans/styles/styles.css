@@ -150,9 +150,9 @@ img {
 
 button, .button, input[type="submit"] {
   background: transparent;
-  border: 1px solid #009D49;
+  border: 1px solid #14281D;
   border-radius: 50px;
-  color: #009D49;
+  color: #14281D;
   display: inline-block;
   font-size: 14px;
   padding: .75em 1.25em; }
@@ -162,7 +162,9 @@ button, .button, input[type="submit"] {
       border-color: #009D49;
       color: #009D49; }
   button:hover, .button:hover, input[type="submit"]:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #009D49;
+    border-color: #009D49; }
 
 .hide {
   display: none; }

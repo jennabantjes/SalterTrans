@@ -17,12 +17,20 @@ else {
 	$ApplicantCity = htmlentities(trim(stripslashes($_POST['ApplicantCity'] )));
 	$ApplicantState = htmlentities(trim(stripslashes($_POST['ApplicantState'] )));
 	$ApplicantZip = htmlentities(trim(stripslashes($_POST['ApplicantZip'] ))); 
+	$DifferentAddress = htmlentities(trim(stripslashes($_POST['DifferentAddress'] )));
+	$PreviousAddress = htmlentities(trim(stripslashes($_POST['PreviousAddress'] )));
+	$PreviousCity = htmlentities(trim(stripslashes($_POST['PreviousCity'] )));
+	$PreviousState = htmlentities(trim(stripslashes($_POST['PreviousState'] )));
+	$PreviousZip = htmlentities(trim(stripslashes($_POST['PreviousZip'] )));
 
 	// Check to see if form field are spaces
 	$SpamBlankMessage = "No blank spaces permitted.";
 
 	if(empty($ApplicantName)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($ApplicantPhone)) {echo "$SpamBlankMessage"; exit();}
 	if(empty($ApplicantEmail)) {echo "$SpamBlankMessage"; exit();}
+	if(empty($ApplicantAddress)) {echo "$SpamBlankMessage"; exit();}
+
 	//if(empty($ApplicantAddress)) {echo "$SpamBlankMessage"; exit();}
 
 	// Check to see if URLs have been injected
@@ -42,6 +50,10 @@ else {
 	if (preg_match("/(http|www)/i", "$ApplicantCity")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$ApplicantState")) {echo "$SpamURLMessage"; exit();}
 	if (preg_match("/(http|www)/i", "$ApplicantZip")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousAddress")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousCity")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousState")) {echo "$SpamURLMessage"; exit();}
+	if (preg_match("/(http|www)/i", "$PreviousZip")) {echo "$SpamURLMessage"; exit();}
 
 
 	// Check to see if scripts have been embedded.
@@ -55,6 +67,10 @@ else {
 	if (preg_match("/script/i", "$ApplicantCity")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$ApplicantState")) {echo "$ScriptAlertMessage"; exit();}
 	if (preg_match("/script/i", "$ApplicantZip")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousAddress")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousCity")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousState")) {echo "$ScriptAlertMessage"; exit();}
+	if (preg_match("/script/i", "$PreviousZip")) {echo "$ScriptAlertMessage"; exit();}
 
 
 	// Pattern match search to strip out the invalid charcaters, this prevents the mail injection spammer 
@@ -67,6 +83,10 @@ else {
 	$ApplicantCity = preg_replace($pattern, "", $ApplicantCity);
 	$ApplicantState = preg_replace($pattern, "", $ApplicantState);
 	$ApplicantZip = preg_replace($pattern, "", $ApplicantZip);
+	$PreviousAddress = preg_replace($pattern, "", $PreviousAddress);
+	$PreviousCity = preg_replace($pattern, "", $PreviousCity);
+	$PreviousState = preg_replace($pattern, "", $PreviousState);
+	$PreviousZip = preg_replace($pattern, "", $PreviousZip);
 
 	$SpamReplaceText = "*content removed*";
 
@@ -81,6 +101,10 @@ else {
 	$ApplicantCity = preg_replace($find, "SpamReplaceText", $ApplicantCity);
 	$ApplicantState = preg_replace($find, "SpamReplaceText", $ApplicantState);
 	$ApplicantZip = preg_replace($find, "SpamReplaceText", $ApplicantZip);
+	$PreviousAddress = preg_replace($find, "SpamReplaceText", $PreviousAddress);
+	$PreviousCity = preg_replace($find, "SpamReplaceText", $PreviousCity);
+	$PreviousState = preg_replace($find, "SpamReplaceText", $PreviousState);
+	$PreviousZip = preg_replace($find, "SpamReplaceText", $PreviousZip);
 
 	// Check to see if the fields contain any content we want to ban
 // 	if(stristr($name, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -92,6 +116,10 @@ else {
  	if(stristr($ApplicantCity, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($ApplicantState, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 	if(stristr($ApplicantZip, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($PreviousAddress, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($PreviousCity, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($PreviousState, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
+	if(stristr($PreviousZip, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();}
 
 	// Do a check on the send email and subject text
  	if(stristr($EmailTo, $SpamReplaceText) !== FALSE) {echo "$SpamErrorMessage"; exit();} 
@@ -108,6 +136,22 @@ else {
 
 
 	// Check to see if optional fields are populated and if so, put into email body
+
+	if(isset($DifferentAddress)&&$DifferentAddress!=''){
+		$EmailBody .= "DifferentAddress: ".($DifferentAddress)."\n";
+	}
+	if(isset($PreviousAddress)&&$PreviousAddress!=''){
+		$EmailBody .= "PreviousAddress: ".($PreviousAddress)."\n";
+	}
+	if(isset($PreviousCity)&&$PreviousCity!=''){
+		$EmailBody .= "PreviousCity: ".($PreviousCity)."\n";
+	}
+	if(isset($PreviousState)&&$PreviousState!=''){
+		$EmailBody .= "PreviousState: ".($PreviousState)."\n";
+	}
+	if(isset($PreviousZip)&&$PreviousZip!=''){
+		$EmailBody .= "PreviousZip: ".($PreviousZip)."\n";
+	}
 
 
 	// Send email 

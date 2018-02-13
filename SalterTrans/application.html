@@ -114,7 +114,7 @@
 							<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
 						</span>
 
-						<span class="col-1-1 repeating-section">
+						<span class="col-1-1 repeating-section" id="former-address-1">
 							<span class="col-1-2">
 								<label>Address
 									<input type="text" name="PreviousAddress">
@@ -631,6 +631,10 @@ $(document).ready(function () {
 	    var ele = $(this).parent().prev().clone(true);
 		ele.find("input").val("");
  		ele.appendTo('.add_new_content:last');
+
+ 		var count = $("#previous-addresses").children().length-1;
+
+		ele.attr("id", "former-address" + "-" + count.toString());
 	    
 	    $(this).parent().prev().after(ele);
 

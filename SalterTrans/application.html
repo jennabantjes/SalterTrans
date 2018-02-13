@@ -114,7 +114,7 @@
 							<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
 						</span>
 
-						<span class="col-1-1 repeating-address">
+						<span class="col-1-1 repeating-section">
 							<span class="col-1-2">
 								<label>Address
 									<input type="text" name="PreviousAddress">
@@ -161,27 +161,29 @@
 					</span>
 
 					<div id="driving-accidents" class="hide">
-						<span class="col-1-2">
-							<label>Date of accident
-								<input type="date" name="AccidentDate">
-							</label>
-						</span>
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>Fatalities
-									<input type="text" name="AccidentFatalities">
+						<span class="driving-accident">
+							<span class="col-1-2">
+								<label>Date of accident
+									<input type="date" name="AccidentDate">
 								</label>
 							</span>
-							<span class="col-1-2 no-padding">
-								<label>Injuries
-									<input type="text" name="AccidentInjuries">
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>Fatalities
+										<input type="text" name="AccidentFatalities">
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>Injuries
+										<input type="text" name="AccidentInjuries">
+									</label>
+								</span>
+							</span>
+							<span class="col-1-1">
+								<label>Nature of accident
+									<input type="text" name="AccidentDetails">
 								</label>
 							</span>
-						</span>
-						<span class="col-1-1">
-							<label>Nature of accident
-								<input type="text" name="AccidentDetails">
-							</label>
 						</span>
 						<a>Add another driving accident</a>
 					</div>
@@ -627,7 +629,11 @@ $(document).ready(function () {
   	$(function(){
 	  $(".addAddress").on('click', function(){
 	    var ele = $(this).parent().prev().clone(true);
+		ele.find("input").val("");
+ 		ele.appendTo('.add_new_content:last');
+	    
 	    $(this).parent().prev().after(ele);
+
 	  })
 	});
 });

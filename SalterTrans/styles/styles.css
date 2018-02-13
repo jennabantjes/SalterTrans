@@ -431,8 +431,8 @@ form h2 {
   margin: .5em 0;
   text-align: left; }
 
-.repeating-address {
-  border-bottom: 1px solid #14281D; }
+.repeating-section {
+  border-bottom: 1px solid #ccc; }
 
 /* RESETS */
 span.no-padding, div.no-padding {

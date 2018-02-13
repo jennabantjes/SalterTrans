@@ -161,7 +161,7 @@
 					</span>
 
 					<div id="driving-accidents" class="hide">
-						<span class="driving-accident">
+						<span class="driving-accident repeating-section">
 							<span class="col-1-2">
 								<label>Date of accident
 									<input type="date" name="AccidentDate">
@@ -185,7 +185,9 @@
 								</label>
 							</span>
 						</span>
-						<a>Add another driving accident</a>
+						<span class="col-1-1">
+							<a>Add another driving accident</a>
+						</span>
 					</div>
 				</section>
 
@@ -201,27 +203,31 @@
 					</span>
 
 					<div id="traffic-convictions" class="hide">
-						<span class="col-1-2">
-							<label>Date of conviction
-								<input type="date" name="TrafficConvictionDate">
-							</label>
-						</span>
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>Location
-									<input type="text" name="TrafficConvictionLocation">
+						<span class="repeating-section">
+							<span class="col-1-2">
+								<label>Date of conviction
+									<input type="date" name="TrafficConvictionDate">
 								</label>
 							</span>
-							<span class="col-1-2 no-padding">
-								<label>Charge
-									<input type="text" name="TrafficConvictionCharge">
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>Location
+										<input type="text" name="TrafficConvictionLocation">
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>Charge
+										<input type="text" name="TrafficConvictionCharge">
+									</label>
+								</span>
+							</span>
+							<span class="col-1-1">
+								<label>Penalty
+									<input type="text" name="TrafficConvictionPenalty">
 								</label>
 							</span>
 						</span>
 						<span class="col-1-1">
-							<label>Penalty
-								<input type="text" name="TrafficConvictionPenalty">
-							</label>
 							<a>Add another traffic conviction</a>
 						</span>
 					</div>
@@ -372,72 +378,76 @@
 							<h3>Please list your prior employment history for the past 10 years.</h3>
 						</span>
 						
-						<span class="col-1-2">
-							<label>Employer name
-								<input type="text" name="FormerEmployerName" required >
-							</label>
-						</span>
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>From
-									<input type="date" name="FormerEmployerDateFrom">
+						<span class="repeating-section">
+							<span class="col-1-2">
+								<label>Employer name
+									<input type="text" name="FormerEmployerName" required >
 								</label>
 							</span>
-							<span class="col-1-2 no-padding">
-								<label>To
-									<input type="date" name="FormerEmployerDateTo">
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>From
+										<input type="date" name="FormerEmployerDateFrom">
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>To
+										<input type="date" name="FormerEmployerDateTo">
+									</label>
+								</span>
+							</span>
+							<span class="col-1-2">
+								<label>Employer's address
+									<input type="text" name="FormerEmployerAddress">
 								</label>
 							</span>
-						</span>
-						<span class="col-1-2">
-							<label>Employer's address
-								<input type="text" name="FormerEmployerAddress">
-							</label>
-						</span>
-						<span class="col-1-2">
-							<label>City
-								<input type="text" name="FormerEmployerCity">
-							</label>
-						</span>
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>State
-									<input type="text" name="FormerEmployerState" maxlength="2">
+							<span class="col-1-2">
+								<label>City
+									<input type="text" name="FormerEmployerCity">
 								</label>
 							</span>
-							<span class="col-1-2 no-padding">
-								<label>Zip code
-									<input type="text" name="FormerEmployerZip" maxlength="5">
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>State
+										<input type="text" name="FormerEmployerState" maxlength="2">
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>Zip code
+										<input type="text" name="FormerEmployerZip" maxlength="5">
+									</label>
+								</span>
+							</span>
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>Position held
+										<input type="text" name="FormerPositionHeld" required>
+									</label>
+								</span>
+								<span class="col-1-2 no-padding">
+									<label>Salary/Wage
+										<input type="text" name="FormerSalary">
+									</label>
+								</span>
+							</span>
+							<span class="col-1-2">
+								<label>Supervisor's name
+									<input type="text" name="FormerSupervisorName">
 								</label>
 							</span>
-						</span>
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>Position held
-									<input type="text" name="FormerPositionHeld" required>
-								</label>
-							</span>
-							<span class="col-1-2 no-padding">
-								<label>Salary/Wage
-									<input type="text" name="FormerSalary">
-								</label>
-							</span>
-						</span>
-						<span class="col-1-2">
-							<label>Supervisor's name
-								<input type="text" name="FormerSupervisorName">
-							</label>
-						</span>
-						<span class="col-1-2">
-							<label>Phone number
-								<input type="tel" name="FormerSupervisorPhone">
+							<span class="col-1-2">
+								<label>Phone number
+									<input type="tel" name="FormerSupervisorPhone">
 
-							</lable>
+								</lable>
+							</span>
+							<span class="col-1-1">
+								<label>Reason for leaving
+									<textarea name="FormerEmployerReasonForLeaving"></textarea>
+								</label>
+							</span>
 						</span>
 						<span class="col-1-1">
-							<label>Reason for leaving
-								<textarea name="FormerEmployerReasonForLeaving"></textarea>
-							</label>
 							<a>Add another employer</a>
 						</span>
 					</div>
@@ -475,14 +485,18 @@
 								</label>
 							</span>
 						</div>
+					</div>
 
-						<span class="col-1-1">
-							<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
+					<div class="col-1-1">
+						<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
 							<br />
+						<span class="col-1-1 repeating-section">
 							<label>Additional qualifications
 								<textarea name="AdditionalQualifications"></textarea>
 							</label>
-							<a>Add another qualification</a>
+						</span>
+						<span class="col-1-1">
+							<a class="addQualification">Add another qualification</a>
 						</span>
 					</div>
 				</section>
@@ -628,6 +642,20 @@
 $(document).ready(function () {
   	$(function(){
 	  $(".addAddress").on('click', function(){
+	    var ele = $(this).parent().prev().clone(true);
+		ele.find("input").val("");
+ 		ele.appendTo('.add_new_content:last');
+
+ 		var count = $("#previous-addresses").children().length-1;
+
+		ele.attr("id", "former-address" + "-" + count.toString());
+	    
+	    $(this).parent().prev().after(ele);
+
+	  })
+	});
+	$(function(){
+	  $(".addQualification").on('click', function(){
 	    var ele = $(this).parent().prev().clone(true);
 		ele.find("input").val("");
  		ele.appendTo('.add_new_content:last');

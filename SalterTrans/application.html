@@ -109,34 +109,36 @@
 							</label>
 					</span>
 
-					<div id="previous-addresses" class="hide repeating-address">
+					<div id="previous-addresses" class="hide">
 						<span class="col-1-1">
 							<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
 						</span>
 
-						<span class="col-1-2">
-							<label>Address
-								<input type="text" name="PreviousAddress">
-							</label>
-						</span>
-
-						<span class="col-1-2">
-							<label>City
-								<input type="text" name="PreviousCity">
-							</label>
-						</span>
-
-						<span class="col-1-2">
-							<span class="col-1-2 no-padding">
-								<label>State
-									<input type="text" name="PreviousState" maxlength="2">
+						<span class="col-1-1 repeating-address">
+							<span class="col-1-2">
+								<label>Address
+									<input type="text" name="PreviousAddress">
 								</label>
 							</span>
 
-							<span class="col-1-2 no-padding">
-								<label>Zip code
-									<input type="text" pattern="\d*" novalidate autocorrect="off" name="PreviousZip" maxlength="5" minlength="5">
+							<span class="col-1-2">
+								<label>City
+									<input type="text" name="PreviousCity">
 								</label>
+							</span>
+
+							<span class="col-1-2">
+								<span class="col-1-2 no-padding">
+									<label>State
+										<input type="text" name="PreviousState" maxlength="2">
+									</label>
+								</span>
+
+								<span class="col-1-2 no-padding">
+									<label>Zip code
+										<input type="text" pattern="\d*" novalidate autocorrect="off" name="PreviousZip" maxlength="5" minlength="5">
+									</label>
+								</span>
 							</span>
 						</span>
 
@@ -624,8 +626,8 @@
 $(document).ready(function () {
   	$(function(){
 	  $(".addAddress").on('click', function(){
-	    var ele = $(this).closest('.repeating-address').clone(true);
-	    $(this).closest('.repeating-address').after(ele);
+	    var ele = $(this).parent().prev().clone(true);
+	    $(this).parent().prev().after(ele);
 	  })
 	});
 });

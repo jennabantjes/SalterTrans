@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>	
 	<title>Salter Transportation</title>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -109,7 +109,7 @@
 							</label>
 					</span>
 
-					<div id="previous-addresses" class="hide">
+					<div id="previous-addresses" class="hide repeating-address">
 						<span class="col-1-1">
 							<h4>Please add all of the addresses you've lived at within the past 7 years.</h4>
 						</span>
@@ -141,7 +141,7 @@
 						</span>
 
 						<span class="col-1-1">
-							<a onclick="anotheraddress();">Add another address</a>
+							<a class="addAddress">Add another address</a>
 						</span>
 					</div>
 				</section>
@@ -619,5 +619,16 @@
 
   ga('create', 'UA-84604994-1', 'auto');
   ga('send', 'pageview');
+
+
+$(document).ready(function () {
+  	$(function(){
+	  $(".addAddress").on('click', function(){
+	    var ele = $(this).closest('.repeating-address').clone(true);
+	    $(this).closest('.repeating-address').after(ele);
+	  })
+	});
+});
+
 
 </script>

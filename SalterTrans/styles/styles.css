@@ -61,7 +61,8 @@ a {
   text-decoration: none;
   border-bottom: 1px solid transparent; }
   a:hover {
-    transition: all ease-in-out 0.2s; }
+    transition: all ease-in-out 0.2s;
+    cursor: pointer; }
 
 h1, .tagline {
   font-weight: 400;

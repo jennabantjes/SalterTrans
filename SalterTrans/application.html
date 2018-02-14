@@ -143,7 +143,7 @@
 						</span>
 
 						<span class="col-1-1">
-							<a class="addAddress">Add another address</a>
+							<a id="addAddress">Add another address</a>
 						</span>
 					</div>
 				</section>
@@ -344,41 +344,43 @@
 								<input type="radio" name="PreviousAffiliation"  value="Yes" onclick="show10();">Yes
 							</label>
 						</span>
+					</div>
 
-						<div id="previous-employers" class="hide">
-							<span class="col-1-1">
-								<h4>Please provide the information for your former affiliated employer.</h4>
-							</span>
+					<div class="hide col-1-1">
+						<span class="col-1-1">
+							<h4>Please provide the information for your former affiliated employer.</h4>
+						</span>
 
-							<span class="col-1-2">
-								<label for="name">Name of former affiliated employer
-									<input type="text" name="AffiliatedEmployerName" autocorrect="off" />
+						<span class="col-1-2">
+							<label for="name">Name of former affiliated employer
+								<input type="text" name="AffiliatedEmployerName" autocorrect="off" />
+							</label>
+						</span>
+						<span class="col-1-2">
+							<span class="col-1-2 no-padding">
+								<label>From
+									<input type="date" name="AffiliatedEmployerFrom"  autocorrect="off" />
 								</label>
 							</span>
-							<span class="col-1-2">
-								<span class="col-1-2 no-padding">
-									<label>From
-										<input type="date" name="AffiliatedEmployerFrom"  autocorrect="off" />
-									</label>
-								</span>
-								<span class="col-1-2 no-padding">
-									<label>To
-										<input type="date" name="AffiliatedEmployerTo" autocorrect="off" />
-									</label>
-								</span>
-							</span>
-							<span class="col-1-1">
-								<label>Reason for leaving
-									<textarea name="AffiliatedEmployerReasonForLeaving"></textarea>
+							<span class="col-1-2 no-padding">
+								<label>To
+									<input type="date" name="AffiliatedEmployerTo" autocorrect="off" />
 								</label>
 							</span>
-						</div>
+						</span>
+						<span class="col-1-1">
+							<label>Reason for leaving
+								<textarea name="AffiliatedEmployerReasonForLeaving"></textarea>
+							</label>
+						</span>
+					</div>
 
+					<div id="previous-employers" class="col-1-1">
 						<span class="col-1-1">
 							<h3>Please list your prior employment history for the past 10 years.</h3>
 						</span>
 						
-						<span class="repeating-section">
+						<div class="repeating-section" id="former-employer-1">
 							<span class="col-1-2">
 								<label>Employer name
 									<input type="text" name="FormerEmployerName" required >
@@ -439,16 +441,16 @@
 								<label>Phone number
 									<input type="tel" name="FormerSupervisorPhone">
 
-								</lable>
+								</label>
 							</span>
 							<span class="col-1-1">
 								<label>Reason for leaving
 									<textarea name="FormerEmployerReasonForLeaving"></textarea>
 								</label>
 							</span>
-						</span>
+						</div>
 						<span class="col-1-1">
-							<a>Add another employer</a>
+							<a id="addEmployer">Add another employer</a>
 						</span>
 					</div>
 				</section>
@@ -490,13 +492,10 @@
 					<div class="col-1-1">
 						<h3>Please provide any additional qualifications which you belive are important to us in considering your employment with this company.</h3>
 							<br />
-						<span class="col-1-1 repeating-section">
+						<span class="col-1-1">
 							<label>Additional qualifications
 								<textarea name="AdditionalQualifications"></textarea>
 							</label>
-						</span>
-						<span class="col-1-1">
-							<a class="addQualification">Add another qualification</a>
 						</span>
 					</div>
 				</section>
@@ -641,7 +640,7 @@
 
 $(document).ready(function () {
   	$(function(){
-	  $(".addAddress").on('click', function(){
+	  $("#addAddress").on('click', function(){
 	    var ele = $(this).parent().prev().clone(true);
 		ele.find("input").val("");
  		ele.appendTo('.add_new_content:last');
@@ -654,15 +653,16 @@ $(document).ready(function () {
 
 	  })
 	});
+
 	$(function(){
-	  $(".addQualification").on('click', function(){
+	  $("#addEmployer").on('click', function(){
 	    var ele = $(this).parent().prev().clone(true);
 		ele.find("input").val("");
  		ele.appendTo('.add_new_content:last');
 
- 		var count = $("#previous-addresses").children().length-1;
+ 		var count = $("#previous-employers").children().length-1;
 
-		ele.attr("id", "former-address" + "-" + count.toString());
+		ele.attr("id", "former-employer" + "-" + count.toString());
 	    
 	    $(this).parent().prev().after(ele);
 

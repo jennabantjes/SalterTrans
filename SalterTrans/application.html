@@ -265,6 +265,7 @@
 						<span class="col-1-2 no-padding">
 							<label>Highest grade completed
 								<select name="HighSchoolCompletion">
+									<option>Please choose a grade</option>
 									<option>9</option>
 									<option>10</option>
 									<option>11</option>
@@ -298,6 +299,7 @@
 						<span class="col-1-2 no-padding">
 							<label>Highest year completed
 								<select name="CollegeCompletion">
+									<option>Please choose a year</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -346,7 +348,7 @@
 						</span>
 					</div>
 
-					<div class="hide col-1-1">
+					<div class="hide col-1-1" id="affiliated-employer">
 						<span class="col-1-1">
 							<h4>Please provide the information for your former affiliated employer.</h4>
 						</span>
@@ -610,10 +612,10 @@
 		}
 		
 		function show9(){
-		  document.getElementById('previous-employers').style.display = 'none';
+		  document.getElementById('affiliated-employer').style.display = 'none';
 		}
 		function show10(){
-		  document.getElementById('previous-employers').style.display ='block';
+		  document.getElementById('affiliated-employer').style.display ='block';
 		}
 
 		function show11(){

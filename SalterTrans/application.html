@@ -191,7 +191,7 @@
 					</div>
 				</section>
 
-				<section>
+				<section id="convictions">
 					<span class="col-1-1">
 						<h3>Have you had any traffic convictions or forfeitures in the past 3 years (other than parking violations)?</h3>
 							<label class="radio">
@@ -202,7 +202,7 @@
 							</label>
 					</span>
 
-					<div id="traffic-convictions" class="hide">
+					<div id="traffic-convictions" class="hide repeating-section">
 						<span class="repeating-section">
 							<span class="col-1-2">
 								<label>Date of conviction
@@ -228,7 +228,7 @@
 							</span>
 						</span>
 						<span class="col-1-1">
-							<a>Add another traffic conviction</a>
+							<a id="addConviction">Add another traffic conviction</a>
 						</span>
 					</div>
 				</section>
@@ -665,6 +665,21 @@ $(document).ready(function () {
  		var count = $("#previous-employers").children().length-1;
 
 		ele.attr("id", "former-employer" + "-" + count.toString());
+	    
+	    $(this).parent().prev().after(ele);
+
+	  })
+	});
+
+	$(function(){
+	  $("#addConviction").on('click', function(){
+	    var ele = $(this).parent().prev().clone(true);
+		ele.find("input").val("");
+ 		ele.appendTo('.add_new_content:last');
+
+ 		var count = $("#convictions").children().length-1;
+
+		ele.attr("id", "traffic-convictions" + "-" + count.toString());
 	    
 	    $(this).parent().prev().after(ele);
 

@@ -10,7 +10,7 @@ else {
 	// Pull in info from form
 	$EmailFrom = 'SalterTrans.com';
 	$EmailTo = 'jennabantjes@gmail.com';
-	$ApplicantName = htmlentities(trim(stripslashes($_POST['ApplicantName'] )));
+	$ApplicantName = htmlentities(trim(stripslashes($_POST['applicant_name'] )));
 	$ApplicantEmail = htmlentities(trim(stripslashes($_POST['ApplicantEmail'] ))); 
 	$ApplicantPhone = htmlentities(trim(stripslashes($_POST['ApplicantPhone'] )));
 	$ApplicantAddress = htmlentities(trim(stripslashes($_POST['ApplicantAddress'] )));
@@ -361,7 +361,7 @@ else {
 		$EmailBody .= "High School Name: ".($HighSchoolName)."\n";
 	}
 	if(isset($HighSchoolCompletion)&&$HighSchoolCompletion!=''){
-		$EmailBody .= "High School Completion: ".($HighSchoolCompletion)."\n";
+		$EmailBody .= "High School Grade Completed: ".($HighSchoolCompletion)."\n";
 	}
 	if(isset($HighSchoolGraduationStatus)&&$HighSchoolGraduationStatus!=''){
 		$EmailBody .= "High School Graduation Status: ".($HighSchoolGraduationStatus)."\n";

@@ -5,6 +5,7 @@ $light-blue: #F1F6FC;
 $bright-blue: #D9E8FF;
 $blue: #04294D;
 $dark-blue: #031C34;
+$darker-blue: #021120;
 
 /* MIXINS */
 
@@ -273,13 +274,6 @@ button, .button, input[type="submit"] {
         color: white;
     }
 
-    h2 {
-        color: white;
-        font-size: 30px; 
-        font-style: italic;
-        font-weight: 200;
-    }
-
     a {
         color: white;
         font-style: none;
@@ -299,10 +293,17 @@ button, .button, input[type="submit"] {
 
 .primary-bg {
     @include gradient;
+ 
+    h2 {
+        color: white;
+        font-size: 30px; 
+        font-style: italic;
+        font-weight: 200;
+    }
 }
 
 .darker-bg {
-    background-color: $dark-blue;
+    background-color: $darker-blue;
 }
 
 .callout {
@@ -556,7 +557,7 @@ form {
  .page-wrapper {
      max-width: 1024px;
      margin: 0 auto;
-     padding: .5em;
+     padding: 1em .5em;
  }
 
  .text-wrapper {

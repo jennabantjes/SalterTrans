@@ -203,11 +203,6 @@ button, .button, input[type="submit"] {
   color: white; }
   .dark-bg p {
     color: white; }
-  .dark-bg h2 {
-    color: white;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 200; }
   .dark-bg a {
     color: white;
     font-style: none;
@@ -231,9 +226,14 @@ button, .button, input[type="submit"] {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09417a', endColorstr='#2154A1',GradientType=0 );
   /* IE6-9 */ }
+  .primary-bg h2 {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200; }
 
 .darker-bg {
-  background-color: #031C34; }
+  background-color: #021120; }
 
 .callout {
   clear: both;
@@ -408,7 +408,7 @@ form h2 {
 .page-wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  padding: .5em; }
+  padding: 1em .5em; }
 
 .text-wrapper {
   max-width: 700px;
